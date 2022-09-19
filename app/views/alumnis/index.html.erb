@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alumnis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Graduation year</th>
+      <th>Companies worked</th>
+      <th>Companyid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alumnis.each do |alumni| %>
+      <tr>
+        <td><%= alumni.graduation_year %></td>
+        <td><%= alumni.companies_worked %></td>
+        <td><%= alumni.companyID %></td>
+        <td><%= link_to 'Show', alumni %></td>
+        <td><%= link_to 'Edit', edit_alumni_path(alumni) %></td>
+        <td><%= link_to 'Destroy', alumni, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alumni', new_alumni_path %>
