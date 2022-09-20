@@ -1,0 +1,25 @@
+// Place all the styles related to the schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body{
+    color: #ff3300;
+    font-size: large;
+    background-color: #4400FA;
+}
+.center-div{
+    flex-direction: center;
+    text-align:center;
+    margin: auto;
+}
+.calendar-div{
+    margin: auto;
+    background-color: #EEEEEE;
+    height:600px;
+    width:1000px;
+    flex-direction:  center;
+    text-align:center;
+}
+h1{
+    color: #FFFFFF;
+}
