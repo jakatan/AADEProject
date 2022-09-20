@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_09_19_224532) do
   create_table "alumnis", force: :cascade do |t|
     t.string "graduation_year"
     t.string "companies_worked"
-    t.string "companyID"
+    t.integer "companyID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2022_09_19_224532) do
     t.string "name"
     t.string "class_year"
     t.string "membership_length"
-    t.string "companyID"
+    t.integer "companyID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -3,7 +3,7 @@ class CreateAlumnis < ActiveRecord::Migration[6.1]
     create_table :alumnis do |t|
       t.string :graduation_year
       t.string :companies_worked
-      t.string :companyID
+      t.integer :companyID
 
       t.timestamps
     end
