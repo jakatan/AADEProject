@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_19_224532) do
+ActiveRecord::Schema.define(version: 2022_09_20_022912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,13 +18,12 @@ ActiveRecord::Schema.define(version: 2022_09_19_224532) do
   create_table "alumnis", force: :cascade do |t|
     t.string "graduation_year"
     t.string "companies_worked"
-    t.integer "companyID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "person_id"
   end
 
   create_table "companies", force: :cascade do |t|
-    t.integer "companyID"
     t.string "companyName"
     t.string "company_website"
     t.datetime "created_at", precision: 6, null: false
@@ -43,11 +42,9 @@ ActiveRecord::Schema.define(version: 2022_09_19_224532) do
   create_table "officers", force: :cascade do |t|
     t.string "position"
     t.string "email"
-    t.integer "companyID"
     t.string "year_elected"
     t.string "description"
     t.string "photo"
-    t.integer "officer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -56,7 +53,6 @@ ActiveRecord::Schema.define(version: 2022_09_19_224532) do
     t.string "name"
     t.string "class_year"
     t.string "membership_length"
-    t.integer "companyID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -66,6 +62,7 @@ ActiveRecord::Schema.define(version: 2022_09_19_224532) do
     t.integer "companyID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "person_id"
   end
 
 end
