@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Officers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Email</th>
+      <th>Companyid</th>
+      <th>Year elected</th>
+      <th>Description</th>
+      <th>Photo</th>
+      <th>Officer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @officers.each do |officer| %>
+      <tr>
+        <td><%= officer.position %></td>
+        <td><%= officer.email %></td>
+        <td><%= officer.companyID %></td>
+        <td><%= officer.year_elected %></td>
+        <td><%= officer.description %></td>
+        <td><%= officer.photo %></td>
+        <td><%= officer.officer_id %></td>
+        <td><%= link_to 'Show', officer %></td>
+        <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
+        <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Officer', new_officer_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @officer.position %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @officer.email %>
+</p>
+
+<p>
+  <strong>Companyid:</strong>
+  <%= @officer.companyID %>
+</p>
+
+<p>
+  <strong>Year elected:</strong>
+  <%= @officer.year_elected %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @officer.description %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @officer.photo %>
+</p>
+
+<p>
+  <strong>Officer:</strong>
+  <%= @officer.officer_id %>
+</p>
+
+<%= link_to 'Edit', edit_officer_path(@officer) %> |
+<%= link_to 'Back', officers_path %>
