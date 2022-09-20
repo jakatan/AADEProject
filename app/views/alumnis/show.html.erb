@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Graduation year:</strong>
+  <%= @alumni.graduation_year %>
+</p>
+
+<p>
+  <strong>Companies worked:</strong>
+  <%= @alumni.companies_worked %>
+</p>
+
+<p>
+  <strong>Companyid:</strong>
+  <%= @alumni.companyID %>
+</p>
+
+<%= link_to 'Edit', edit_alumni_path(@alumni) %> |
+<%= link_to 'Back', alumnis_path %>
