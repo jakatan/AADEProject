@@ -1,2 +1,0 @@
-class OfficerPage < ApplicationRecord
-end

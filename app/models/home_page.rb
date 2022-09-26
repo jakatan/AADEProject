@@ -1,2 +1,0 @@
-class HomePage < ApplicationRecord
-end

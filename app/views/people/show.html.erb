@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Id:</strong>
-  <%= @person.id %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @person.name %>
 </p>
@@ -20,10 +15,6 @@
   <%= @person.membership_length %>
 </p>
 
-<p>
-  <strong>Companyid:</strong>
-  <%= @person.companyID %>
-</p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

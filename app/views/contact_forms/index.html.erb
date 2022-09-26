@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Contactid</th>
+      <th>Person</th>
       <th>Email</th>
       <th>Name</th>
       <th>Message</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @contact_forms.each do |contact_form| %>
       <tr>
-        <td><%= contact_form.contactID %></td>
+        <td><%= contact_form.person_id %></td>
         <td><%= contact_form.email %></td>
         <td><%= contact_form.name %></td>
         <td><%= contact_form.message %></td>

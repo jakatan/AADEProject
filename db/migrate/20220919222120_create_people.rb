@@ -4,7 +4,6 @@ class CreatePeople < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :class_year
       t.string :membership_length
-      t.integer :companyID
 
       t.timestamps
     end

@@ -7,7 +7,7 @@
     <tr>
       <th>Graduation year</th>
       <th>Companies worked</th>
-      <th>Companyid</th>
+      <th>Person</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= alumni.graduation_year %></td>
         <td><%= alumni.companies_worked %></td>
-        <td><%= alumni.companyID %></td>
+        <td><%= alumni.person_id %></td>
         <td><%= link_to 'Show', alumni %></td>
         <td><%= link_to 'Edit', edit_alumni_path(alumni) %></td>
         <td><%= link_to 'Destroy', alumni, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :positions
   resources :people
   resources :schedules
-
+  resources :admins
   root 'home_pages#index'
 end
+
