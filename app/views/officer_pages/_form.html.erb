@@ -1,0 +1,17 @@
+<%= form_with(model: officer_page) do |form| %>
+  <% if officer_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(officer_page.errors.count, "error") %> prohibited this officer_page from being saved:</h2>
+
+      <ul>
+        <% officer_page.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
