@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :officers
   resources :positions
   resources :people
-  root 'officers#index'
   resources :schedules
-  root 'schedules#index'
-
+  root 'home_pages#index'
+end
