@@ -1,4 +1,4 @@
 class Officer < ApplicationRecord
-  validates :companyID, :companyName, :company_website, presence: true
+  validates :person_id, :companyName, :company_website, presence: true
   has_many :person
 end

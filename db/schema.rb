@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_20_022912) do
+ActiveRecord::Schema.define(version: 2022_09_19_224532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2022_09_20_022912) do
   create_table "alumnis", force: :cascade do |t|
     t.string "graduation_year"
     t.string "companies_worked"
+    t.integer "person_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "person_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -31,20 +31,10 @@ ActiveRecord::Schema.define(version: 2022_09_20_022912) do
   end
 
   create_table "contact_forms", force: :cascade do |t|
-    t.integer "contactID"
+    t.integer "person_id"
     t.string "email"
     t.string "name"
     t.string "message"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "home_pages", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "officer_pages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -55,6 +45,7 @@ ActiveRecord::Schema.define(version: 2022_09_20_022912) do
     t.string "year_elected"
     t.string "description"
     t.string "photo"
+    t.integer "person_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -69,10 +60,10 @@ ActiveRecord::Schema.define(version: 2022_09_20_022912) do
 
   create_table "positions", force: :cascade do |t|
     t.string "position"
-    t.integer "companyID"
+    t.integer "person_id"
+    t.integer "company_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "person_id"
   end
 
 end

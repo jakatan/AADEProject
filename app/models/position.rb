@@ -1,5 +1,5 @@
 class Position < ApplicationRecord
-  validates :position, :companyID, presence: true
+  validates :position, :company_id, :person_id, presence: true
   belongs_to :person
   belongs_to :company
 end
