@@ -1,9 +1,9 @@
-// Place all the styles related to the schedules controller here.
+// Place all the styles related to the homePages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 body{
-    color: #ff3300;
+    color: #FFFFFF;
     font-size: large;
     background-color: #500000;
 }
@@ -12,14 +12,11 @@ body{
     text-align:center;
     margin: auto;
 }
-.calendar-div{
-    margin: auto;
-    background-color: #EEEEEE;
-    height:600px;
-    width:1000px;
-    flex-direction:  center;
-    text-align:center;
-}
+
 h1{
+    color: #FFFFFF;
+}
+
+h2{
     color: #FFFFFF;
 }
