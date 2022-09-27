@@ -1,4 +1,4 @@
-p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <head>
   <link rel="stylesheet" href="/assets/officer_pages.scss">
@@ -11,3 +11,32 @@ p id="notice"><%= notice %></p>
   </body>
 
 </html>
+
+<table>
+  <thead>
+  <tr>
+    <th>Position</th>
+    <th>Email</th>
+    <th>Year elected</th>
+    <th>Description</th>
+    <th>Photo</th>
+    <th>Person</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @officers.each do |officer| %>
+    <tr>
+      <td><%= officer.position %></td>
+      <td><%= officer.email %></td>
+      <td><%= officer.year_elected %></td>
+      <td><%= officer.description %></td>
+      <td><%= officer.photo %></td>
+      <td><%= Person.find(officer.person_id).name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= render 'contact_forms/form', contact_form: @contact_form %>

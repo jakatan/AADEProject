@@ -65,6 +65,6 @@ class OfficersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def officer_params
-      params.require(:officer).permit(:position, :email, :companyID, :year_elected, :description, :photo, :officer_id)
+      params.require(:officer).permit(:position, :email, :year_elected, :description, :photo, :person_id)
     end
 end

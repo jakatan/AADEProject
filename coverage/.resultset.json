@@ -584,7 +584,6 @@
           1,
           1,
           1,
-          1,
           null
         ]
       },
@@ -609,7 +608,6 @@
           1,
           1,
           1,
-          null,
           null
         ]
       },
@@ -624,6 +622,7 @@
       },
       "/csce431/AADEProject/app/models/contact_form.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -644,6 +643,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -658,6 +658,9 @@
       },
       "/csce431/AADEProject/app/models/person.rb": {
         "lines": [
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -2433,6 +2436,6 @@
         ]
       }
     },
-    "timestamp": 1664241277
+    "timestamp": 1664241487
   }
 }

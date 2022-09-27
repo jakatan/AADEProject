@@ -1,9 +1,10 @@
 class OfficerPagesController < ApplicationController
-  before_action :set_officer_page, only: %i[ show edit update destroy ]
+  before_action :set_officer, only: %i[ show ]
 
   # GET /officer_pages or /officer_pages.json
   def index
-    # @officer_pages = OfficerPage.all
+    @officers = Officer.all
+    @contact_form = ContactForm.new
   end
 
   # GET /officer_pages/1 or /officer_pages/1.json
@@ -58,13 +59,14 @@ class OfficerPagesController < ApplicationController
   end
 
   private
-    # # Use callbacks to share common setup or constraints between actions.
-    # def set_officer_page
-    #   @officer_page = OfficerPage.find(params[:id])
-    # end
-    #
-    # # Only allow a list of trusted parameters through.
-    # def officer_page_params
-    #   params.fetch(:officer_page, {})
-    # end
+  # Use callbacks to share common setup or constraints between actions.
+    def set_officer
+      @officer = Officer.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def officer_params
+      params.require(:officer).permit(:position, :email, :companyID, :year_elected, :description, :photo, :officer_id)
+    end
+
 end
