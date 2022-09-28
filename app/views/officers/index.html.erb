@@ -32,7 +32,7 @@
         <td><%= officer.email %></td>
         <td><%= officer.year_elected %></td>
         <td><%= officer.description %></td>
-        <td><%= officer.photo %></td>
+        <td><%= officer.portrait.filename.to_s %></td>
         <td><%= officer.person_id %></td>
         <td><%= link_to 'Show', officer %></td>
         <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
