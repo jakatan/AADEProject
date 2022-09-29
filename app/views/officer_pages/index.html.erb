@@ -1,44 +1,50 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+
 
 <head>
-  <link rel="stylesheet" href="/assets/officer_pages.scss">
+  <%= stylesheet_link_tag 'officer_pages' %>
+
 </head>
-<html>
-  <header></header>
-<h1 style ="text-align: center;">Welcome to the Officer/Contact us Page!</h1>
-  <body>
-    <h2 style ="color: #ffffff; text-align: center;">This will host the list of officers and a contact form</h2>
-  </body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="./home_pages">Home</a></li>
+      <li><a href="./officers">Officers</a></li>
+      <li><a href="./alumnis">Alumnis</a></li>
+      <li><a href="./schedules">Calendar</a></li>
+    </ul>
+  </div>
+</nav>
 
-</html>
+<div class = "left-align-div">
+  <h1 style "margin:200px; padding-left: 20px;">Officers</h1>
+</div>
+<div class = "column-div">
+  <div class = "row-div">
 
-<table>
-  <thead>
-  <tr>
-    <th>Position</th>
-    <th>Email</th>
-    <th>Year elected</th>
-    <th>Description</th>
-    <th>Portrait</th>
-    <th>Person</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+    <% @officers.each do |officer| %>
+      <div class="card">
+        <div class="container">
+          <h3><%=officer.position %></h3>
 
-  <tbody>
-  <% @officers.each do |officer| %>
-    <tr>
-      <td><%= officer.position %></td>
-      <td><%= officer.email %></td>
-      <td><%= officer.year_elected %></td>
-      <td><%= officer.description %></td>
-      <% if officer.portrait.attached? %>
-      <td><%= image_tag officer.portrait.variant(resize_to_fit: [200, 200]) %></td>
-      <% end %>
-      <td><%= Person.find(officer.person_id).name %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+          <% if officer.portrait.attached? %>
+            <%= image_tag officer.portrait, class: "card-img-top" %>
+          <% end %>
 
-<%= render 'contact_forms/form', contact_form: @contact_form %>
+          <p><%=Person.find(officer.person_id).class_year %>&nbsp<b><%=Person.find(officer.person_id).name %></b></p>
+          <p><%=officer.description %></p>
+        </div>
+      </div>
+    <% end %>
+
+
+  </div>
+</div>
+<div class = "center-div">
+  <h1 class = "contactHeader">Contact Us</h1>
+  <div class = "column-div">
+    <p>Have a question? Interested in speaking at a general meeting? Just looking to drop a note? Click the appropriate officer&apos;s name below to draft an email, hover to reveal their email. Please direct all general inquiries to our secretary.</p>
+  </div>
+</div>
+

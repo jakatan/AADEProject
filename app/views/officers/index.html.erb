@@ -1,44 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="./home_pages">Home</a></li>
-        <li><a href="./officers">Officers</a></li>
-        <li><a href="./alumnis">Alumnis</a></li>
-        <li><a href="./schedules">Calendar</a></li>
-      </ul>
-    </div>
- </nav>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="./home_pages">Home</a></li>
+      <li><a href="./officers">Officers</a></li>
+      <li><a href="./alumnis">Alumnis</a></li>
+      <li><a href="./schedules">Calendar</a></li>
+    </ul>
+  </div>
+</nav>
 <h1>Officers</h1>
 
 <table>
   <thead>
-    <tr>
-      <th>Position</th>
-      <th>Email</th>
-      <th>Year elected</th>
-      <th>Description</th>
-      <th>Photo</th>
-      <th>Person</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Position</th>
+    <th>Email</th>
+    <th>Year elected</th>
+    <th>Description</th>
+    <th>Photo</th>
+    <th>Person</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @officers.each do |officer| %>
-      <tr>
-        <td><%= officer.position %></td>
-        <td><%= officer.email %></td>
-        <td><%= officer.year_elected %></td>
-        <td><%= officer.description %></td>
-        <td><%= officer.portrait.filename.to_s %></td>
-        <td><%= officer.person_id %></td>
-        <td><%= link_to 'Show', officer %></td>
-        <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
-        <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <% @officers.each do |officer| %>
+    <tr>
+      <td><%= officer.position %></td>
+      <td><%= officer.email %></td>
+      <td><%= officer.year_elected %></td>
+      <td><%= officer.description %></td>
+      <td><%= officer.portrait.filename.to_s %></td>
+      <td><%= officer.person_id %></td>
+      <td><%= link_to 'Show', officer %></td>
+      <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
+      <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
 
