@@ -1,5 +1,11 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>  
+<html>  
 
+
+<head>  
+<%= stylesheet_link_tag 'officers' %>
+
+</head>  
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
@@ -10,38 +16,101 @@
       </ul>
     </div>
  </nav>
-<h1>Officers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Position</th>
-      <th>Email</th>
-      <th>Year elected</th>
-      <th>Description</th>
-      <th>Photo</th>
-      <th>Person</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class = "left-align-div">
+<h1 style "margin:200px; padding-left: 20px;">Officers</h1>
+  </div>
+<div class = "column-div">
+<div class = "row-div">
+    <div class="card">
+      <div class="container">
+          <h3>President</h3>
+          <a href = "https://www.linkedin.com/in/danielle-nguyen-4a9087196/?trk=public_profile_browsemap">
+          <%= image_tag("LIT05760.jpg", class: "card-img-top", alt: "Danielle's Linkedin")%>
+          </a>
+          <p><b>Danielle Nguyen</b></p>
+          <p>Architecture &apos;23</p>
+      </div>
+    </div>
+    <div class="card">
+    <div class="container">
+        <h3>President</h3>
+        <a href = "https://www.linkedin.com/in/danielle-nguyen-4a9087196/?trk=public_profile_browsemap">
+        <%= image_tag("LIT05760.jpg", class: "card-img-top", alt: "Danielle's Linkedin")%>
+        </a>
+        <p><b>Danielle Nguyen</b></p>
+        <p>Architecture &apos;23</p>
+    </div>
+  </div>
+  <div class="card">
+  <div class="container">
+      <h3>President</h3>
+      <a href = "https://www.linkedin.com/in/danielle-nguyen-4a9087196/?trk=public_profile_browsemap">
+      <%= image_tag("LIT05760.jpg", class: "card-img-top", alt: "Danielle's Linkedin")%>
+      </a>
+      <p><b>Danielle Nguyen</b></p>
+      <p>Architecture &apos;23</p>
+  </div>
+  </div>
+  <div class="card">
+  <div class="container">
+      <h3>President</h3>
+      <a href = "https://www.linkedin.com/in/danielle-nguyen-4a9087196/?trk=public_profile_browsemap">
+      <%= image_tag("LIT05760.jpg", class: "card-img-top", alt: "Danielle's Linkedin")%>
+      </a>
+      <p><b>Danielle Nguyen</b></p>
+      <p>Architecture &apos;23</p>
+  </div>
+  </div>
+  <div class="card">
+  <div class="container">
+      <h3>President</h3>
+      <a href = "https://www.linkedin.com/in/danielle-nguyen-4a9087196/?trk=public_profile_browsemap">
+      <%= image_tag("LIT05760.jpg", class: "card-img-top", alt: "Danielle's Linkedin")%>
+      </a>
+      <p><b>Danielle Nguyen</b></p>
+      <p>Architecture &apos;23</p>
+  </div>
+  </div>
+  <div class="card">
+  <div class="container">
+      <h3>President</h3>
+      <a href = "https://www.linkedin.com/in/danielle-nguyen-4a9087196/?trk=public_profile_browsemap">
+      <%= image_tag("LIT05760.jpg", class: "card-img-top", alt: "Danielle's Linkedin")%>
+      </a>
+      <p><b>Danielle Nguyen</b></p>
+      <p>Architecture &apos;23</p>
+  </div>
+  </div>
+  <div class="card">
+  <div class="container">
+      <h3>President</h3>
+      <a href = "https://www.linkedin.com/in/danielle-nguyen-4a9087196/?trk=public_profile_browsemap">
+      <%= image_tag("LIT05760.jpg", class: "card-img-top", alt: "Danielle's Linkedin")%>
+      </a>
+      <p><b>Danielle Nguyen</b></p>
+      <p>Architecture &apos;23</p>
+  </div>
+  </div>
+  <div class="card">
+  <div class="container">
+      <h3>President</h3>
+      <a href = "https://www.linkedin.com/in/danielle-nguyen-4a9087196/?trk=public_profile_browsemap">
+      <%= image_tag("LIT05760.jpg", class: "card-img-top", alt: "Danielle's Linkedin")%>
+      </a>
+      <p><b>Danielle Nguyen</b></p>
+      <p>Architecture &apos;23</p>
+  </div>
+  </div>
+</div>
+<div class = "center-div">
+  <h1 class = "contactHeader">Contact Us</h1>
+  <div class = "column-div">
+    <p>Have a question? Interested in speaking at a general meeting? Just looking to drop a note? Click the appropriate officer&apos;s name below to draft an email, hover to reveal their email. Please direct all general inquiries to our secretary.</p>
+  </div>
+</div>
 
-  <tbody>
-    <% @officers.each do |officer| %>
-      <tr>
-        <td><%= officer.position %></td>
-        <td><%= officer.email %></td>
-        <td><%= officer.year_elected %></td>
-        <td><%= officer.description %></td>
-        <td><%= officer.photo %></td>
-        <td><%= officer.person_id %></td>
-        <td><%= link_to 'Show', officer %></td>
-        <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
-        <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>
+</html>  
 
-<br>
 
-<%= link_to 'New Officer', new_officer_path %>
