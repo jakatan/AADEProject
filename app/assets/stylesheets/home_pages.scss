@@ -6,6 +6,7 @@ body{
     color: #FFFFFF;
     font-size: large;
     background-color: #500000;
+    margin: 0px;
 }
 .center-div{
     flex-direction: center;
@@ -14,15 +15,30 @@ body{
 }
 
 h1{
-    color: #FFFFFF;
+    text-align: center;
 }
 
 h2{
-    color: #FFFFFF;
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
 
 .landing {
-    height: 200px;
-    width: 500px;
+    height: 100vh;
+    width: 100vw;
     background-color: blue;
+    flex-direction: center;
+    text-align:center;
+    padding-top: 50vh;
+}
+
+.about {
+
+}
+
+.alumni {
+    
 }
