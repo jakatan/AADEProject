@@ -26,10 +26,14 @@ p {
     text-align: center;
 }
 
+.p-3 {
+    padding: 3rem!important;
+}
+
 .landing {
     height: 100vh;
     // width: 99.12vw;
-    background-color: blue;
+    background-color:#500000;
     flex-direction: center;
     text-align:center;
 }
@@ -43,7 +47,7 @@ p {
 .about {
     height: 50vh;
     // width: 99.12vw;
-    background-color:aquamarine;
+    background-color:#690d0d;
     flex-direction: center;
     text-align:center;
     padding-top: 15vh;
@@ -52,7 +56,7 @@ p {
 .alumni {
     height: 50vh;
     // width: 99.12vw;
-    background-color:chartreuse;
+    background-color:#500000;
     flex-direction: center;
     text-align:center;
     padding-top: 15vh;
