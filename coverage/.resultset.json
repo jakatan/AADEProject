@@ -354,6 +354,12 @@
       "/csce431/AADEProject/config/routes.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -362,6 +368,12 @@
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/helpers/admins_helper.rb": {
+        "lines": [
+          1,
           null
         ]
       },
@@ -389,6 +401,18 @@
           null
         ]
       },
+      "/csce431/AADEProject/app/helpers/home_pages_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/helpers/officer_pages_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/csce431/AADEProject/app/helpers/officers_helper.rb": {
         "lines": [
           1,
@@ -402,6 +426,12 @@
         ]
       },
       "/csce431/AADEProject/app/helpers/positions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/helpers/schedules_helper.rb": {
         "lines": [
           1,
           null
@@ -427,6 +457,44 @@
         ]
       },
       "/csce431/AADEProject/spec/helpers/contact_forms_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/spec/helpers/home_pages_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/spec/helpers/officer_pages_helper_spec.rb": {
         "lines": [
           1,
           null,
@@ -516,7 +584,6 @@
           1,
           1,
           1,
-          1,
           null
         ]
       },
@@ -541,7 +608,6 @@
           1,
           1,
           1,
-          null,
           null
         ]
       },
@@ -556,6 +622,7 @@
       },
       "/csce431/AADEProject/app/models/contact_form.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -591,6 +658,7 @@
       },
       "/csce431/AADEProject/app/models/person.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -2136,7 +2204,8 @@
           null,
           1,
           1,
-          4,
+          1,
+          5,
           null,
           null,
           1,
@@ -2153,6 +2222,12 @@
           1,
           null,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           1,
           1,
@@ -2225,6 +2300,49 @@
           1,
           null,
           1,
+          1,
+          1,
+          8,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -2236,7 +2354,7 @@
           null,
           1,
           1,
-          4,
+          7,
           null,
           1,
           1,
@@ -2256,6 +2374,31 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -2267,6 +2410,8 @@
           1,
           1,
           4,
+          4,
+          4,
           null,
           null,
           1,
@@ -2275,22 +2420,22 @@
           null,
           1,
           1,
-          0,
+          1,
           null,
           null,
           1,
           1,
-          0,
+          1,
           null,
           null,
           1,
           1,
-          0,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1663642854
+    "timestamp": 1664241487
   }
 }

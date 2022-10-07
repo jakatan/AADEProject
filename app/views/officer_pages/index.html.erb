@@ -1,13 +1,59 @@
-p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+
 
 <head>
-  <link rel="stylesheet" href="/assets/officer_pages.scss">
-</head>
-<html>
-  <header></header>
-<h1 style ="text-align: center;">Welcome to the Officer/Contact us Page!</h1>
-  <body>
-    <h2 style ="color: #ffffff; text-align: center;">This will host the list of officers and a contact form</h2>
-  </body>
+  <%= stylesheet_link_tag 'officer_pages' %>
 
-</html>
+</head>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="./home_pages">Home</a></li>
+      <li><a href="./officers">Officers</a></li>
+      <li><a href="./alumnis">Alumnis</a></li>
+      <li><a href="./schedules">Calendar</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class = "left-align-div">
+  <h1 style "margin:200px; padding-left: 20px;">Officers</h1>
+</div>
+<div class = "column-div">
+  <div class = "row-div">
+
+    <% @officers.each do |officer| %>
+      <div class="card">
+        <div class="container">
+          <h3><%=officer.position %></h3>
+
+          <% if officer.portrait.attached? %>
+            <%= image_tag officer.portrait, class: "card-img-top" %>
+          <% end %>
+
+          <p><%=Person.find(officer.person_id).class_year %>&nbsp<b><%=Person.find(officer.person_id).name %></b></p>
+          <p><%=officer.description %></p>
+        </div>
+      </div>
+    <% end %>
+
+
+  </div>
+</div>
+<div class = "center-div">
+  <h1 class = "contactHeader">Contact Us</h1>
+  <div class = "column-div">
+    <p>Have a question? Interested in speaking at a general meeting? Just looking to drop a note? Click the appropriate officer&apos;s name below to draft an email, hover to reveal their email. Please direct all general inquiries to our secretary.</p>
+
+    <%= form_with do |form| %>
+      <%= form.label :name, "Enter name here:" %>
+      <%= form.text_field :name %>
+      <%= label_tag(:text2, "Email:") %>
+      <%= form.submit "Search" %>
+    <% end %>
+
+
+  </div>
+</div>
+
