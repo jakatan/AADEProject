@@ -9,12 +9,12 @@
       </body>
     </div>
   </div>
-
-<br>
-  <%= link_to("alumnis", alumnis_path) %>
-  <%= link_to("companies", companies_path) %>
-  <%= link_to("contact form", contact_forms_path) %>
-  <%= link_to("officers", officers_path) %>
-  <%= link_to("people", people_path) %>
-  <%= link_to("positions", positions_path) %>
+  <%=  link_to "New", admin_google_oauth2_omniauth_authorize_path, method: :post%>
+  <%= link_to("alumnis", alumnis_path) %> <br>
+  <%= link_to("companies", companies_path) %> <br>
+  <%= link_to("contact form", contact_forms_path) %> <br>
+  <%= link_to("officers", officers_path) %> <br>
+  <%= link_to("people", people_path) %> <br>
+  <%= link_to("positions", positions_path) %><br><br><br><br>
+  <%= link_to "Sign out", destroy_admin_session_path %>
 </html>

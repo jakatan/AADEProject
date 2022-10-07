@@ -1,4 +1,5 @@
 class AdminsController < ApplicationController
+  before_action :authenticate_admin!
   # before_action :set_admin, only: %i[ show edit update destroy ]
 
   # GET /admins or /admins.json
@@ -12,7 +13,7 @@ class AdminsController < ApplicationController
 
   # GET /admins/new
   def new
-    # @admin = Admin.new
+    @admin = Admin.new
   end
 
   # GET /admins/1/edit
@@ -21,17 +22,17 @@ class AdminsController < ApplicationController
 
   # POST /admins or /admins.json
   def create
-    # @admin = Admin.new(admin_params)
-    #
-    # respond_to do |format|
-    #   if @admin.save
-    #     format.html { redirect_to admin_url(@admin), notice: "Admin was successfully created." }
-    #     format.json { render :show, status: :created, location: @admin }
-    #   else
-    #     format.html { render :new, status: :unprocessable_entity }
-    #     format.json { render json: @admin.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    @admin = Admin.new(admin_params)
+
+    respond_to do |format|
+      if @admin.save
+        format.html { redirect_to admin_url(@admin), notice: "Admin was successfully created." }
+        format.json { render :show, status: :created, location: @admin }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @admin.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /admins/1 or /admins/1.json
@@ -58,13 +59,13 @@ class AdminsController < ApplicationController
   end
 
   private
-    # # Use callbacks to share common setup or constraints between actions.
-    # def set_admin
-    #   @admin = Admin.find(params[:id])
-    # end
-    #
-    # # Only allow a list of trusted parameters through.
-    # def admin_params
-    #   params.require(:admin).permit(:title)
-    # end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_admin
+      @admin = Admin.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def admin_params
+      params.require(:admin).permit(:email, :full_name)
+    end
 end
