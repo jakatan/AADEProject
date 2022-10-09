@@ -46,13 +46,7 @@
   <div class = "column-div">
     <p>Have a question? Interested in speaking at a general meeting? Just looking to drop a note? Click the appropriate officer&apos;s name below to draft an email, hover to reveal their email. Please direct all general inquiries to our secretary.</p>
 
-    <%= form_with do |form| %>
-      <%= form.label :name, "Enter name here:" %>
-      <%= form.text_field :name %>
-      <%= label_tag(:text2, "Email:") %>
-      <%= form.submit "Search" %>
-    <% end %>
-
+    <%= render '/contact_forms/form', contact_form: @contact_form %>
 
   </div>
 </div>

@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 2022_10_04_183026) do
     t.string "avatar_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
   create_table "alumnis", force: :cascade do |t|

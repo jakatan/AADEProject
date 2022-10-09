@@ -25,7 +25,7 @@ RSpec.describe Person, type: :model do
   end
 
   it 'deletes dependent officer when deleted' do
-    officer = Officer.create(person_id: subject.id, position: 'test', year_elected: '2022', description: 'test', photo: '/ad')
+    officer = Officer.create(person_id: subject.id, position: 'test', year_elected: '2022', description: 'test')
 
     subject.destroy
     expect(Person.exists?(subject.id)).to be false

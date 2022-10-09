@@ -13,3 +13,5 @@
         membership_length: "1"
     }])
     p "Created #{Person.count} people"
+
+Admin.create!(email: 'davidking@tamu.edu')

@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_person, only: %i[ show edit update destroy ]
 
   # GET /people or /people.json

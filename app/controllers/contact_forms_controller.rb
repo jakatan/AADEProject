@@ -1,4 +1,5 @@
 class ContactFormsController < ApplicationController
+  before_action :authenticate_admin!, except: %i[new]
   before_action :set_contact_form, only: %i[ show edit update destroy ]
 
   # GET /contact_forms or /contact_forms.json

@@ -1,4 +1,5 @@
 class PositionsController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_position, only: %i[ show edit update destroy ]
 
   # GET /positions or /positions.json
