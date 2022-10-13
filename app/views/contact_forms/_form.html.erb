@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :person_id %>
-    <%= form.number_field :person_id %>
+    <%= form.select :person_id, Person.joins(:officer).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "id_of_the_person_id_select_box" %>
   </div>
 
   <div class="field">
@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :message %>
-    <%= form.text_field :message %>
+    <%= form.text_field :message, :cols => 30, :rows => 10 %>
   </div>
 
   <div class="actions">

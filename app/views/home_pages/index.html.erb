@@ -59,7 +59,11 @@
               <% end %>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-            <h3>Companies Test Section</h3>
+              <h3>Companies Test Section</h3>
+              
+              <% @companies.each do |company| %>
+                <h4><a href="https://<%= company.company_website %>" target="_blank"><%= company.companyName %></a></h4>
+              <% end %>
             </div>
           </div>
         </div>

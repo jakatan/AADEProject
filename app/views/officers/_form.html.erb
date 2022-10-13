@@ -31,14 +31,18 @@
     <%= form.text_field :description %>
   </div>
 
-  <div class="field">
-    <%= form.label :photo %>
-    <%= form.text_field :photo %>
-  </div>
 
   <div class="field">
     <%= form.label :person_id %>
-    <%= form.number_field :person_id %>
+    <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "id_of_the_person_id_select_box" %>
+  </div>
+
+  <div class = "field">
+    <%= form.label :portrait %>
+    <% if officer.portrait.attached? %>
+      <%= image_tag officer.portrait %><br>
+    <% end %>
+    <%= form.file_field :portrait, accept: 'image/png, image/gif, image/jpeg'%>
   </div>
 
   <div class="actions">
