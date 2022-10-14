@@ -2,6 +2,9 @@ require "rails_helper"
 
 RSpec.describe ContactFormsController, type: :routing do
   describe "routing" do
+    before do #Skip authentication for routing
+      allow_any_instance_of(Devise::Controllers::Helpers).to receive(:authenticate_admin!).and_return(true)
+    end
     it "routes to #index" do
       expect(get: "/contact_forms").to route_to("contact_forms#index")
     end

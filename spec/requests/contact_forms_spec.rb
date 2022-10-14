@@ -24,7 +24,9 @@ RSpec.describe "/contact_forms", type: :request do
   let(:invalid_attributes) {
     skip("Add a hash of attributes invalid for your model")
   }
-
+  before do #Skip authentication for routing
+    allow_any_instance_of(Devise::Controllers::Helpers).to receive(:authenticate_admin!).and_return(true)
+  end
   describe "GET /index" do
     it "renders a successful response" do
       ContactForm.create! valid_attributes

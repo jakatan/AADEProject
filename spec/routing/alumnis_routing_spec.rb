@@ -2,6 +2,11 @@ require "rails_helper"
 
 RSpec.describe AlumnisController, type: :routing do
   describe "routing" do
+
+    before do #Skip authentication for routing
+      allow_any_instance_of(Devise::Controllers::Helpers).to receive(:authenticate_admin!).and_return(true)
+    end
+
     it "routes to #index" do
       expect(get: "/alumnis").to route_to("alumnis#index")
     end
