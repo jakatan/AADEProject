@@ -22,7 +22,6 @@ class OfficersController < ApplicationController
   # POST /officers or /officers.json
   def create
     @officer = Officer.new(officer_params)
-
     respond_to do |format|
       if @officer.save
         format.html { redirect_to officer_url(@officer), notice: "Officer was successfully created." }
@@ -65,6 +64,6 @@ class OfficersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def officer_params
-      params.require(:officer).permit(:position, :email, :companyID, :year_elected, :description, :photo, :officer_id)
+      params.require(:officer).permit(:position, :email, :year_elected, :description, :person_id, :portrait)
     end
 end

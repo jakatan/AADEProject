@@ -10,12 +10,12 @@ RSpec.describe Company, type: :model do
   end
 
   it 'is not valid without company name' do
-    subject.companyName = nil;
+    subject.companyName = nil
     expect(subject).not_to be_valid
   end
 
   it 'is not valid without company website' do
-    subject.company_website = nil;
+    subject.company_website = nil
     expect(subject).not_to be_valid
   end
 end

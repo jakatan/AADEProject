@@ -1,22 +1,27 @@
-<p id="notice"><%= notice %></p>
-
-<h1 style ="text-align: center;">Welcome to the Scheduling Page!</h1>
-<html>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="./home_pages">Home</a></li>
-        <li><a href="./officers">Officers</a></li>
-        <li><a href="./alumnis">Alumnis</a></li>
-        <li><a href="./schedules">Calendar</a></li>
-      </ul>
+<header> 
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+  <a class="navbar-brand" href="./home_pages">AADE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="./home_pages">Home</a>
+      <a class="nav-item nav-link active" href="./schedules">Schedule<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="./officer_pages">Officer Page</a>
     </div>
+  </div>
   </nav>
+ 
+  <h1 style ="text-align: center;">AADE Schedule</h1>
+</header>
 
+<html>
   <div class = "center-div">
     <div class = "calendar-div">
       <body>
-      Schedule will be here once linked.
+      <!-- Change this iframe when we get the official calnedar-->
+      <iframe src="https://calendar.google.com/calendar/embed?src=andrew.hooper14%40tamu.edu&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </body>
     </div>
   </div>

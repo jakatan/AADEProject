@@ -2,15 +2,15 @@ require 'rails_helper'
 
 RSpec.describe ContactForm, type: :model do
   subject do
-    described_class.new(contactID: 'test', email: 'test', name: 'test', message: 'test')
+    described_class.new(person_id: 12, email: 'test', name: 'test', message: 'test')
   end
 
   it 'is valid with valid atributes' do
     expect(subject).to be_valid
   end
 
-  it 'is not valid without contactID' do
-    subject.contactID = nil
+  it 'is not valid without person id' do
+    subject.person_id = nil
     expect(subject).not_to be_valid
   end
 
@@ -20,7 +20,7 @@ RSpec.describe ContactForm, type: :model do
   end
 
   it 'is not valid without name' do
-    subject.name = nil;
+    subject.name = nil
     expect(subject).not_to be_valid
   end
 

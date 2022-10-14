@@ -2,7 +2,7 @@
 
 <p>
   <strong>Person:</strong>
-  <%= @contact_form.person_id %>
+  <%= Person.where(id: @contact_form.person_id).name %>
 </p>
 
 <p>

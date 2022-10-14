@@ -5,18 +5,35 @@
 body{
     color: #FFFFFF;
     font-size: large;
-    background-color: #500000;
-}
-.center-div{
-    flex-direction: center;
-    text-align:center;
-    margin: auto;
+    background-color:#500000;
+    margin: 0px;
 }
 
 h1{
-    color: #FFFFFF;
+    text-align: center;
 }
 
 h2{
-    color: #FFFFFF;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.p-3 {
+    padding: 3rem!important;
+}
+
+#landing {
+    height: 100vh;
+}
+
+#about {
+    height: 50vh;
+    background-color:#690d0d;
+}
+
+#alumni {
+    height: 50vh;
 }
