@@ -1,10 +1,10 @@
-<%= form_with(model: alumni) do |form| %>
-  <% if alumni.errors.any? %>
+<%= form_with(model: admin) do |form| %>
+  <% if admin.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(alumni.errors.count, "error") %> prohibited this alumni from being saved:</h2>
+      <h2><%= pluralize(admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
 
       <ul>
-        <% alumni.errors.each do |error| %>
+        <% admin.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

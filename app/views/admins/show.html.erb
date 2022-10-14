@@ -1,2 +1,15 @@
-<h1> login in</h1>
-<%= link_to "Sign out", destroy_admin_session_path %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Full Name:</strong>
+  <%= @admin.full_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @admin.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_path(@admin) %> |
+<%= link_to 'Back', admins_path %>
