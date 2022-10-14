@@ -41,7 +41,7 @@ RSpec.describe Person, type: :model do
   end
 
   it 'deletes dependent positions when deleted' do
-    company = Company.create(company_website: 'test', companyName: 'test')
+    company = Company.create(website: 'test', name: 'test')
     position = Position.create(person_id: subject.id, company_id: company.id, position: 'test')
 
     subject.destroy

@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Officer, type: :model do
-  person = Person.create(name: 'test', class_year: '2023', membership_length: '20 years')
+  before :all do
+    @person = Person.create(name: 'test', class_year: '2023', membership_length: '20 years')
+  end
   subject do
-    described_class.new(person_id: person.id , position: 'lead', email: 'test', year_elected: 'test', description: 'test')
+    described_class.new(person_id: @person.id , position: 'lead', email: 'test', year_elected: 'test', description: 'test')
   end
 
   it 'is valid with valid atributes' do
@@ -35,9 +37,7 @@ RSpec.describe Officer, type: :model do
     expect(subject).not_to be_valid
   end
 
-  it 'is deleted when person is deleted' do
-    person.destroy
-    expect(Person.exists?(person.id)).to be false
-    expect(Officer.exists?(subject.id)).to be false
+  after :all do
+    @person.destroy
   end
 end

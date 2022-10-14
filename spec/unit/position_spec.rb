@@ -1,12 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Position, type: :model do
-  subject do
-    company = Company.create(companyName: 'TAMU', company_website: 'www.tamu.edu')
-    person = Person.create(name: 'test', class_year: '2023', membership_length: '20 years')
-    described_class.new(position: 'leader', person_id: person.id , company_id: company.id)
-
+  before :all do
+    @company = Company.create(name: 'TAMU', website: 'www.tamu.edu')
+    @person = Person.create(name: 'test', class_year: '2000', membership_length: '20 years')
   end
+
+  subject do
+    described_class.new(position: 'leader', person_id: @person.id , company_id: @company.id)
+  end
+
   it 'is valid with valid attributes' do
     expect(subject).to be_valid
   end
@@ -24,5 +27,10 @@ RSpec.describe Position, type: :model do
   it 'it not valid without person_id' do
     subject.person_id = nil
     expect(subject).not_to be_valid
+  end
+
+  after :all do
+    @company.destroy
+    @person.destroy
   end
 end

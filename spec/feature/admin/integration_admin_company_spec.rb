@@ -15,6 +15,17 @@ RSpec.describe 'Admin is able to', type: :feature do
     click_on 'Sign in'
   end
 
+  scenario 'add a company' do
+    visit companies_path
+    click_on 'New Company'
+    fill_in 'company_name', with: 'apple'
+    fill_in 'company_website', with: 'test'
+    click_on 'Create Company'
+    expect(:notice).to be_present
+    visit companies_path
+    expect(page).to have_content('apple')
+  end
+
   after do #Log out the admin
     visit destroy_admin_session_path
   end

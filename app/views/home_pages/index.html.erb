@@ -62,7 +62,7 @@
               <h3>Companies Test Section</h3>
               
               <% @companies.each do |company| %>
-                <h4><a href="https://<%= company.company_website %>" target="_blank"><%= company.companyName %></a></h4>
+                <h4><a href="https://<%= company.website %>" target="_blank"><%= company.name %></a></h4>
               <% end %>
             </div>
           </div>

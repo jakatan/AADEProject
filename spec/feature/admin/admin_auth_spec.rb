@@ -102,7 +102,7 @@ RSpec.describe 'Access with admin login - ', type: :feature do
     @officer = Officer.create!(person_id: @person.id , position: 'lead', email: 'test', year_elected: 'test', description: 'test')
     @alumni = Alumni.create!(graduation_year: '2022', companies_worked: 'TAMU', person_id: @person.id)
     @contact_form = ContactForm.create!(person_id: @person.id, email: 'test', name: 'test', message: 'test')
-    @company = Company.create!(companyName: 'TAMU', company_website: 'www.website.com')
+    @company = Company.create!(name: 'TAMU', website: 'www.website.com')
     @position = Position.create!(position: 'leader', person_id: @person.id , company_id: @company.id)
     Admin.create!(email: 'test@test.com')
   end
@@ -201,6 +201,14 @@ RSpec.describe 'Access with admin login - ', type: :feature do
 
   after do
     visit destroy_admin_session_path
+  end
+
+  after :all do
+    @person.destroy
+    @officer.destroy
+    @contact_form.destroy
+    @company.destroy
+    @alumni.destroy
   end
 
 

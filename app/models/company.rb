@@ -1,4 +1,4 @@
 class Company < ApplicationRecord
-  validates :company_website, :companyName, presence: true
+  validates :website, :name, presence: true
   has_many :positions
 end

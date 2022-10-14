@@ -23,7 +23,7 @@ RSpec.describe 'Home page renders', type: :feature do
     end
 
     scenario 'One or more companies' do
-        Company.create!(companyName: 'Microsoft', company_website: 'microsoft.com')
+        Company.create!(name: 'Microsoft', website: 'microsoft.com')
         visit home_pages_path
         # click_on 'button text name'
         expect(page).to have_content('Microsoft')
