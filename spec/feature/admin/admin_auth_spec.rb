@@ -1,5 +1,7 @@
 require 'rails_helper'
-
+#
+# This tests that only a logged in admin is able to access certain pages
+#
 RSpec.describe 'Access without admin login - ', type: :feature do
   search_text = 'Sign in'
 
