@@ -15,3 +15,8 @@
     p "Created #{Person.count} people"
 
 Admin.create!(email: 'davidking@tamu.edu')
+Admin.create!(email: 'jakatanugraha@tamu.edu')
+Admin.create!(email: 'andrew.hooper14@tamu.edu')
+Admin.create!(email: 'cjstech@tamu.edu')
+Admin.create!(email: 'leanne.khashab.1@tamu.edu')
+Admin.create!(email: 'jlbreeden21@tamu.edu')
