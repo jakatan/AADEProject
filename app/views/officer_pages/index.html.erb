@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html>
 
+  <head>
+    <%= stylesheet_link_tag 'officer_pages' %>
+  </head>
 
-<head>
-  <%= stylesheet_link_tag 'officer_pages' %>
-
-</head>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="./home_pages">Home</a></li>
-      <li><a href="./officers">Officers</a></li>
-      <li><a href="./alumnis">Alumnis</a></li>
-      <li><a href="./schedules">Calendar</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div class = "left-align-div">
-  <h1 style "margin:200px; padding-left: 20px;">Officers</h1>
-</div>
-<div class = "column-div">
-  <div class = "row-div">
-
-    <% @officers.each do |officer| %>
-      <div class="card">
-        <div class="container">
-          <h3><%=officer.position %></h3>
-
-          <% if officer.portrait.attached? %>
-            <%= image_tag officer.portrait, class: "card-img-top" %>
-          <% end %>
-
-          <p><%=Person.find(officer.person_id).class_year %>&nbsp<b><%=Person.find(officer.person_id).name %></b></p>
-          <p><%=officer.description %></p>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+      <a class="navbar-brand" href="./home_pages">AADE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="./home_pages">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="./schedules">Schedule</a>
+          <a class="nav-item nav-link active" href="./officer_pages">Officer Page</a>
         </div>
       </div>
-    <% end %>
+    </nav>
+  </header>
 
-
+  <div class = "left-align-div">
+    <h1 style "margin:200px; padding-left: 20px;">Officers</h1>
   </div>
-</div>
-<div class = "center-div">
-  <h1 class = "contactHeader">Contact Us</h1>
   <div class = "column-div">
-    <p>Have a question? Interested in speaking at a general meeting? Just looking to drop a note? Click the appropriate officer&apos;s name below to draft an email, hover to reveal their email. Please direct all general inquiries to our secretary.</p>
+    <div class = "row-div">
 
-    <%= form_with do |form| %>
-      <%= form.label :name, "Enter name here:" %>
-      <%= form.text_field :name %>
-      <%= label_tag(:text2, "Email:") %>
-      <%= form.submit "Search" %>
-    <% end %>
+      <% @officers.each do |officer| %>
+        <div class="card">
+          <div class="container">
+            <h3><%=officer.position %></h3>
+
+            <% if officer.portrait.attached? %>
+              <%= image_tag officer.portrait, class: "card-img-top" %>
+            <% end %>
+
+            <p><%=Person.find(officer.person_id).class_year %>&nbsp<b><%=Person.find(officer.person_id).name %></b></p>
+            <p><%=officer.description %></p>
+          </div>
+        </div>
+      <% end %>
 
 
+    </div>
   </div>
-</div>
+  <div class = "center-div">
+    <h1 class = "contactHeader">Contact Us</h1>
+    <div class = "column-div">
+      <p>Have a question? Interested in speaking at a general meeting? Just looking to drop a note? Click the appropriate officer&apos;s name below to draft an email, hover to reveal their email. Please direct all general inquiries to our secretary.</p>
 
+      <%= form_with do |form| %>
+        <%= form.label :name, "Enter name here:" %>
+        <%= form.text_field :name %>
+        <%= label_tag(:text2, "Email:") %>
+        <%= form.submit "Search" %>
+      <% end %>
+
+
+    </div>
+  </div>
+</html>

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/csce431/spec/feature/home_pages_spec.rb": {
+      "/csce431/AADEProject/spec/feature/navbar_spec.rb": {
         "lines": [
           1,
           null,
@@ -9,34 +9,26 @@
           null,
           1,
           1,
-          null,
           1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
           1,
           null,
           null,
           1,
           1,
           1,
+          1,
+          null,
           null,
           1,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
       },
-      "/csce431/spec/rails_helper.rb": {
+      "/csce431/AADEProject/spec/rails_helper.rb": {
         "lines": [
           null,
           1,
@@ -104,7 +96,7 @@
           null
         ]
       },
-      "/csce431/config/environment.rb": {
+      "/csce431/AADEProject/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -113,7 +105,7 @@
           1
         ]
       },
-      "/csce431/config/application.rb": {
+      "/csce431/AADEProject/config/application.rb": {
         "lines": [
           1,
           null,
@@ -139,7 +131,7 @@
           null
         ]
       },
-      "/csce431/config/boot.rb": {
+      "/csce431/AADEProject/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -147,7 +139,7 @@
           1
         ]
       },
-      "/csce431/config/environments/test.rb": {
+      "/csce431/AADEProject/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -211,7 +203,7 @@
           null
         ]
       },
-      "/csce431/config/initializers/application_controller_renderer.rb": {
+      "/csce431/AADEProject/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -223,7 +215,7 @@
           null
         ]
       },
-      "/csce431/config/initializers/assets.rb": {
+      "/csce431/AADEProject/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -235,18 +227,6 @@
           null,
           null,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1
-        ]
-      },
-      "/csce431/config/initializers/backtrace_silencers.rb": {
-        "lines": [
-          null,
-          null,
           null,
           null,
           null,
@@ -255,7 +235,19 @@
           1
         ]
       },
-      "/csce431/config/initializers/content_security_policy.rb": {
+      "/csce431/AADEProject/config/initializers/backtrace_silencers.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "/csce431/AADEProject/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -289,7 +281,7 @@
           null
         ]
       },
-      "/csce431/config/initializers/cookies_serializer.rb": {
+      "/csce431/AADEProject/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -298,7 +290,7 @@
           1
         ]
       },
-      "/csce431/config/initializers/filter_parameter_logging.rb": {
+      "/csce431/AADEProject/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -308,7 +300,7 @@
           null
         ]
       },
-      "/csce431/config/initializers/inflections.rb": {
+      "/csce431/AADEProject/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -328,7 +320,7 @@
           null
         ]
       },
-      "/csce431/config/initializers/mime_types.rb": {
+      "/csce431/AADEProject/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -336,7 +328,7 @@
           null
         ]
       },
-      "/csce431/config/initializers/permissions_policy.rb": {
+      "/csce431/AADEProject/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -351,7 +343,7 @@
           null
         ]
       },
-      "/csce431/config/initializers/wrap_parameters.rb": {
+      "/csce431/AADEProject/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -369,7 +361,7 @@
           null
         ]
       },
-      "/csce431/config/routes.rb": {
+      "/csce431/AADEProject/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -389,73 +381,73 @@
           null
         ]
       },
-      "/csce431/app/helpers/admins_helper.rb": {
+      "/csce431/AADEProject/app/helpers/admins_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/alumnis_helper.rb": {
+      "/csce431/AADEProject/app/helpers/alumnis_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/application_helper.rb": {
+      "/csce431/AADEProject/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/companies_helper.rb": {
+      "/csce431/AADEProject/app/helpers/companies_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/contact_forms_helper.rb": {
+      "/csce431/AADEProject/app/helpers/contact_forms_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/home_pages_helper.rb": {
+      "/csce431/AADEProject/app/helpers/home_pages_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/officer_pages_helper.rb": {
+      "/csce431/AADEProject/app/helpers/officer_pages_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/officers_helper.rb": {
+      "/csce431/AADEProject/app/helpers/officers_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/people_helper.rb": {
+      "/csce431/AADEProject/app/helpers/people_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/positions_helper.rb": {
+      "/csce431/AADEProject/app/helpers/positions_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/helpers/schedules_helper.rb": {
+      "/csce431/AADEProject/app/helpers/schedules_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/controllers/home_pages_controller.rb": {
+      "/csce431/AADEProject/app/controllers/home_pages_controller.rb": {
         "lines": [
           1,
           null,
@@ -463,8 +455,8 @@
           null,
           1,
           null,
-          4,
-          4,
+          1,
+          1,
           null,
           null,
           null,
@@ -479,28 +471,13 @@
           null
         ]
       },
-      "/csce431/app/controllers/application_controller.rb": {
+      "/csce431/AADEProject/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/csce431/app/models/alumni.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/app/models/company.rb": {
+      "/csce431/AADEProject/app/models/alumni.rb": {
         "lines": [
           1,
           1,
@@ -508,11 +485,133 @@
           null
         ]
       },
-      "/csce431/app/models/person.rb": {
+      "/csce431/AADEProject/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/models/company.rb": {
         "lines": [
           1,
           1,
           1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/controllers/schedules_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/controllers/officer_pages_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/models/officer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/models/contact_form.rb": {
+        "lines": [
           1,
           1,
           1,
@@ -521,6 +620,6 @@
         ]
       }
     },
-    "timestamp": 1665620054
+    "timestamp": 1665783371
   }
 }
