@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :admins, controllers: { omniauth_callbacks: 'admins/omniauth_callbacks' }
 
   devise_scope :admin do
@@ -21,4 +20,3 @@ Rails.application.routes.draw do
 
   root 'home_pages#index'
 end
-
