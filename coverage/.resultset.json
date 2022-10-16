@@ -1,21 +1,15 @@
 {
   "RSpec": {
     "coverage": {
-      "/csce431/spec/feature/schedule_spec.rb": {
+      "/csce431/spec/feature/schedules_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          null,
           1,
-          null,
-          null,
           1,
-          null,
-          null,
           1,
-          null,
           null,
           null
         ]
@@ -213,6 +207,7 @@
           null,
           null,
           1,
+          1,
           null,
           null,
           null,
@@ -222,7 +217,8 @@
           null,
           null,
           null,
-          null
+          null,
+          1
         ]
       },
       "/csce431/config/initializers/backtrace_silencers.rb": {
@@ -356,7 +352,7 @@
           1,
           null,
           1,
-          null,
+          1,
           1,
           1,
           1,
@@ -445,13 +441,7 @@
           null,
           1,
           null,
-          null,
-          null,
-          null,
           1,
-          null,
-          null,
-          null,
           1,
           null,
           null,
@@ -462,57 +452,36 @@
           null,
           null,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          0,
           null,
           null
         ]
       },
       "/csce431/app/controllers/application_controller.rb": {
         "lines": [
+          1,
+          null
+        ]
+      },
+      "/csce431/app/models/alumni.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/app/models/company.rb": {
+        "lines": [
+          1,
+          1,
           1,
           null
         ]
@@ -592,6 +561,6 @@
         ]
       }
     },
-    "timestamp": 1665707799
+    "timestamp": 1665947566
   }
 }

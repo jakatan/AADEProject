@@ -4,20 +4,30 @@
 
 //#4400FA
 
-body{
+body {
+    color: #FFFFFF;
     font-size: large;
     background-color: #500000;
 }
-.center-div{
-    flex-direction: center;
+
+.center-div {
     text-align:center;
     margin: auto;
 }
-.calendar-div{
-    margin: auto;
-    flex-direction:  center;
-    text-align:center;
+
+h1 {
+    text-align: center;
 }
-h1{
-    color: #FFFFFF;
+
+.upcoming-events {
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+iframe {
+    border: 0;
+    width: 800px;
+    height: 600px;
+    padding-top: 17px;
+    padding-bottom: 17px;
 }
