@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 class Company < ApplicationRecord
-  validates :company_website, :companyName, presence: true
-  has_many :positions
+     validates :website, :name, presence: true
+     has_many :positions
 end

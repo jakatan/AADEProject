@@ -1,15 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="./home_pages">Home</a></li>
-      <li><a href="./officers">Officers</a></li>
-      <li><a href="./alumnis">Alumnis</a></li>
-      <li><a href="./schedules">Calendar</a></li>
-    </ul>
-  </div>
-</nav>
+<%= link_to("Admin Home", admins_path) %>
+
 <h1>Officers</h1>
 
 <table>
@@ -45,4 +37,3 @@
 <br>
 
 <%= link_to 'New Officer', new_officer_path %>
-<%= link_to("Admin Home", admins_path) %>

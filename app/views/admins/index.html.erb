@@ -2,19 +2,37 @@
 
 <h1 style ="text-align: center;">Welcome to the Admins Page!</h1>
 <html>
-  <div class = "center-div">
-    <div class = "calendar-div">
-      <body>
-      Admin Page will be here once linked.
-      </body>
-    </div>
-  </div>
 
-<br>
-  <%= link_to("alumnis", alumnis_path) %>
-  <%= link_to("companies", companies_path) %>
-  <%= link_to("contact form", contact_forms_path) %>
-  <%= link_to("officers", officers_path) %>
-  <%= link_to("people", people_path) %>
-  <%= link_to("positions", positions_path) %>
+
+  <%= link_to("alumnis", alumnis_path) %> <br>
+  <%= link_to("companies", companies_path) %> <br>
+  <%= link_to("contact form", contact_forms_path) %> <br>
+  <%= link_to("officers", officers_path) %> <br>
+  <%= link_to("people", people_path) %> <br>
+  <%= link_to("positions", positions_path) %><br>
+  <%= link_to "Sign out", destroy_admin_session_path %><br><br><br><br>
 </html>
+
+<h1>List of Admins</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @admins.each do |admin| %>
+    <tr>
+      <td><%= admin.full_name %></td>
+      <td><%= admin.email %></td>
+      <td><%= link_to 'Show', admin %></td>
+      <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+      <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
