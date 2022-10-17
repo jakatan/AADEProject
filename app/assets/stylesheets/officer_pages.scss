@@ -3,91 +3,115 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 body {
-    color: #ffffff;
-    font-size: large;
-    background-color: #500000;
+  color: #ffffff;
+  font-size: large;
+  background-color: #500000;
 }
 .center-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    background-color: #333333;
-    padding-bottom: 10px;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  background-color: #333333;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .column-div {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(250, 250, 250, 0.8);
-    justify-content: center;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(250, 250, 250, 0.8);
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .left-align-div {
-    flex-direction: center;
-    text-align: left;
-    background-color: #333333;
-    padding-bottom: 10px;
-    padding-top: 10px;
+  flex-direction: center;
+  text-align: left;
+  background-color: #333333;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .row-div {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
 }
 .card-img-top {
-    width: 220px;
+  width: 220px;
 }
 .card {
-    /* Add shadows to create the "card" effect */
-    background-color: #333333;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+  /* Add shadows to create the "card" effect */
+  background-color: #333333;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  max-width: 270px;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Add some padding inside the card container */
 .container {
-    padding: 4px 4px;
-    align-items: center;
-    text-align: center;
+  padding: 4px 4px;
+  align-items: space-between;
+  text-align: center;
+  justify-items: space-between;
 }
 
 .contactHeader {
-    text-align: center;
+  text-align: center;
+}
+.contact_row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+.field {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.contact_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding-top: 10px;
+  padding-bottom: 10%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 h1 {
-    color: #ffffff;
-    text-align: start;
-    text-shadow: 2px 2px #111111;
-    font-size: 50px;
-    padding-left: 20px;
-    margin: 0px;
+  color: #ffffff;
+  text-align: start;
+  text-shadow: 2px 2px #111111;
+  font-size: 50px;
+  padding-left: 20px;
+  margin: 0px;
 }
 
 h2 {
-    color: #ffffff;
+  color: #ffffff;
 }
 h3 {
-    margin: 10px;
+  margin: 10px;
 }
 p {
-    margin: 4px;
+  margin: 4px;
 }
 a:hover {
-    opacity: 0.5;
-    transition: 0.5s ease;
+  opacity: 0.5;
+  transition: 0.5s ease;
 }
