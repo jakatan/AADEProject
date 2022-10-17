@@ -83,13 +83,8 @@ RSpec.describe('Access without admin login - ', type: :feature) do
 
           # New access is not restricted due to public users needing to be able to submit
           visit new_contact_form_path
-          expect(page).not_to(have_content(search_text))
-
-          visit edit_contact_form_path(1)
           expect(page).to(have_content(search_text))
 
-          visit contact_form_path(1)
-          expect(page).to(have_content(search_text))
      end
 end
 
