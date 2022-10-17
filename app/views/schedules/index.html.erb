@@ -9,6 +9,9 @@
       <a class="nav-item nav-link" href="./home_pages">Home</a>
       <a class="nav-item nav-link active" href="./schedules">Schedule<span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="./officer_pages">Officer Page</a>
+      <% if admin_signed_in? %>
+        <a class="nav-item nav-link" href="./admins">Admin</a>
+      <% end %>
     </div>
   </div>
   </nav>
