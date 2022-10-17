@@ -12,7 +12,7 @@
 
 <p>
   <strong>Person:</strong>
-  <%= Person.where(id: @alumni.person_id).name %>
+  <%= @alumni.person.name %>
 </p>
 
 <%= link_to 'Edit', edit_alumni_path(@alumni) %> |

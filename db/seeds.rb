@@ -64,4 +64,17 @@
         year_elected: "2022",
         description: "i am brandon"}])
     p "Created #{Person.count} people"
+
     p "Created #{Officer.count} officers"
+
+
+    Admin.destroy_all
+    Admin.create!(email: 'davidking@tamu.edu')
+    Admin.create!(email: 'jakatanugraha@tamu.edu')
+    Admin.create!(email: 'andrew.hooper14@tamu.edu')
+    Admin.create!(email: 'cjstech@tamu.edu')
+    Admin.create!(email: 'leanne.khashab.1@tamu.edu')
+    Admin.create!(email: 'jlbreeden21@tamu.edu')
+    Admin.create!(email: 'sjperry1999@tamu.edu')
+    p "Created #{Admin.count} admins"
+
