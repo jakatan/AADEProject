@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 body{
-    color: #FFFFFF;
+    color: black;
     font-size: large;
     background-color: #500000;
 }
@@ -14,9 +14,19 @@ body{
 }
 
 h1{
-    color: #FFFFFF;
+    color: black;
 }
 
 h2{
-    color: #FFFFFF;
+    color: black;
+}
+
+body{
+    min-height: 97vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+
 }
