@@ -37,3 +37,14 @@ p {
 #alumni {
     height: 50vh;
 }
+
+body{
+    min-height: 97vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    bottom: 0;
+
+}

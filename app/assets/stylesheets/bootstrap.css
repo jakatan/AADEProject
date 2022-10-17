@@ -54,7 +54,9 @@ body {
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  min-height: 100vh;
 }
+
 
 hr {
   margin: 1rem 0;
