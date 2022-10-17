@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :person_id %>
-    <%= form.number_field :person_id %>
+    <%= form.select :person_id, Person.order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "position_person_id" %>
   </div>
 
   <div class="field">
     <%= form.label :company_id %>
-    <%= form.number_field :company_id %>
+    <%= form.select :company_id, Company.order(:name).map { |company| [company.name, company.id] }, include_blank: true, id: "position_company_id" %>
   </div>
 
   <div class="actions">
