@@ -38,30 +38,30 @@
         position: "President",
         email: "sjperry1999@tamu.edu",
         year_elected: "2022",
-        description: "i am steven"
+        description: "Petroleum Engineering"
         },{
         person_id: Person.second.id,
         position: "Vice President External",
         email: "aakash25@tamu.edu",
         year_elected: "2022",
-        description: "i am aakash"  
+        description: "Petroleum Engineering"  
         },{
         person_id: Person.third.id,
         position: "Vice President Internal",
         email: "willgretz@tamu.edu",
         year_elected: "2022",
-        description: "i am will"
+        description: "Petroleum Engineering"
         },{        
         person_id: Person.fourth.id,
         position: "Secretary",
         email: "christian02@tamu.edu",
         year_elected: "2022",
-        description: "i am christian"},
+        description: "Petroleum Engineering"},
         {
         person_id: Person.fifth.id,
         position: "Treasury",
         email: "Brandonovo@tamu.edu",
         year_elected: "2022",
-        description: "i am brandon"}])
+        description: "Petroleum Engineering"}])
     p "Created #{Person.count} people"
     p "Created #{Officer.count} officers"

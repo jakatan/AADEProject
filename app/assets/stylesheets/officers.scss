@@ -62,19 +62,25 @@ body {
 /* Add some padding inside the card container */
 .container {
   padding: 4px 4px;
-  align-items: center;
+  align-items: space-around;
+  align-content: space-around;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .contactHeader {
   text-align: center;
+  max-width: 270px;
+  width: 270px;
 }
+
 h1 {
   color: #ffffff;
   text-align: start;
   text-shadow: 2px 2px #111111;
   font-size: 50px;
-  margin: 0px;
+  margin: 200px;
+  padding-left: 20px;
 }
 
 h2 {

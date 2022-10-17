@@ -25,7 +25,7 @@ class ContactFormsController < ApplicationController
 
     respond_to do |format|
       if @contact_form.save
-        format.html { redirect_to officer_page_path, notice: "Contact form was successfully created." }
+        format.html { redirect_to contact_form_url(@contact_form), notice: "Contact form was successfully submitted." }
         format.json { render :show, status: :created, location: @contact_form }
       else
         format.html { render :new, status: :unprocessable_entity }
