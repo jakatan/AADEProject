@@ -26,12 +26,12 @@
 </header>
 
 <div class = "left-align-div">
-  <h1 style "margin:200px; padding-left: 20px;">Officers</h1>
+  <h1>Officers</h1>
 </div>
 <div class = "column-div">
   <div class = "row-div">
 
-    <% @officers.each do |officer| %>
+    <% @officers.order(:person_id).each do |officer| %>
       <div class="card">
         <div class="container">
           <h3><%=officer.position %></h3>
@@ -43,8 +43,8 @@
 
           <% end %>
 
-          <p><%=Person.find(officer.person_id).class_year %>&nbsp<b><%=Person.find(officer.person_id).name %></b></p>
-          <p><%=officer.description %></p>
+          <p><b><%=Person.find(officer.person_id).name %></b>&nbsp</p>
+          <p><%=officer.description %><%=' ' + Person.find(officer.person_id).class_year[2..-1] + '\'' %></p>
         </div>
       </div>
     <% end %>
@@ -55,8 +55,9 @@
 <div class = "center-div">
   <h1 class = "contactHeader">Contact Us</h1>
   <div class = "column-div">
-    <p>Have a question? Interested in speaking at a general meeting? Just looking to drop a note? Click the appropriate officer&apos;s name below to draft an email, hover to reveal their email. Please direct all general inquiries to our secretary.</p>
-
+    <div class = "contact_div">
+      <p>Have a question? Just looking to drop a note?</p>
+      <p> Choose the appropriate officer&apos;s name below to reach out! Please direct all general inquiries to our secretary.</p> <br/>
     <%= render '/contact_forms/form', contact_form: @contact_form %>
 
   </div>

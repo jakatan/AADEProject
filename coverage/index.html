@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-10-17T02:09:32+00:00">2022-10-17T02:09:32+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-10-17T21:51:29+00:00">2022-10-17T21:51:29+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="yellow">
-  88.72%
+  88.69%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>1480</b> relevant lines,
-    <span class="green"><b>1313</b> lines covered</span> and
+    <b>1476</b> relevant lines,
+    <span class="green"><b>1309</b> lines covered</span> and
     <span class="red"><b>167</b> lines missed. </span>
     (<span class="yellow">
-  88.72%
+  88.69%
 </span>
 )
   </div>
@@ -132,7 +132,7 @@
             <td class="cell--number">34</td>
             <td class="cell--number">20</td>
             <td class="cell--number">14</td>
-            <td class="cell--number">0.79</td>
+            <td class="cell--number">0.76</td>
             
           </tr>
         
@@ -590,9 +590,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e691666c4fdc2ee6051a6c1b8241d31bad68a6c8" class="src_link" title="spec/feature/admin/admin_auth_spec.rb">spec/feature/admin/admin_auth_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">213</td>
-            <td class="cell--number">134</td>
-            <td class="cell--number">134</td>
+            <td class="cell--number">208</td>
+            <td class="cell--number">130</td>
+            <td class="cell--number">130</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.19</td>
             
@@ -3410,7 +3410,7 @@
 
             
 
-            <code class="ruby">     before_action :authenticate_admin!, except: %i[new]</code>
+            <code class="ruby">     before_action :authenticate_admin!, except: %i[create show update edit]</code>
           </li>
         </div>
       
@@ -3547,8 +3547,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="17">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="2" data-linenumber="17">
+            <span class="hits">2</span>
             
 
             
@@ -3685,7 +3685,7 @@
 
             
 
-            <code class="ruby">                    format.html { redirect_to(officer_page_path, notice: &#39;Contact form was successfully created.&#39;) }</code>
+            <code class="ruby">                    format.html { redirect_to contact_form_url(@contact_form), notice: &quot;Contact form was successfully submitted.&quot; }</code>
           </li>
         </div>
       
@@ -16199,8 +16199,8 @@
     
 
     <div class="t-line-summary">
-      <b>134</b> relevant lines.
-      <span class="green"><b>134</b> lines covered</span> and
+      <b>130</b> relevant lines.
+      <span class="green"><b>130</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -17153,7 +17153,7 @@
 
             
 
-            <code class="ruby">          expect(page).not_to(have_content(search_text))</code>
+            <code class="ruby">          expect(page).to(have_content(search_text))</code>
           </li>
         </div>
       
@@ -17169,24 +17169,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="88">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="88">
+            
             
 
             
 
-            <code class="ruby">          visit edit_contact_form_path(1)</code>
+            <code class="ruby">     end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="89">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="89">
+            
             
 
             
 
-            <code class="ruby">          expect(page).to(have_content(search_text))</code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -17208,7 +17208,7 @@
 
             
 
-            <code class="ruby">          visit contact_form_path(1)</code>
+            <code class="ruby">RSpec.describe(&#39;Access with admin login - &#39;, type: :feature) do</code>
           </li>
         </div>
       
@@ -17219,67 +17219,12 @@
 
             
 
-            <code class="ruby">          expect(page).to(have_content(search_text))</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="93">
-            
-            
-
-            
-
-            <code class="ruby">     end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="94">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="95">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="96">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">RSpec.describe(&#39;Access with admin login - &#39;, type: :feature) do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="97">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">     before :all do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="98">
+          <li class="covered" data-hits="1" data-linenumber="93">
             <span class="hits">1</span>
             
 
@@ -17290,7 +17235,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="99">
+          <li class="covered" data-hits="1" data-linenumber="94">
             <span class="hits">1</span>
             
 
@@ -17301,7 +17246,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="100">
+          <li class="covered" data-hits="1" data-linenumber="95">
             <span class="hits">1</span>
             
 
@@ -17312,7 +17257,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="101">
+          <li class="never" data-hits="" data-linenumber="96">
             
             
 
@@ -17323,7 +17268,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="102">
+          <li class="never" data-hits="" data-linenumber="97">
             
             
 
@@ -17334,7 +17279,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="103">
+          <li class="covered" data-hits="1" data-linenumber="98">
             <span class="hits">1</span>
             
 
@@ -17345,7 +17290,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="104">
+          <li class="covered" data-hits="1" data-linenumber="99">
             <span class="hits">1</span>
             
 
@@ -17356,7 +17301,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="105">
+          <li class="covered" data-hits="1" data-linenumber="100">
             <span class="hits">1</span>
             
 
@@ -17367,7 +17312,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="106">
+          <li class="covered" data-hits="1" data-linenumber="101">
             <span class="hits">1</span>
             
 
@@ -17378,7 +17323,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="107">
+          <li class="covered" data-hits="1" data-linenumber="102">
             <span class="hits">1</span>
             
 
@@ -17389,7 +17334,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="108">
+          <li class="never" data-hits="" data-linenumber="103">
             
             
 
@@ -17400,7 +17345,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="109">
+          <li class="never" data-hits="" data-linenumber="104">
             
             
 
@@ -17411,7 +17356,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="110">
+          <li class="covered" data-hits="1" data-linenumber="105">
             <span class="hits">1</span>
             
 
@@ -17422,7 +17367,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="111">
+          <li class="covered" data-hits="6" data-linenumber="106">
             <span class="hits">6</span>
             
 
@@ -17433,7 +17378,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="112">
+          <li class="covered" data-hits="6" data-linenumber="107">
             <span class="hits">6</span>
             
 
@@ -17444,7 +17389,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="113">
+          <li class="covered" data-hits="6" data-linenumber="108">
             <span class="hits">6</span>
             
 
@@ -17455,7 +17400,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="114">
+          <li class="covered" data-hits="6" data-linenumber="109">
             <span class="hits">6</span>
             
 
@@ -17466,7 +17411,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="115">
+          <li class="never" data-hits="" data-linenumber="110">
             
             
 
@@ -17477,7 +17422,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="116">
+          <li class="never" data-hits="" data-linenumber="111">
             
             
 
@@ -17488,7 +17433,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="117">
+          <li class="covered" data-hits="1" data-linenumber="112">
             <span class="hits">1</span>
             
 
@@ -17499,7 +17444,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="118">
+          <li class="covered" data-hits="1" data-linenumber="113">
             <span class="hits">1</span>
             
 
@@ -17510,7 +17455,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="119">
+          <li class="covered" data-hits="1" data-linenumber="114">
             <span class="hits">1</span>
             
 
@@ -17521,7 +17466,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="120">
+          <li class="covered" data-hits="1" data-linenumber="115">
             <span class="hits">1</span>
             
 
@@ -17532,7 +17477,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="121">
+          <li class="covered" data-hits="1" data-linenumber="116">
             <span class="hits">1</span>
             
 
@@ -17543,7 +17488,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="122">
+          <li class="covered" data-hits="1" data-linenumber="117">
             <span class="hits">1</span>
             
 
@@ -17554,7 +17499,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="123">
+          <li class="never" data-hits="" data-linenumber="118">
             
             
 
@@ -17565,7 +17510,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="124">
+          <li class="never" data-hits="" data-linenumber="119">
             
             
 
@@ -17576,7 +17521,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="125">
+          <li class="covered" data-hits="1" data-linenumber="120">
             <span class="hits">1</span>
             
 
@@ -17587,7 +17532,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="126">
+          <li class="covered" data-hits="6" data-linenumber="121">
             <span class="hits">6</span>
             
 
@@ -17598,7 +17543,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="127">
+          <li class="never" data-hits="" data-linenumber="122">
             
             
 
@@ -17609,7 +17554,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="128">
+          <li class="never" data-hits="" data-linenumber="123">
             
             
 
@@ -17620,7 +17565,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="129">
+          <li class="covered" data-hits="1" data-linenumber="124">
             <span class="hits">1</span>
             
 
@@ -17631,7 +17576,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="130">
+          <li class="covered" data-hits="1" data-linenumber="125">
             <span class="hits">1</span>
             
 
@@ -17642,7 +17587,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="131">
+          <li class="covered" data-hits="1" data-linenumber="126">
             <span class="hits">1</span>
             
 
@@ -17653,7 +17598,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="132">
+          <li class="never" data-hits="" data-linenumber="127">
             
             
 
@@ -17664,7 +17609,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="133">
+          <li class="covered" data-hits="1" data-linenumber="128">
             <span class="hits">1</span>
             
 
@@ -17675,7 +17620,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="134">
+          <li class="covered" data-hits="1" data-linenumber="129">
             <span class="hits">1</span>
             
 
@@ -17686,7 +17631,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="135">
+          <li class="never" data-hits="" data-linenumber="130">
             
             
 
@@ -17697,7 +17642,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="136">
+          <li class="covered" data-hits="1" data-linenumber="131">
             <span class="hits">1</span>
             
 
@@ -17708,7 +17653,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="137">
+          <li class="covered" data-hits="1" data-linenumber="132">
             <span class="hits">1</span>
             
 
@@ -17719,7 +17664,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="138">
+          <li class="never" data-hits="" data-linenumber="133">
             
             
 
@@ -17730,13 +17675,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="139">
+          <li class="covered" data-hits="1" data-linenumber="134">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">          visit company_path(@company)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="135">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="136">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="137">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="138">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     it &#39;admin person pages is allowed&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="139">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          visit people_path</code>
           </li>
         </div>
       
@@ -17758,67 +17758,12 @@
 
             
 
-            <code class="ruby">     end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="142">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="143">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">     it &#39;admin person pages is allowed&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="144">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          visit people_path</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="145">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="146">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="147">
+          <li class="covered" data-hits="1" data-linenumber="142">
             <span class="hits">1</span>
             
 
@@ -17829,7 +17774,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="148">
+          <li class="covered" data-hits="1" data-linenumber="143">
             <span class="hits">1</span>
             
 
@@ -17840,7 +17785,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="149">
+          <li class="never" data-hits="" data-linenumber="144">
             
             
 
@@ -17851,7 +17796,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="150">
+          <li class="covered" data-hits="1" data-linenumber="145">
             <span class="hits">1</span>
             
 
@@ -17862,7 +17807,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="151">
+          <li class="covered" data-hits="1" data-linenumber="146">
             <span class="hits">1</span>
             
 
@@ -17873,7 +17818,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="152">
+          <li class="never" data-hits="" data-linenumber="147">
             
             
 
@@ -17884,13 +17829,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="153">
+          <li class="covered" data-hits="1" data-linenumber="148">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">          visit person_path(@person)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="149">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="150">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="151">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="152">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     it &#39;access admin officer pages is allowed&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="153">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          visit officers_path</code>
           </li>
         </div>
       
@@ -17912,67 +17912,12 @@
 
             
 
-            <code class="ruby">     end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="156">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="157">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">     it &#39;access admin officer pages is allowed&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="158">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          visit officers_path</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="159">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="160">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="161">
+          <li class="covered" data-hits="1" data-linenumber="156">
             <span class="hits">1</span>
             
 
@@ -17983,7 +17928,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="162">
+          <li class="covered" data-hits="1" data-linenumber="157">
             <span class="hits">1</span>
             
 
@@ -17994,7 +17939,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="163">
+          <li class="never" data-hits="" data-linenumber="158">
             
             
 
@@ -18005,7 +17950,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="164">
+          <li class="covered" data-hits="1" data-linenumber="159">
             <span class="hits">1</span>
             
 
@@ -18016,7 +17961,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="165">
+          <li class="covered" data-hits="1" data-linenumber="160">
             <span class="hits">1</span>
             
 
@@ -18027,7 +17972,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="166">
+          <li class="never" data-hits="" data-linenumber="161">
             
             
 
@@ -18038,13 +17983,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="167">
+          <li class="covered" data-hits="1" data-linenumber="162">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">          visit officer_path(@officer)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="163">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="164">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="165">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="166">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     it &#39;access admin alumni pages is allowed&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="167">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          visit alumnis_path</code>
           </li>
         </div>
       
@@ -18066,67 +18066,12 @@
 
             
 
-            <code class="ruby">     end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="170">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="171">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">     it &#39;access admin alumni pages is allowed&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="172">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          visit alumnis_path</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="173">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="174">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="175">
+          <li class="covered" data-hits="1" data-linenumber="170">
             <span class="hits">1</span>
             
 
@@ -18137,7 +18082,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="176">
+          <li class="covered" data-hits="1" data-linenumber="171">
             <span class="hits">1</span>
             
 
@@ -18148,7 +18093,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="177">
+          <li class="never" data-hits="" data-linenumber="172">
             
             
 
@@ -18159,7 +18104,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="178">
+          <li class="covered" data-hits="1" data-linenumber="173">
             <span class="hits">1</span>
             
 
@@ -18170,7 +18115,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="179">
+          <li class="covered" data-hits="1" data-linenumber="174">
             <span class="hits">1</span>
             
 
@@ -18181,7 +18126,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="180">
+          <li class="never" data-hits="" data-linenumber="175">
             
             
 
@@ -18192,13 +18137,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="181">
+          <li class="covered" data-hits="1" data-linenumber="176">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">          visit alumni_path(@alumni)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="177">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="178">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="179">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="180">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     it &#39;access admin postion pages is allowed&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="181">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          visit positions_path</code>
           </li>
         </div>
       
@@ -18220,67 +18220,12 @@
 
             
 
-            <code class="ruby">     end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="184">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="185">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">     it &#39;access admin postion pages is allowed&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="186">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          visit positions_path</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="187">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="188">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="189">
+          <li class="covered" data-hits="1" data-linenumber="184">
             <span class="hits">1</span>
             
 
@@ -18291,7 +18236,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="190">
+          <li class="covered" data-hits="1" data-linenumber="185">
             <span class="hits">1</span>
             
 
@@ -18302,7 +18247,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="191">
+          <li class="never" data-hits="" data-linenumber="186">
             
             
 
@@ -18313,7 +18258,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="192">
+          <li class="covered" data-hits="1" data-linenumber="187">
             <span class="hits">1</span>
             
 
@@ -18324,7 +18269,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="193">
+          <li class="covered" data-hits="1" data-linenumber="188">
             <span class="hits">1</span>
             
 
@@ -18335,7 +18280,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="194">
+          <li class="never" data-hits="" data-linenumber="189">
             
             
 
@@ -18346,13 +18291,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="195">
+          <li class="covered" data-hits="1" data-linenumber="190">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">          visit position_path(@position)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="191">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="192">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="193">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="194">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     it &#39;access admin contact form pages is allowed&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="195">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          visit contact_forms_path</code>
           </li>
         </div>
       
@@ -18374,7 +18374,7 @@
 
             
 
-            <code class="ruby">     end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -18385,7 +18385,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">          # New access is not restricted due to public users needing to be able to submit</code>
           </li>
         </div>
       
@@ -18396,7 +18396,7 @@
 
             
 
-            <code class="ruby">     it &#39;access admin contact form pages is allowed&#39; do</code>
+            <code class="ruby">          visit new_contact_form_path</code>
           </li>
         </div>
       
@@ -18407,23 +18407,12 @@
 
             
 
-            <code class="ruby">          visit contact_forms_path</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="201">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="202">
+          <li class="never" data-hits="" data-linenumber="201">
             
             
 
@@ -18434,51 +18423,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="203">
-            
-            
-
-            
-
-            <code class="ruby">          # New access is not restricted due to public users needing to be able to submit</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="204">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          visit new_contact_form_path</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="205">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">          expect(page).not_to(have_content(@search_text))</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="206">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="207">
+          <li class="covered" data-hits="1" data-linenumber="202">
             <span class="hits">1</span>
             
 
@@ -18489,7 +18434,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="208">
+          <li class="covered" data-hits="1" data-linenumber="203">
             <span class="hits">1</span>
             
 
@@ -18500,7 +18445,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="209">
+          <li class="never" data-hits="" data-linenumber="204">
             
             
 
@@ -18511,7 +18456,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="210">
+          <li class="covered" data-hits="1" data-linenumber="205">
             <span class="hits">1</span>
             
 
@@ -18522,7 +18467,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="211">
+          <li class="covered" data-hits="1" data-linenumber="206">
             <span class="hits">1</span>
             
 
@@ -18533,7 +18478,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="212">
+          <li class="never" data-hits="" data-linenumber="207">
             
             
 
@@ -18544,7 +18489,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="213">
+          <li class="never" data-hits="" data-linenumber="208">
             
             
 
