@@ -30,4 +30,40 @@ RSpec.describe('Admin is able to', type: :feature) do
           visit companies_path
           expect(page).to(have_content('apple'))
      end
+
+     it 'add a company with bad param' do
+          visit companies_path
+          click_on 'New Company'
+          fill_in 'company_name', with: ''
+          fill_in 'company_website', with: ''
+          click_on 'Create Company'
+          expect(page).to(have_content('prohibited this company from being saved'))
+     end
+
+     it 'update a company' do
+          company = Company.create!(name: 'apple', website: 'test')
+          visit edit_company_path(company.id)
+          fill_in 'company_name', with: 'orange'
+          click_on 'Update Company'
+          expect(:notice).to(be_present)
+          visit companies_path
+          expect(page).to(have_content('orange'))
+     end
+
+     it 'update a company with bad params' do
+          company = Company.create!(name: 'apple', website: 'test')
+          visit edit_company_path(company.id)
+          fill_in 'company_name', with: ''
+          click_on 'Update Company'
+          expect(page).to(have_content('prohibited this company from being saved'))
+     end
+
+     it 'delete a company' do
+          Company.create!(name: 'apple', website: 'test')
+          visit companies_path
+          expect(page).to(have_content('apple'))
+          click_on 'Destroy'
+          expect(page).not_to(have_content('apple'))
+     end
+
 end

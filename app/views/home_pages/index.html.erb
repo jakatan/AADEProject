@@ -16,6 +16,9 @@
             <a class="nav-item nav-link active" href="./home_pages">Home<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="./schedules">Schedule</a>
             <a class="nav-item nav-link" href="./officer_pages">Officer Page</a>
+            <% if admin_signed_in? %>
+              <a class="nav-item nav-link" href="./admins">Admin</a>
+            <% end %>
           </div>
         </div>
       </nav>
@@ -55,7 +58,7 @@
               <h3>Alumni Test Section</h3>
 
               <% @alumnis.each do |alumni| %>
-                <h4><%= Person.find(alumni.person_id).name %></h4>
+                <h4><%= alumni.person.name %></h4>
               <% end %>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">

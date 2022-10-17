@@ -33,6 +33,14 @@ RSpec.describe('Admin is able to', type: :feature) do
           expect(page).to(have_content('TestPerson'))
      end
 
+     it 'add an alumni with bad param' do
+          Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
+          visit alumnis_path
+          click_on 'New Alumni'
+          click_on 'Create Alumni'
+          expect(page).to(have_content('prohibited this alumni from being saved'))
+     end
+
      it 'update an alumni' do
           person = Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
           alumni = Alumni.create!(graduation_year: '2022', companies_worked: 'apple', person_id: person.id)
@@ -44,5 +52,25 @@ RSpec.describe('Admin is able to', type: :feature) do
           expect(:notice).to(be_present)
           visit alumnis_path
           expect(page).to(have_content('orange'))
+     end
+
+     it 'update an alumni with bad param' do
+          person = Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
+          alumni = Alumni.create!(graduation_year: '2022', companies_worked: 'apple', person_id: person.id)
+          visit edit_alumni_path(alumni.id)
+          fill_in 'alumni_graduation_year', with: ''
+          fill_in 'alumni_companies_worked', with: ''
+          select 'TestPerson', from: 'alumni_person_id'
+          click_on 'Update Alumni'
+          expect(page).to(have_content('prohibited this alumni from being saved'))
+     end
+
+     it 'delete an alumni' do
+          person = Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
+          alumni = Alumni.create!(graduation_year: '2022', companies_worked: 'apple', person_id: person.id)
+          visit alumnis_path
+          expect(page).to(have_content('TestPerson'))
+          click_on 'Destroy'
+          expect(page).not_to(have_content('TestPerson'))
      end
 end
