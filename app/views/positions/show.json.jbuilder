@@ -1,1 +1,3 @@
-json.partial! "positions/position", position: @position
+# frozen_string_literal: true
+
+json.partial!('positions/position', position: @position)

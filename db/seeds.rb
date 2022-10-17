@@ -7,9 +7,74 @@
 #   Character.create(name: 'Luke', movie: movies.first)
     Person.destroy_all
     
-    Person.create!([{
+     Person.create!([{
         name: "Stephen Perry",
         class_year: "2023",
         membership_length: "1"
-    }])
+        },
+        {
+        name: "Aakash Verma",
+        class_year: "2023",
+        membership_length: "1"
+        },
+        {
+        name: "William Gretzinger",
+        class_year: "2023",
+        membership_length: "1"
+        },
+        {
+        name: "Christian Contreras",
+        class_year: "2023",
+        membership_length: "1"
+        },
+        {
+        name: "Brandon Salinas",
+        class_year: "2023",
+        membership_length: "1"
+        }])
+
+    Officer.create!([{
+        person_id: Person.first.id,
+        position: "President",
+        email: "sjperry1999@tamu.edu",
+        year_elected: "2022",
+        description: "i am steven"
+        },{
+        person_id: Person.second.id,
+        position: "Vice President External",
+        email: "aakash25@tamu.edu",
+        year_elected: "2022",
+        description: "i am aakash"  
+        },{
+        person_id: Person.third.id,
+        position: "Vice President Internal",
+        email: "willgretz@tamu.edu",
+        year_elected: "2022",
+        description: "i am will"
+        },{        
+        person_id: Person.fourth.id,
+        position: "Secretary",
+        email: "christian02@tamu.edu",
+        year_elected: "2022",
+        description: "i am christian"},
+        {
+        person_id: Person.fifth.id,
+        position: "Treasury",
+        email: "Brandonovo@tamu.edu",
+        year_elected: "2022",
+        description: "i am brandon"}])
     p "Created #{Person.count} people"
+
+    p "Created #{Officer.count} officers"
+
+
+    Admin.destroy_all
+    Admin.create!(email: 'davidking@tamu.edu')
+    Admin.create!(email: 'jakatanugraha@tamu.edu')
+    Admin.create!(email: 'andrew.hooper14@tamu.edu')
+    Admin.create!(email: 'cjstech@tamu.edu')
+    Admin.create!(email: 'leanne.khashab.1@tamu.edu')
+    Admin.create!(email: 'jlbreeden21@tamu.edu')
+    Admin.create!(email: 'sjperry1999@tamu.edu')
+    p "Created #{Admin.count} admins"
+
