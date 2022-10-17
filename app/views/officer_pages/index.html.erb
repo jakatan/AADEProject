@@ -38,6 +38,9 @@
 
           <% if officer.portrait.attached? %>
             <%= image_tag officer.portrait, class: "card-img-top" %>
+          <% else %>
+          <%= image_tag("noimage.png", class: "card-img-top")%>
+
           <% end %>
 
           <p><%=Person.find(officer.person_id).class_year %>&nbsp<b><%=Person.find(officer.person_id).name %></b></p>
