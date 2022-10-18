@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to("Admin Home", admins_path) %><br>
 <h1>Positions</h1>
 
 <table>
@@ -16,8 +17,8 @@
     <% @positions.each do |position| %>
       <tr>
         <td><%= position.position %></td>
-        <td><%= position.person_id %></td>
-        <td><%= position.company_id %></td>
+        <td><%= position.person.name %></td>
+        <td><%= position.company.name %></td>
         <td><%= link_to 'Show', position %></td>
         <td><%= link_to 'Edit', edit_position_path(position) %></td>
         <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>

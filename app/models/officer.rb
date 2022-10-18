@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 class Officer < ApplicationRecord
-  validates :person_id, :companyName, :company_website, presence: true
-  has_many :person
+     validates :person_id, :position, :email, :year_elected, :description, presence: true
+     belongs_to :person
+     has_many :contact_forms
+     has_one_attached :portrait
 end

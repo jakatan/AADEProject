@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to("Admin Home", admins_path) %><br>
 <h1>Contact Forms</h1>
 
 <table>
@@ -16,7 +17,7 @@
   <tbody>
     <% @contact_forms.each do |contact_form| %>
       <tr>
-        <td><%= contact_form.person_id %></td>
+        <td><%= Person.where(id: contact_form.person_id).name %></td>
         <td><%= contact_form.email %></td>
         <td><%= contact_form.name %></td>
         <td><%= contact_form.message %></td>
@@ -30,4 +31,3 @@
 
 <br>
 
-<%= link_to 'New Contact Form', new_contact_form_path %>

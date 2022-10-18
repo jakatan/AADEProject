@@ -21,14 +21,19 @@
 </p>
 
 <p>
-  <strong>Photo:</strong>
-  <%= @officer.photo %>
+  <strong>Person:</strong>
+  <%= @officer.person.name %>
 </p>
 
 <p>
-  <strong>Person:</strong>
-  <%= @officer.person_id %>
+  <strong>Photo</strong>
+  <% if @officer.portrait.attached? %>
+    <%= image_tag @officer.portrait.variant(resize_to_fit: [200, 200]) %>
+  <% else %>
+    Image could not load
+  <% end %>
 </p>
+
 
 <%= link_to 'Edit', edit_officer_path(@officer) %> |
 <%= link_to 'Back', officers_path %>

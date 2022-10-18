@@ -31,14 +31,22 @@
     <%= form.text_field :description %>
   </div>
 
-  <div class="field">
-    <%= form.label :photo %>
-    <%= form.text_field :photo %>
-  </div>
 
   <div class="field">
     <%= form.label :person_id %>
-    <%= form.number_field :person_id %>
+    <% if officer.blank? %>
+      <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "officer_person_id" %>
+    <%else %>
+      <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).or(Person.where(id: officer.person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "officer_person_id" %>
+    <%end %>
+  </div>
+
+  <div class = "field">
+    <%= form.label :portrait %>
+    <% if officer.portrait.attached? %>
+      <%= image_tag officer.portrait %><br>
+    <% end %>
+    <%= form.file_field :portrait, accept: 'image/png, image/gif, image/jpeg'%>
   </div>
 
   <div class="actions">
