@@ -10,8 +10,8 @@ RSpec.describe('Home page renders', type: :feature) do
      end
 
      it 'One or more alumni' do
-          person = Person.create!(name: 'Tom', class_year: '2020', membership_length: '2')
-          alumni = Alumni.create!(graduation_year: '2021', companies_worked: 'Apple', person_id: person.id)
+          person = Person.create!(name: 'Tom', class_year: '2020', email: 'test@test.com', membership_length: '2')
+          alumni = Alumni.create!(graduation_year: '2021', person_id: person.id)
           visit home_pages_path
           # click_on 'button text name'
           expect(page).to(have_content('Tom'))

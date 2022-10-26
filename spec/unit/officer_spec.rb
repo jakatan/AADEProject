@@ -4,13 +4,13 @@ require 'rails_helper'
 
 RSpec.describe(Officer, type: :model) do
      subject do
-          described_class.new(person_id: @person.id, position: 'lead', email: 'test', year_elected: 'test',
+          described_class.new(person_id: @person.id, position: 'lead', year_elected: 'test',
                               description: 'test'
           )
      end
 
      before :all do
-          @person = Person.create!(name: 'test', class_year: '2023', membership_length: '20 years')
+          @person = Person.create!(name: 'test', email:'test@test.com', is_admin: false, class_year: '2023', membership_length: '20 years')
      end
 
      after :all do
@@ -23,11 +23,6 @@ RSpec.describe(Officer, type: :model) do
 
      it 'is not valid without position' do
           subject.position = nil
-          expect(subject).not_to(be_valid)
-     end
-
-     it 'is not valid without email' do
-          subject.email = nil
           expect(subject).not_to(be_valid)
      end
 

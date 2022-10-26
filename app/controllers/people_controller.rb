@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PeopleController < ApplicationController
-     before_action :authenticate_admin!
+     before_action :authenticate_person!
      before_action :set_person, only: %i[show edit update destroy]
 
      # GET /people or /people.json
@@ -67,6 +67,6 @@ class PeopleController < ApplicationController
 
      # Only allow a list of trusted parameters through.
      def person_params
-          params.require(:person).permit(:id, :name, :class_year, :membership_length, :companyID)
+          params.require(:person).permit(:name, :class_year, :membership_length, :email, :is_admin)
      end
 end

@@ -27,7 +27,7 @@ RSpec.describe('/alumnis', type: :request) do
      end
 
      before do # Skip authentication for routing
-          allow_any_instance_of(Devise::Controllers::Helpers).to(receive(:authenticate_admin!).and_return(true))
+          allow_any_instance_of(Devise::Controllers::Helpers).to(receive(:authenticate_person!).and_return(true))
      end
 
      describe 'GET /index' do

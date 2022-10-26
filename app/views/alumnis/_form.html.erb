@@ -17,11 +17,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :companies_worked %>
-    <%= form.text_field :companies_worked %>
-  </div>
-
-  <div class="field">
     <%= form.label :person_id %>
     <%= form.select :person_id, Person.order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "alumni_person_id" %>
   </div>

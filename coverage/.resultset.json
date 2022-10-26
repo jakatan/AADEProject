@@ -608,13 +608,18 @@
           null
         ]
       },
-      "/csce431/AADEProject/app/models/admin.rb": {
+      "/csce431/AADEProject/app/models/person.rb": {
         "lines": [
           null,
           null,
           1,
+          1,
           null,
-          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           1,
           null,
           1,
@@ -716,74 +721,6 @@
         "lines": [
           null,
           null,
-          1,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/models/alumni.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/models/company.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/models/contact_form.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/models/officer.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/models/person.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/models/position.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
           1,
           null
         ]
@@ -1251,6 +1188,60 @@
           null
         ]
       },
+      "/csce431/AADEProject/app/models/alumni.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/models/company.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/models/contact_form.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/models/officer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/AADEProject/app/models/position.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/csce431/AADEProject/app/controllers/admins/sessions_controller.rb": {
         "lines": [
           null,
@@ -1314,8 +1305,8 @@
           null,
           1,
           null,
-          38,
-          38,
+          70,
+          70,
           null,
           null,
           null,
@@ -1432,6 +1423,6 @@
         ]
       }
     },
-    "timestamp": 1666056646
+    "timestamp": 1666810053
   }
 }
