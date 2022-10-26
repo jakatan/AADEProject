@@ -9,7 +9,7 @@ class MergeAdminsUnderPeople < ActiveRecord::Migration[6.1]
 
   def down
     remove_column :people, :email, :string, null: false, default: ""
-    remove_column :people, :is_admin, :boolean
+    remove_column :people, :is_admin, :boolean, default: false
     add_column :officers, :email, :string
 
     create_table :admins do |t|

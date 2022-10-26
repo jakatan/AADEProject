@@ -9,7 +9,7 @@ RSpec.describe(Position, type: :model) do
 
      before :all do
           @company = Company.create!(name: 'TAMU', website: 'www.tamu.edu')
-          @person = Person.create!(name: 'test', class_year: '2000', membership_length: '20 years')
+          @person = Person.create!(name: 'test', email: 'test@test.com', class_year: '2000', membership_length: '20 years')
      end
 
      after :all do

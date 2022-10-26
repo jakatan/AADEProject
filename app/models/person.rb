@@ -3,7 +3,7 @@
 class Person < ApplicationRecord
      devise :omniauthable, omniauth_providers: [:google_oauth2]
 
-     validates :name, :class_year, :membership_length, presence: true
+     validates :name, :class_year, :membership_length, :email, presence: true
      has_many :positions, dependent: :destroy # This will delete all the positions to the person when person is deleted
      has_many :companies, through: :positions
      has_many :contact_forms, through: :officers

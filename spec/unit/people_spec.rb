@@ -5,7 +5,7 @@ require 'rails_helper'
 
 RSpec.describe(Person, type: :model) do
      subject do
-          Person.create!(name: 'david', class_year: '2023', membership_length: '6 years')
+          Person.create!(name: 'david', email: 'test@test.com', is_admin: false, class_year: '2023', membership_length: '6 years')
      end
 
      it 'is valid with valid attributes' do
@@ -14,6 +14,11 @@ RSpec.describe(Person, type: :model) do
 
      it 'is not valid without name' do
           subject.name = nil
+          expect(subject).not_to(be_valid)
+     end
+
+     it 'is not valid without email' do
+          subject.email = nil
           expect(subject).not_to(be_valid)
      end
 
@@ -28,7 +33,7 @@ RSpec.describe(Person, type: :model) do
      end
 
      it 'deletes dependent officer when deleted' do
-          officer = Officer.create!(person_id: subject.id, position: 'test', year_elected: '2022', description: 'test', email: 'test@test.com')
+          officer = Officer.create!(person_id: subject.id, position: 'test', year_elected: '2022', description: 'test')
 
           subject.destroy!
           expect(described_class.exists?(subject.id)).to(be(false))
@@ -36,7 +41,7 @@ RSpec.describe(Person, type: :model) do
      end
 
      it 'deletes dependent alumni when deleted' do
-          alumni = Alumni.create!(person_id: subject.id, graduation_year: 'test', companies_worked: 'test')
+          alumni = Alumni.create!(person_id: subject.id, graduation_year: 'test')
 
           subject.destroy!
           expect(described_class.exists?(subject.id)).to(be(false))
