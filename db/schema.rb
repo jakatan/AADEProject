@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_14_212724) do
+ActiveRecord::Schema.define(version: 2022_10_26_014608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,18 +43,8 @@ ActiveRecord::Schema.define(version: 2022_10_14_212724) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "admins", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "full_name"
-    t.string "uid"
-    t.string "avatar_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "alumnis", force: :cascade do |t|
     t.string "graduation_year"
-    t.string "companies_worked"
     t.integer "person_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -78,7 +68,6 @@ ActiveRecord::Schema.define(version: 2022_10_14_212724) do
 
   create_table "officers", force: :cascade do |t|
     t.string "position"
-    t.string "email"
     t.string "year_elected"
     t.string "description"
     t.integer "person_id"
@@ -92,6 +81,8 @@ ActiveRecord::Schema.define(version: 2022_10_14_212724) do
     t.string "membership_length"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email", default: "", null: false
+    t.boolean "is_admin"
   end
 
   create_table "positions", force: :cascade do |t|
