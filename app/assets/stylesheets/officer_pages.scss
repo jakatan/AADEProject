@@ -16,6 +16,8 @@ body {
   background-color: #333333;
   padding-bottom: 10px;
   padding-top: 10px;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .column-div {
@@ -70,6 +72,9 @@ body {
   justify-items: space-between;
 }
 
+.actions {
+  padding-top: 40px;
+}
 .contactHeader {
   text-align: center;
 }
@@ -80,18 +85,46 @@ body {
   align-content: center;
 }
 .field {
-  padding-right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  flex-direction: row;
+}
+.actions {
+  font-size: small;
+}
+.message {
+  width: 500px;
+  font-size: medium;
   padding-left: 5px;
+}
+.person_id {
+  width: 200px;
+  font-size: small;
+  padding-left: 5px;
+}
+.email {
+  width: 200px;
+  font-size: small;
+  padding-left: 5px;
+}
+.name {
+  width: 200px;
+  font-size: small;
+  padding-left: 5px;
+}
+.messageText {
+  padding-top: 20px;
 }
 .contact_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  background-color: #333333;
   padding-top: 10px;
-  padding-bottom: 10%;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-bottom: 10px;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 h1 {
   color: #ffffff;

@@ -12,28 +12,30 @@
   <% end %>
 
   <div class="contact_row">
-  <div class="field">
-    <%= form.label :person_id %>
-    <%= form.select :person_id, Person.joins(:officer).order(:person_id).map { |person| [person.name, person.id] }, include_blank: true, id: "id_of_the_person_id_select_box" %>
-  </div>
+    <div class="field">
+      <%= form.label :person_id %>
+      <%= form.select :person_id, Person.joins(:officer).order(:person_id).map { |person| [person.name, person.id] }, include_blank: true, id: "id_of_the_person_id_select_box", class:'person_id'%>
+    </div>
+    
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'name'%>
+    </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: 'email' %>
+    </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_field :message, :cols => 30, :rows => 10 %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
   </div>
-  </div>
+  <%= form.label :message, class:'messageText' %>
+    <div class="field">
+      <%= form.text_area :message, :cols => 15, :rows => 5, class: 'message'%>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
 <% end %>
