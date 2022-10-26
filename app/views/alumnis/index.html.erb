@@ -3,32 +3,32 @@
 
 <h1>Alumnis</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Graduation year</th>
-      <th>Companies worked</th>
-      <th>Person</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @alumnis.each do |alumni| %>
-      <tr>
-        <td><%= alumni.graduation_year %></td>
-        <td><% Position.where(person_id: alumni.person_id).each do |positon| %>
-              <%=positon.company.name %>,
-            <% end %>
-            </td>
-        <td><%= Person.find(alumni.person_id).name %></td>
-        <td><%= link_to 'Show', alumni %></td>
-        <td><%= link_to 'Edit', edit_alumni_path(alumni) %></td>
-        <td><%= link_to 'Destroy', alumni, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <table class="table w-auto">
+    <thead>
+      <tr class="th-lg">
+        <th scope="col" >Graduation year</th>
+        <th scope="col" >Companies worked</th>
+        <th scope="col" >Person</th>
+        <th scope="col" colspan="3" style="text-align:center;" >Options</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody >
+      <% @alumnis.each do |alumni| %>
+        <tr scope="row" class="th-lg">
+          <td><%= alumni.graduation_year %></td>
+          <td><% Position.where(person_id: alumni.person_id).each do |positon| %>
+                <%=positon.company.name %>,
+              <% end %>
+              </td>
+          <td><%= Person.find(alumni.person_id).name %></td>
+          <td><%= link_to 'Show', alumni, :class => "btn btn-outline-info"%></td>
+          <td><%= link_to 'Edit', edit_alumni_path(alumni), :class => "btn btn-outline-info" %></td>
+          <td><%= link_to 'Destroy', alumni, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-danger"%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
 <br>
 

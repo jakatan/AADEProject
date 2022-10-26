@@ -31,9 +31,10 @@
   <div class="field">
     <%= form.label :person_id %>
     <% if officer.blank? %>
-      <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "officer_person_id" %>
+
+      <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "officer_person_id"%>
     <%else %>
-      <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).or(Person.where(id: officer.person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "officer_person_id" %>
+      <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).or(Person.where(id: officer.person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "officer_person_id"%>
     <%end %>
   </div>
 
