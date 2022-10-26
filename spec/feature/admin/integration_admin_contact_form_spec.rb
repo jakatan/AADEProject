@@ -6,8 +6,10 @@ require 'rails_helper'
 #
 RSpec.describe('Admin is able to', type: :feature) do
      before :all do # Create admin used in mockoauth
-          Admin.create!(email: 'test@test.com')
+          @person = Person.create!(name: 'admin', class_year: 'n/a',
+                                   membership_length: 'n/a', email: 'test@test.com', is_admin: true)
      end
+
 
      before do # Log in the admin
           Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin] # If using Devise
@@ -16,8 +18,12 @@ RSpec.describe('Admin is able to', type: :feature) do
           click_on 'Sign in'
      end
 
+     after :all do
+          @person.destroy!
+     end
+
      after do # Log out the admin
-          visit destroy_admin_session_path
+          visit destroy_person_session_path
      end
 
      #

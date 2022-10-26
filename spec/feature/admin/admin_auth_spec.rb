@@ -91,15 +91,14 @@ end
 RSpec.describe('Access with admin login - ', type: :feature) do
      before :all do
           @search_text = 'Sign in'
-          @person = Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
-          @officer = Officer.create!(person_id: @person.id, position: 'lead', email: 'test', year_elected: 'test',
-                                     description: 'test'
-          )
-          @alumni = Alumni.create!(graduation_year: '2022', companies_worked: 'TAMU', person_id: @person.id)
+          @person = Person.create!(name: 'TestPerson', class_year: '2023',
+                                   membership_length: '20 years', email: 'test@test.com', is_admin: true)
+          @officer = Officer.create!(person_id: @person.id, position: 'lead', year_elected: 'test',
+                                     description: 'test')
+          @alumni = Alumni.create!(graduation_year: '2022', person_id: @person.id)
           @contact_form = ContactForm.create!(person_id: @person.id, email: 'test', name: 'test', message: 'test')
           @company = Company.create!(name: 'TAMU', website: 'www.website.com')
           @position = Position.create!(position: 'leader', person_id: @person.id, company_id: @company.id)
-          Admin.create!(email: 'test@test.com')
      end
 
      before do
@@ -118,7 +117,7 @@ RSpec.describe('Access with admin login - ', type: :feature) do
      end
 
      after do
-          visit destroy_admin_session_path
+          visit destroy_person_session_path
      end
 
      it 'admin company pages is allowed' do

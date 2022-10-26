@@ -6,7 +6,8 @@ require 'rails_helper'
 #
 RSpec.describe('Admin is able to', type: :feature) do
      before :all do # Create admin used in mockoauth
-          Admin.create!(email: 'test@test.com')
+          @person = Person.create!(name: 'admin', class_year: 'n/a',
+                                   membership_length: 'n/a', email: 'test@test.com', is_admin: true)
      end
 
      before do # Log in the admin
@@ -16,16 +17,19 @@ RSpec.describe('Admin is able to', type: :feature) do
           click_on 'Sign in'
      end
 
+     after :all do
+          @person.destroy!
+     end
+
      after do # Log out the admin
-          visit destroy_admin_session_path
+          visit destroy_person_session_path
      end
 
      it 'add an alumni' do
-          Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
+          Person.create!(name: 'TestPerson', class_year: '2023', email: 'test@gmail.com', membership_length: '20 years')
           visit alumnis_path
           click_on 'New Alumni'
           fill_in 'alumni_graduation_year', with: '2022'
-          fill_in 'alumni_companies_worked', with: 'apple'
           select 'TestPerson', from: 'alumni_person_id'
           click_on 'Create Alumni'
           expect(:notice).to(be_present)
@@ -34,7 +38,7 @@ RSpec.describe('Admin is able to', type: :feature) do
      end
 
      it 'add an alumni with bad param' do
-          Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
+          Person.create!(name: 'TestPerson', class_year: '2023', email: 'test@gmail.com', membership_length: '20 years')
           visit alumnis_path
           click_on 'New Alumni'
           click_on 'Create Alumni'
@@ -42,32 +46,30 @@ RSpec.describe('Admin is able to', type: :feature) do
      end
 
      it 'update an alumni' do
-          person = Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
-          alumni = Alumni.create!(graduation_year: '2022', companies_worked: 'apple', person_id: person.id)
+          person = Person.create!(name: 'TestPerson', class_year: '2023', email: 'test@gmail.com', membership_length: '20 years')
+          alumni = Alumni.create!(graduation_year: '2022', person_id: person.id)
           visit edit_alumni_path(alumni.id)
-          fill_in 'alumni_graduation_year', with: '2'
-          fill_in 'alumni_companies_worked', with: 'orange'
+          fill_in 'alumni_graduation_year', with: 'testyear'
           select 'TestPerson', from: 'alumni_person_id'
           click_on 'Update Alumni'
           expect(:notice).to(be_present)
           visit alumnis_path
-          expect(page).to(have_content('orange'))
+          expect(page).to(have_content('testyear'))
      end
 
      it 'update an alumni with bad param' do
-          person = Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
-          alumni = Alumni.create!(graduation_year: '2022', companies_worked: 'apple', person_id: person.id)
+          person = Person.create!(name: 'TestPerson', class_year: '2023', email: 'test@gmail.com', membership_length: '20 years')
+          alumni = Alumni.create!(graduation_year: '2022', person_id: person.id)
           visit edit_alumni_path(alumni.id)
           fill_in 'alumni_graduation_year', with: ''
-          fill_in 'alumni_companies_worked', with: ''
           select 'TestPerson', from: 'alumni_person_id'
           click_on 'Update Alumni'
           expect(page).to(have_content('prohibited this alumni from being saved'))
      end
 
      it 'delete an alumni' do
-          person = Person.create!(name: 'TestPerson', class_year: '2023', membership_length: '20 years')
-          alumni = Alumni.create!(graduation_year: '2022', companies_worked: 'apple', person_id: person.id)
+          person = Person.create!(name: 'TestPerson', class_year: '2023', email: 'test@gmail.com', membership_length: '20 years')
+          alumni = Alumni.create!(graduation_year: '2022', person_id: person.id)
           visit alumnis_path
           expect(page).to(have_content('TestPerson'))
           click_on 'Destroy'
