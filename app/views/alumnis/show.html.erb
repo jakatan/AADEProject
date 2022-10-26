@@ -7,7 +7,9 @@
 
 <p>
   <strong>Companies worked:</strong>
-  <%= @alumni.companies_worked %>
+  <% Position.where(person_id: @alumni.person_id).each do |position| %>
+    <%=position.company.name %>
+  <% end %>
 </p>
 
 <p>

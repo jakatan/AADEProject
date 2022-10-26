@@ -2,7 +2,7 @@
 
 class Admins::OmniauthCallbacksController < Devise::OmniauthCallbacksController
      def google_oauth2
-          admin = Admin.from_omniauth(auth)
+          admin = Person.from_omniauth(auth)
 
           if admin.present?
                sign_out_all_scopes
@@ -11,7 +11,7 @@ class Admins::OmniauthCallbacksController < Devise::OmniauthCallbacksController
           else
                flash[:alert] =
                     t('devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not authorized.")
-               redirect_to(new_admin_session_path)
+               redirect_to(new_person_session_path)
           end
      end
 
@@ -19,7 +19,7 @@ class Admins::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
      # The path used when OmniAuth fails
      def after_omniauth_failure_path_for(_scope)
-          new_admin_session_path
+          new_person_session_path
      end
 
      def after_sign_in_path_for(resource_or_scope)

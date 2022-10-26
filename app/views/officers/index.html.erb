@@ -21,7 +21,7 @@
   <% @officers.each do |officer| %>
     <tr>
       <td><%= officer.position %></td>
-      <td><%= officer.email %></td>
+      <td><%= officer.person.email %></td>
       <td><%= officer.year_elected %></td>
       <td><%= officer.description %></td>
       <td><%= officer.portrait.filename.to_s %></td>

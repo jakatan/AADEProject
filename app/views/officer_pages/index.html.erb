@@ -17,7 +17,7 @@
         <a class="nav-item nav-link active" href="./home_pages">Home<span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="./schedules">Schedule</a>
         <a class="nav-item nav-link" href="./officer_pages">Officer Page</a>
-        <% if admin_signed_in? %>
+        <% if person_signed_in? %>
           <a class="nav-item nav-link" href="./admins">Admin</a>
         <% end %>
       </div>

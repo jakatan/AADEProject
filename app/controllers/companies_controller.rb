@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CompaniesController < ApplicationController
-     before_action :authenticate_admin!
+     before_action :authenticate_person!
      before_action :set_company, only: %i[show edit update destroy]
 
      # GET /companies or /companies.json

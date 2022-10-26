@@ -17,7 +17,10 @@
     <% @alumnis.each do |alumni| %>
       <tr>
         <td><%= alumni.graduation_year %></td>
-        <td><%= alumni.companies_worked %></td>
+        <td><% Position.where(person_id: alumni.person_id).each do |positon| %>
+              <%=positon.company.name %>,
+            <% end %>
+            </td>
         <td><%= Person.find(alumni.person_id).name %></td>
         <td><%= link_to 'Show', alumni %></td>
         <td><%= link_to 'Edit', edit_alumni_path(alumni) %></td>
