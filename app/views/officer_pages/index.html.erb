@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag "officer_pages" %>
 </head>
 
-
+<%= render 'layouts/nav' %>
 <div class = "left-align-div">
   <h1>Officers</h1>
 </div>
@@ -33,14 +33,14 @@
 
   </div>
 </div>
-<div class = "center-div">
-  <h1 class = "contactHeader">Contact Us</h1>
-  <div class = "column-div">
-    <div class = "contact_div">
-      <p>Have a question? Just looking to drop a note?</p>
-      <p> Choose the appropriate officer&apos;s name below to reach out! Please direct all general inquiries to our secretary.</p> <br/>
-    <%= render '/contact_forms/form', contact_form: @contact_form %>
+  <div class = "center-div">
+    <h1 class = "contactHeader">Contact Us</h1>
+    <div class = "column-div">
+      <div class = "contact_div">
+        <p>Have a question? Just looking to drop a note?</p>
+        <p> Choose the appropriate officer&apos;s name below to reach out! Please direct all general inquiries to our secretary.</p> <br/>
+      <%= render '/contact_forms/form', contact_form: @contact_form %>
 
+    </div>
   </div>
 </div>
-

@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to("Admin Home", admins_path) %><br>
 <h1>Contact Forms</h1>
 
-<table>
+<table  class="table">
   <thead>
     <tr>
-      <th>Person</th>
-      <th>Email</th>
-      <th>Name</th>
-      <th>Message</th>
-      <th colspan="3"></th>
+      <th scope="col" >Person</th>
+      <th scope="col" >Email</th>
+      <th scope="col" >Name</th>
+      <th scope="col" >Message</th>
+      <th scope="col" colspan="3" style="text-align:center;" >Options</th>
     </tr>
   </thead>
 
   <tbody>
     <% @contact_forms.each do |contact_form| %>
-      <tr>
+      <tr scope="row" >
         <td><%= Person.where(id: contact_form.person_id).name %></td>
         <td><%= contact_form.email %></td>
         <td><%= contact_form.name %></td>
         <td><%= contact_form.message %></td>
-        <td><%= link_to 'Show', contact_form %></td>
-        <td><%= link_to 'Edit', edit_contact_form_path(contact_form) %></td>
-        <td><%= link_to 'Destroy', contact_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', contact_form, :class => "btn btn-outline-info" %></td>
+        <td><%= link_to 'Edit', edit_contact_form_path(contact_form), :class => "btn btn-outline-info" %></td>
+        <td><%= link_to 'Destroy', contact_form, method: :delete, data: { confirm: 'Are you sure?' },
+                        :class => "btn btn-outline-danger" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -13,15 +13,22 @@
     <%= csp_meta_tag %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'global_style' %>
     <style>
         .flash__alert   { color: red; }
         .flash__notice  { color: blue; }
         .flash__success { color: green; }
     </style>
-    <%= render 'layouts/nav' %>
   </head>
 
-
+  <% if  current_page?(controller: :home_pages, action: :index) or
+          current_page?(controller: :schedules, action: :index) or
+          current_page?(controller: :officer_pages, action: :index) %>
+    <%= render 'layouts/nav' %>
+  <% else %>
+      <%= render 'layouts/admin_nav' %>
+      <%= stylesheet_link_tag 'admins' %>
+  <% end %>
   <body>
   <% if flash.any? %>
     <% flash.each do |key, value| -%>

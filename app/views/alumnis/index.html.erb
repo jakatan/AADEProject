@@ -3,9 +3,9 @@
 
 <h1>Alumnis</h1>
 
-  <table class="table w-auto">
+  <table class="table">
     <thead>
-      <tr class="th-lg">
+      <tr>
         <th scope="col" >Graduation year</th>
         <th scope="col" >Companies worked</th>
         <th scope="col" >Person</th>
@@ -15,7 +15,7 @@
 
     <tbody >
       <% @alumnis.each do |alumni| %>
-        <tr scope="row" class="th-lg">
+        <tr scope="row" >
           <td><%= alumni.graduation_year %></td>
           <td><% Position.where(person_id: alumni.person_id).each do |positon| %>
                 <%=positon.company.name %>,
@@ -24,7 +24,8 @@
           <td><%= Person.find(alumni.person_id).name %></td>
           <td><%= link_to 'Show', alumni, :class => "btn btn-outline-info"%></td>
           <td><%= link_to 'Edit', edit_alumni_path(alumni), :class => "btn btn-outline-info" %></td>
-          <td><%= link_to 'Destroy', alumni, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-danger"%></td>
+          <td><%= link_to 'Destroy', alumni, method: :delete, data: { confirm: 'Are you sure?' },
+                          :class => "btn btn-outline-danger"%></td>
         </tr>
       <% end %>
     </tbody>
@@ -32,5 +33,4 @@
 
 <br>
 
-<%= link_to 'New Alumni', new_alumni_path %>
-<%= link_to("Admin Home", admins_path) %>
+<%= link_to 'New Alumni', new_alumni_path, :class => "btn btn-success"  %>
