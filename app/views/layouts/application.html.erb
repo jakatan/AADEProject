@@ -21,14 +21,17 @@
     </style>
   </head>
 
-  <% if  current_page?(controller: :home_pages, action: :index) or
-          current_page?(controller: :schedules, action: :index) or
-          current_page?(controller: :officer_pages, action: :index) %>
+  <!-- This checks what page is currently displayed and renders the correct navbar -->
+  <% if  current_page?(home_pages_path) or
+          current_page?(schedules_path) or
+          current_page?(officer_pages_path) %>
     <%= render 'layouts/nav' %>
   <% else %>
       <%= render 'layouts/admin_nav' %>
       <%= stylesheet_link_tag 'admins' %>
   <% end %>
+
+
   <body>
   <% if flash.any? %>
     <% flash.each do |key, value| -%>
