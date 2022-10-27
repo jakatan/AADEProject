@@ -1,18 +1,18 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Positions</h1>
 
-<table class="table">
-  <thead>
+<div class="outer-table-div">
+  <table class="table">
+    <thead>
     <tr>
       <th scope="col" >Position</th>
       <th scope="col" >Person</th>
       <th scope="col" >Company</th>
       <th scope="col" colspan="3" style="text-align:center;" >Options</th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @positions.each do |position| %>
       <tr>
         <td><%= position.position %></td>
@@ -24,8 +24,10 @@
                         :class => "btn btn-outline-danger" %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
+
 
 <br>
 

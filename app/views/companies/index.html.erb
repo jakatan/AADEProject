@@ -1,18 +1,17 @@
-<p id="notice"><%= notice %></p>
-<%= link_to("Admin Home", admins_path) %>
 
 <h1>Companies</h1>
 
-<table class="table">
-  <thead>
+<div class="outer-table-div">
+  <table class="table">
+    <thead>
     <tr>
       <th scope="col" >Company Name</th>
       <th scope="col" >Company website</th>
       <th scope="col"  colspan="3" style="text-align:center;"> Options </th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @companies.each do |company| %>
       <tr>
         <td><%= company.name %></td>
@@ -22,8 +21,10 @@
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-danger" %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
+
 
 <br>
 

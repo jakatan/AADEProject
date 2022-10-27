@@ -1,8 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="title">
+  <h1>Alumnis</h1>
+</div>
 
 
-<h1>Alumnis</h1>
+<div class="submit-button">
+  <%= link_to 'New Alumni', new_alumni_path, :class => "btn btn-success"  %>
+</div>
 
+
+
+<div class="outer-table-div">
   <table class="table">
     <thead>
       <tr>
@@ -30,7 +37,7 @@
       <% end %>
     </tbody>
   </table>
+</div>
 
 <br>
 
-<%= link_to 'New Alumni', new_alumni_path, :class => "btn btn-success"  %>

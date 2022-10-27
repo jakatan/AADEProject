@@ -1,37 +1,39 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Officers</h1>
 
-<table class="table">
-  <thead>
-  <tr>
-    <th scope="col">Position</th>
-    <th scope="col">Email</th>
-    <th scope="col">Year elected</th>
-    <th scope="col">Description</th>
-    <th scope="col">Photo</th>
-    <th scope="col">Person</th>
-    <th scope="col" colspan="3" style="text-align:center;" >Options</th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @officers.each do |officer| %>
-    <tr scope="row" >
-      <td><%= officer.position %></td>
-      <td><%= officer.person.email %></td>
-      <td><%= officer.year_elected %></td>
-      <td><%= officer.description %></td>
-      <td><%= officer.portrait.filename.to_s %></td>
-      <td><%= officer.person.name %></td>
-      <td><%= link_to 'Show', officer, :class => "btn btn-outline-info"%></td>
-      <td><%= link_to 'Edit', edit_officer_path(officer), :class => "btn btn-outline-info"  %></td>
-      <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' },
-                      :class => "btn btn-outline-danger" %></td>
+<div class="outer-table-div">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Position</th>
+      <th scope="col">Email</th>
+      <th scope="col">Year elected</th>
+      <th scope="col">Description</th>
+      <th scope="col">Photo</th>
+      <th scope="col">Person</th>
+      <th scope="col" colspan="3" style="text-align:center;" >Options</th>
     </tr>
-  <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+    <% @officers.each do |officer| %>
+      <tr scope="row" >
+        <td><%= officer.position %></td>
+        <td><%= officer.person.email %></td>
+        <td><%= officer.year_elected %></td>
+        <td><%= officer.description %></td>
+        <td><%= officer.portrait.filename.to_s %></td>
+        <td><%= officer.person.name %></td>
+        <td><%= link_to 'Show', officer, :class => "btn btn-outline-info"%></td>
+        <td><%= link_to 'Edit', edit_officer_path(officer), :class => "btn btn-outline-info"  %></td>
+        <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' },
+                        :class => "btn btn-outline-danger" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
 
 <br>
 

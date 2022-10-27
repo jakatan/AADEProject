@@ -5,4 +5,20 @@
 .outer-table-div{
   margin-left: 20px;
   margin-right: 20px;
+  position: relative;
+  height: 60vh;
+  overflow: auto;
+  display: block;
+}
+
+.submit-button{
+  margin: 20px;
+}
+
+.title{
+  margin: 20px;
+}
+
+.fields{
+  margin-left: 20px;
 }
