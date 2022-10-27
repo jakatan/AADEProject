@@ -1,18 +1,27 @@
+<div class="row justify-content-center">
+  <div class="card" style="text-align: center; width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong><h5>Person Name: </h5></strong>
+        <%= @position.person.name %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Company: </h5></strong>
+        <%= @position.company.name %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Position At Company: </h5></strong>
+        <%= @position.position %>
+      </li>
+    </ul>
+    <div class="card-footer">
+      <%= link_to 'Edit', edit_position_path(@position), :class=>"btn btn-warning"   %>
 
-<p>
-  <strong>Position:</strong>
-  <%= @position.position %>
-</p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Person:</strong>
-  <%= @position.person.name %>
-</p>
+<div class="submit-button">
+  <%= link_to 'Back', positions_path, :class=>"btn btn-dark"   %>
+</div>
 
-<p>
-  <strong>Company:</strong>
-  <%= @position.company.name %>
-</p>
-
-<%= link_to 'Edit', edit_position_path(@position) %> |
-<%= link_to 'Back', positions_path %>

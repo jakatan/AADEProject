@@ -11,42 +11,59 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :position %>
-    <%= form.text_field :position %>
+  <div class="fields">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :position, {class: 'form-label'} %>
+      <%= form.text_field :position, {class: "form-control"} %>
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :year_elected, {class: 'form-label'} %>
+      <%= form.text_field :year_elected, {class: "form-control"} %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :description, {class: 'form-label'} %>
+      <%= form.text_field :description, {class: "form-control"} %>
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :person_id, {class: 'form-label'} %>
+      <% if officer.blank? %>
+
+        <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id))
+                        .order(:name).map { |person| [person.name, person.id] },
+                        {include_blank: true, id: "officer_person_id"}, {class: "form-control"}%>
+      <%else %>
+        <%= form.select :person_id,
+                        Person.where.not(id: Officer.select(:person_id))
+                          .or(Person.where(id: officer.person_id)).order(:name).map { |person| [person.name, person.id] },
+                        {include_blank: true, id: "officer_person_id"}, {class: "form-control"}%>
+      <%end %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :portrait, {class: 'form-label'} %>
+      <% if officer.portrait.attached? %>
+        <%= image_tag officer.portrait %><br>
+      <% end %>
+      <%= form.file_field :portrait, {accept: 'image/png, image/gif, image/jpeg', class: "form-control"}%>
+      </div>
+    </div>
   </div>
 
-
-  <div class="field">
-    <%= form.label :year_elected %>
-    <%= form.text_field :year_elected %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-
-  <div class="field">
-    <%= form.label :person_id %>
-    <% if officer.blank? %>
-
-      <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "officer_person_id"%>
-    <%else %>
-      <%= form.select :person_id, Person.where.not(id: Officer.select(:person_id)).or(Person.where(id: officer.person_id)).order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "officer_person_id"%>
-    <%end %>
-  </div>
-
-  <div class = "field">
-    <%= form.label :portrait %>
-    <% if officer.portrait.attached? %>
-      <%= image_tag officer.portrait %><br>
-    <% end %>
-    <%= form.file_field :portrait, accept: 'image/png, image/gif, image/jpeg'%>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="submit-button">
+    <%= form.button :submit => "", class: "btn btn-success" %>
   </div>
 <% end %>

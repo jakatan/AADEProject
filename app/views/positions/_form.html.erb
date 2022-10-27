@@ -11,22 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :position %>
-    <%= form.text_field :position %>
+  <div class="fields">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <%= form.label :position, {class: 'form-label'} %>
+        <%= form.text_field :position, { class: "form-control"} %>
+      </div>
+    </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <%= form.label :person_id, {class: 'form-label'} %>
+          <%= form.select :person_id, Person.order(:name).map { |person| [person.name, person.id] },
+                          {include_blank: true, id: "position_person_id"}, { class: "form-control"} %>
+        </div>
+      </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <%= form.label :company_id, {class: 'form-label'} %>
+            <%= form.select :company_id, Company.order(:name).map { |company| [company.name, company.id] },
+                            {include_blank: true, id: "position_company_id"}, { class: "form-control"} %>
+          </div>
+        </div>
   </div>
 
-  <div class="field">
-    <%= form.label :person_id %>
-    <%= form.select :person_id, Person.order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "position_person_id" %>
-  </div>
 
-  <div class="field">
-    <%= form.label :company_id %>
-    <%= form.select :company_id, Company.order(:name).map { |company| [company.name, company.id] }, include_blank: true, id: "position_company_id" %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="submit-button">
+    <%= form.button :submit => "", class: "btn btn-success" %>
   </div>
 <% end %>

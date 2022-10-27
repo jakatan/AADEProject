@@ -1,5 +1,11 @@
-<h1>New Person</h1>
+<div class="title">
+  <h1>New Person</h1>
+</div>
+
 
 <%= render 'form', person: @person %>
 
-<%= link_to 'Back', people_path, :class=>"btn btn-dark"  %>
+<div class="submit-button">
+  <%= link_to 'Back', people_path, :class=>"btn btn-dark"  %>
+</div>
+

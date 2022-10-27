@@ -11,18 +11,24 @@
     </div>
   <% end %>
 
+  <div class="fields">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <%= form.label :name, {class: 'form-label'} %>
+        <%= form.text_field :name, { class: "form-control"} %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <%= form.label :website, {class: 'form-label'} %>
+        <%= form.text_field :website, { class: "form-control"} %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :website %>
-    <%= form.text_field :website %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="submit-button">
+    <%= form.button :submit => "", class: "btn btn-success" %>
   </div>
 <% end %>

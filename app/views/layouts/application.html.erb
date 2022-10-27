@@ -24,8 +24,10 @@
   <!-- This checks what page is currently displayed and renders the correct navbar -->
   <% if  current_page?(home_pages_path) or
           current_page?(schedules_path) or
-          current_page?(officer_pages_path) %>
+          current_page?(officer_pages_path) or
+          current_page?(root_path)%>
     <%= render 'layouts/nav' %>
+    <%= render 'layouts/footer' %>
   <% else %>
       <%= render 'layouts/admin_nav' %>
       <%= stylesheet_link_tag 'admins' %>
@@ -39,6 +41,6 @@
     <% end -%>
   <% end %>
   <%= yield %>
- <%= render 'layouts/footer' %>
+
   </body>
 </html>
