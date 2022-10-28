@@ -73,6 +73,24 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
-  ENV['GOOGLE_OAUTH_CLIENT_ID'] = '284431453271-b7fh18v4g6e9js490qanodlndsh73356.apps.googleusercontent.com'
-  ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = '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'
+  #ENV['GOOGLE_OAUTH_CLIENT_ID'] = '284431453271-b7fh18v4g6e9js490qanodlndsh73356.apps.googleusercontent.com'
+  #ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = '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'
 end
+
+# This setups Oauth to NOT use the live google server if selected
+# IF not set a user will need to specify a GOOGLE_OAUTH_CLIENT_ID and GOOGLE_OAUTH_CLIENT_SECRET they wish to route to
+if ENV['GOOGLE_OAUTH_LOCAL'] == "1"
+  #This enables test mode which auto redirect to the auth/google/callback. Meaning, no call is made to actual google authentication server
+  OmniAuth.config.test_mode = true
+
+  # This specifies the mock account that will be logging in. Change email to change which account is logging in when clicking 'Sign In'
+  OmniAuth.config.add_mock(:google_oauth2, { info: { email: 'davidking@tamu.edu'} })
+
+  #This configures auth and devise to work together
+  Rails.application.env_config['devise.mapping'] = Devise.mappings[:person] # If using Devise
+  Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_oauth2]
+else
+  Rails.application.env_config['GOOGLE_OAUTH_CLIENT_ID'] = ENV['GOOGLE_OAUTH_CLIENT_ID']
+  Rails.application.env_config['GOOGLE_OAUTH_CLIENT_SECRET'] = ENV['GOOGLE_OAUTH_CLIENT_SECRET']
+end
+
