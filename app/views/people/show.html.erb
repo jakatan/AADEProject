@@ -1,30 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="row justify-content-center">
+  <div class="card" style="text-align: center; width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong><h5>Person Name: </h5></strong>
+        <%= @person.name %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Class Year: </h5></strong>
+        <%= @person.class_year %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Membership Length: </h5></strong>
+        <%= @person.membership_length %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Email: </h5></strong>
+        <%= @person.email %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Is An Admin: </h5></strong>
+        <%= @person.is_admin %>
+      </li>
+    </ul>
+    <div class="card-footer">
+      <%= link_to 'Edit', edit_person_path(@person), :class=>"btn btn-warning"   %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @person.name %>
-</p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Class year:</strong>
-  <%= @person.class_year %>
-</p>
-
-<p>
-  <strong>Membership length:</strong>
-  <%= @person.membership_length %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @person.email %>
-</p>
-
-<p>
-  <strong>Is Admin:</strong>
-  <%= @person.is_admin %>
-</p>
-
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<div class="submit-button">
+  <%= link_to 'Back', people_path, :class=>"btn btn-dark"   %>
+</div>

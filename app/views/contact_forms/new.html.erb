@@ -1,5 +1,10 @@
-<h1>New Contact Form</h1>
+<div class="title">
+  <h1>New Contact Form</h1>
+</div>
+
 
 <%= render 'form', contact_form: @contact_form %>
+<div class="submit-button">
+  <%= link_to 'Back', contact_forms_path, :class=>"btn btn-dark"  %>
+</div>
 
-<%= link_to 'Back', contact_forms_path %>

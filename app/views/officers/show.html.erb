@@ -1,39 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="row justify-content-center">
+  <div class="card" style="text-align: center; width: 18rem;">
+    <% if @officer.portrait.attached? %>
+      <%= image_tag @officer.portrait.variant(resize_to_fit: [200, 200]), :class=>"card-img-top" %>
+    <% else %>
+      Image could not load
+    <% end %>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong><h5>Officer Name: </h5></strong>
+        <%= @officer.person.name %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Position: </h5></strong>
+        <%= @officer.position %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Year Elected: </h5></strong>
+        <%= @officer.year_elected %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Description: </h5></strong>
+        <%= @officer.description%>
+      </li>
+    </ul>
+    <div class="card-footer">
+      <%= link_to 'Edit', edit_officer_path(@officer), :class=>"btn btn-warning" %>
+      <%= link_to 'Edit Person Details', edit_person_path(@officer.person), :class=>"btn btn-warning" %>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Position:</strong>
-  <%= @officer.position %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @officer.person.email %>
-</p>
-
-<p>
-  <strong>Year elected:</strong>
-  <%= @officer.year_elected %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @officer.description %>
-</p>
-
-<p>
-  <strong>Person:</strong>
-  <%= @officer.person.name %>
-</p>
-
-<p>
-  <strong>Photo</strong>
-  <% if @officer.portrait.attached? %>
-    <%= image_tag @officer.portrait.variant(resize_to_fit: [200, 200]) %>
-  <% else %>
-    Image could not load
-  <% end %>
-</p>
-
-
-<%= link_to 'Edit', edit_officer_path(@officer) %> |
-<%= link_to 'Back', officers_path %>
+<div class="submit-button">
+  <%= link_to 'Back', officers_path, :class=>"btn btn-dark"   %>
+</div>

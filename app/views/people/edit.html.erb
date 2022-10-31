@@ -1,6 +1,13 @@
-<h1>Editing Person</h1>
+<div class="submit-button">
+  <h1>Editing Person</h1>
+</div>
 
 <%= render 'form', person: @person %>
 
-<%= link_to 'Show', @person %> |
-<%= link_to 'Back', people_path %>
+<div class="submit-button">
+  <%= link_to 'Show', @person, :class=> "btn btn-primary"%>
+</div>
+<div class="submit-button">
+  <%= link_to 'Back', people_path, :class=> "btn btn-warning" %>
+</div>
+

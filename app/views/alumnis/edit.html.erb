@@ -1,6 +1,15 @@
-<h1>Editing Alumni</h1>
+<div class="title">
+  <h1>Editing Alumni</h1>
+</div>
+
 
 <%= render 'form', alumni: @alumni %>
 
-<%= link_to 'Show', @alumni %> |
-<%= link_to 'Back', alumnis_path %>
+<div class="submit-button">
+  <%= link_to 'Show', @alumni, :class=> "btn btn-primary" %>
+</div>
+
+<div class="submit-button">
+  <%= link_to 'Back', alumnis_path, :class=> "btn btn-dark" %>
+</div>
+

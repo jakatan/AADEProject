@@ -12,15 +12,27 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'home_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'global_style' %>
     <style>
         .flash__alert   { color: red; }
         .flash__notice  { color: blue; }
         .flash__success { color: green; }
     </style>
   </head>
+
+  <!-- This checks what page is currently displayed and renders the correct navbar -->
+  <% if  current_page?(home_pages_path) or
+          current_page?(schedules_path) or
+          current_page?(officer_pages_path) or
+          current_page?(root_path)%>
+    <%= render 'layouts/nav' %>
+
+  <% else %>
+      <%= render 'layouts/admin_nav' %>
+      <%= stylesheet_link_tag 'admins' %>
+  <% end %>
+
 
   <body>
   <% if flash.any? %>
@@ -29,6 +41,13 @@
     <% end -%>
   <% end %>
   <%= yield %>
- <%= render 'layouts/footer' %>
+
   </body>
+  <% if  current_page?(home_pages_path) or
+    current_page?(schedules_path) or
+    current_page?(officer_pages_path) or
+    current_page?(root_path)%>
+    <%= render 'layouts/footer' %>
+  <% end %>
+
 </html>

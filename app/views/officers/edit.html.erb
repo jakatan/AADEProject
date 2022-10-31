@@ -1,6 +1,14 @@
-<h1>Editing Officer</h1>
+<div class="title">
+  <h1>Editing Officer</h1>
+</div>
+
 
 <%= render 'form', officer: @officer %>
 
-<%= link_to 'Show', @officer %> |
-<%= link_to 'Back', officers_path %>
+<div class="submit-button">
+  <%= link_to 'Show', @officer, :class=> "btn btn-primary" %>
+</div>
+<div class="submit-button">
+  <%= link_to 'Back', officers_path, :class=> "btn btn-warning" %>
+</div>
+

@@ -11,17 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :graduation_year %>
-    <%= form.text_field :graduation_year %>
+  <div class="fields">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <%= form.label :person_id, {class: 'form-label'} %>
+        <%= form.select :person_id, Person.order(:name).map { |person| [person.name, person.id] }, {include_blank: true, id: "alumni_person_id"}, {class: "form-control"} %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <%= form.label :graduation_year, {class: 'form-label'}%>
+        <%= form.text_field :graduation_year, { class: "form-control"}%>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :person_id %>
-    <%= form.select :person_id, Person.order(:name).map { |person| [person.name, person.id] }, include_blank: true, id: "alumni_person_id" %>
-  </div>
+<div class="submit-button">
+  <%= form.button :submit => "", class: "btn btn-success" %>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
 <% end %>
