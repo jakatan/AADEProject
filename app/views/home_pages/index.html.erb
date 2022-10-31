@@ -53,22 +53,20 @@
                 <div class = "row-div">
                   <%  @companies.each do |company| %>
                     <a href="https://<%= company.website %>" target="_blank" class="company-link">
-                      <div class="card container-fluid">
+                      <div class="card container-fluid align-items-center">
                         <div class="container row justify-content-center align-items-center h-100">
-                          <div class="d-flex justify-content-center">
-                            <% if company.logo.attached? %>
-                              <%= image_tag company.logo, class: "card-img-top" %>
-                            <% else %>
-                              <%= image_tag("noimage.png", class: "card-img-top")%>
-                            
-                            <% end %>
-                          </div>
+                          <% if company.logo.attached? %>
+                            <%= image_tag company.logo, class: "card-img-top" %>
+                          <% else %>
+                            <%= image_tag("noimage.png", class: "card-img-top")%>
                           
-                          <div class"align-items-end">
-                            <h4><%= company.name %></h4>
-                          </div>
-                          
+                          <% end %>
                         </div>
+
+                        <div class"container row justify-content-center align-items-end">
+                          <h4><%= company.name %></h4>
+                        </div>
+                          
                       </div>
                     </a>
                   <% end %>
