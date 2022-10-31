@@ -41,7 +41,9 @@
               <div class = "column-div">
                 <div class = "row-div">
                   <% @alumnis.each do |alumni| %>
-                    <h4><%= alumni.person.name %></h4>
+                    <div id="alumni-names">
+                      <h4><%= alumni.person.name %></h4>
+                    </div>
                   <% end %>
                 </div>
               </div>
