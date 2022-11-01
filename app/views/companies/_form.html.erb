@@ -25,6 +25,16 @@
         <%= form.text_field :website, { class: "form-control"} %>
       </div>
     </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :logo, {class: 'form-label'} %>
+      <% if company.logo.attached? %>
+        <%= image_tag company.logo %><br>
+      <% end %>
+      <%= form.file_field :logo, {accept: 'image/png, image/gif, image/jpeg, image/svg', class: "form-control"}%>
+      </div>
+    </div>
   </div>
 
 
