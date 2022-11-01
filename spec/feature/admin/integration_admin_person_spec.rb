@@ -6,7 +6,8 @@ require 'rails_helper'
 #
 RSpec.describe('Admin is able to', type: :feature) do
      before :all do # Create admin used in mockoauth
-          Admin.create!(email: 'test@test.com')
+          @person = Person.create!(name: 'admin', class_year: 'n/a',
+                                   membership_length: 'n/a', email: 'test@test.com', is_admin: true)
      end
 
      before do # Log in the admin
@@ -16,8 +17,12 @@ RSpec.describe('Admin is able to', type: :feature) do
           click_on 'Sign in'
      end
 
+     after :all do
+          @person.destroy!
+     end
+
      after do # Log out the admin
-          visit destroy_admin_session_path
+          visit destroy_person_session_path
      end
 
      it 'add a person' do
@@ -26,6 +31,7 @@ RSpec.describe('Admin is able to', type: :feature) do
           fill_in 'person_name', with: 'david'
           fill_in 'person_class_year', with: 'test'
           fill_in 'person_membership_length', with: 'test'
+          fill_in 'person_email', with: 'test@gmail.com'
           click_on 'Create Person'
           expect(:notice).to(be_present)
           visit people_path
@@ -43,7 +49,7 @@ RSpec.describe('Admin is able to', type: :feature) do
      end
 
      it 'update a person' do
-          person = Person.create!(name: 'apple', class_year: 'test', membership_length: 'test')
+          person = Person.create!(name: 'apple', class_year: 'test', email: 'test@gmail.com', membership_length: 'test')
           visit edit_person_path(person.id)
           fill_in 'person_name', with: 'orange'
           click_on 'Update Person'
@@ -53,7 +59,7 @@ RSpec.describe('Admin is able to', type: :feature) do
      end
 
      it 'update a person with bad params' do
-          person = Person.create!(name: 'apple', class_year: 'test', membership_length: 'test')
+          person = Person.create!(name: 'apple', class_year: 'test', email: 'test@gmail.com', membership_length: 'test')
           visit edit_person_path(person.id)
           fill_in 'person_name', with: ''
           click_on 'Update Person'
@@ -61,10 +67,12 @@ RSpec.describe('Admin is able to', type: :feature) do
      end
 
      it 'delete a person' do
-          Person.create!(name: 'apple', class_year: 'test', membership_length: 'test')
+          Person.create!(name: 'apple', class_year: 'test', email: 'test@gmail.com', membership_length: 'test')
           visit people_path
           expect(page).to(have_content('apple'))
-          click_on 'Destroy'
+          within find('tr', text: 'apple') do
+               click_on 'Destroy'
+          end
           expect(page).not_to(have_content('apple'))
      end
 

@@ -1,3 +1,4 @@
-<h1>"Sign in please"</h1>
-<%= link_to("home page", home_pages_path) %> <br><br>
-<%=  link_to "Sign in", admin_google_oauth2_omniauth_authorize_path, method: :post%>
+<h1 style ="text-align: center;">Sign In</h1>
+<h3 style="text-align: center;">
+  <%=  link_to "Sign in", person_google_oauth2_omniauth_authorize_path, method: :post, class: "btn btn-info"%>
+</h3>

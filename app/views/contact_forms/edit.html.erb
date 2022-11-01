@@ -1,6 +1,14 @@
-<h1>Editing Contact Form</h1>
+<div class="submit-button">
+  <h1>Editing Contact Form</h1>
+</div>
+
 
 <%= render 'form', contact_form: @contact_form %>
 
-<%= link_to 'Show', @contact_form %> |
-<%= link_to 'Back', contact_forms_path %>
+<div class="submit-button">
+  <%= link_to 'Show', @contact_form, :class=> "btn btn-primary" %>
+</div>
+<div class="submit-button">
+  <%= link_to 'Back', contact_forms_path, :class=> "btn btn-warning" %>
+</div>
+

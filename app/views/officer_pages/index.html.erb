@@ -5,26 +5,6 @@
   <%= stylesheet_link_tag "officer_pages" %>
 </head>
 
-<header>
-
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top">
-    <a class="navbar-brand" href="./home_pages">AADE</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="./home_pages">Home<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="./schedules">Schedule</a>
-        <a class="nav-item nav-link" href="./officer_pages">Officer Page</a>
-        <% if admin_signed_in? %>
-          <a class="nav-item nav-link" href="./admins">Admin</a>
-        <% end %>
-      </div>
-    </div>
-  </nav>
-</header>
-
 <div class = "left-align-div">
   <h1>Officers</h1>
 </div>
@@ -38,7 +18,7 @@
           <% if officer.portrait.attached? %>
             <%= image_tag officer.portrait, class: "card-img-top" %>
           <% else %>
-          <%= image_tag("noimage.png", class: "card-img-top")%>
+            <%= image_tag("noimage.png", class: "card-img-top")%>
 
           <% end %>
 
@@ -49,14 +29,14 @@
     <% end %>
   </div>
 </div>
+  <div class = "center-div">
+    <h1 class = "contactHeader">Contact Us</h1>
+    <div class = "column-div">
+      <div class = "contact_div">
+        <p>Have a question? Just looking to drop a note?</p>
+        <p> Choose the appropriate officer&apos;s name below to reach out! Please direct all general inquiries to our secretary.</p> <br/>
+      <%= render '/contact_forms/form', contact_form: @contact_form %>
 
-<div class = "center-div">
-  <h1 class = "contactHeader">Contact Us</h1>
-    <div class = "contact_div">
-      <p>Have a question? Just looking to drop a note?</p>
-      <p> Choose the appropriate officer&apos;s name below to reach out! Please direct all general inquiries to our secretary.</p> <br/>
-    <%= render '/contact_forms/form', contact_form: @contact_form %>
-
+    </div>
   </div>
 </div>
-

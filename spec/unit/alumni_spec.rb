@@ -4,11 +4,11 @@ require 'rails_helper'
 
 RSpec.describe(Alumni, type: :model) do
      subject do
-          described_class.new(graduation_year: '2022', companies_worked: 'TAMU', person_id: @person.id)
+          described_class.new(graduation_year: '2022', person_id: @person.id)
      end
 
      before :all do
-          @person = Person.create!(name: 'test', class_year: '2001', membership_length: '20 years')
+          @person = Person.create!(name: 'test', email: 'test@test.com', is_admin:false, class_year: '2001', membership_length: '20 years')
      end
 
      after :all do
@@ -21,11 +21,6 @@ RSpec.describe(Alumni, type: :model) do
 
      it 'is not valid without graduation year' do
           subject.graduation_year = nil
-          expect(subject).not_to(be_valid)
-     end
-
-     it 'is not valid without companies_worked' do
-          subject.companies_worked = nil
           expect(subject).not_to(be_valid)
      end
 

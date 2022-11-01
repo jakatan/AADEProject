@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CompaniesController < ApplicationController
-     before_action :authenticate_admin!
+     before_action :authenticate_person!
      before_action :set_company, only: %i[show edit update destroy]
 
      # GET /companies or /companies.json
@@ -67,6 +67,6 @@ class CompaniesController < ApplicationController
 
      # Only allow a list of trusted parameters through.
      def company_params
-          params.require(:company).permit(:name, :website)
+          params.require(:company).permit(:name, :website, :logo)
      end
 end

@@ -1,19 +1,36 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Graduation year:</strong>
-  <%= @alumni.graduation_year %>
-</p>
+<div class="row justify-content-center">
+  <div class="card" style="text-align: center; width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong><h5>Person Name: </h5></strong>
+        <%= @alumni.person.name %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Graduation Year: </h5></strong>
+        <%= @alumni.graduation_year %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Companies Worked: </h5></strong>
+        <p class="card-text">
+          <% Position.where(person_id: @alumni.person_id).each do |position| %>
+            <%=position.company.name %>
+          <% end %>
+        </p>
+      </li>
+    </ul>
+    <div class="card-footer">
+        <%= link_to 'Edit', edit_alumni_path(@alumni), :class=>"btn btn-warning"   %>
 
-<p>
-  <strong>Companies worked:</strong>
-  <%= @alumni.companies_worked %>
-</p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Person:</strong>
-  <%= @alumni.person.name %>
-</p>
+<div class="submit-button">
+  <%= link_to 'Back', alumnis_path, :class=>"btn btn-dark"   %>
+</div>
 
-<%= link_to 'Edit', edit_alumni_path(@alumni) %> |
-<%= link_to 'Back', alumnis_path %>
+
+
+
+

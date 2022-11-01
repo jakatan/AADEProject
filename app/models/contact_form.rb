@@ -2,6 +2,6 @@
 
 class ContactForm < ApplicationRecord
      validates :person_id, :email, :name, :message, presence: true
-     has_one :person, through: :officer
-     has_one :officer
+     has_many :officer
+     has_many :person, through: :officer
 end

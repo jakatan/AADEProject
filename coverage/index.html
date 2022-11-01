@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-11-01T17:07:19+00:00">2022-11-01T17:07:19+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-10-27T04:42:34+00:00">2022-10-27T04:42:34+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="red">
-  67.34%
+      <span class="green">
+  94.23%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.85
+       <span class="green">
+         2.52
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>45</b> files in total.
+    <b>46</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>346</b> relevant lines,
-    <span class="green"><b>233</b> lines covered</span> and
-    <span class="red"><b>113</b> lines missed. </span>
-    (<span class="red">
-  67.34%
+    <b>364</b> relevant lines,
+    <span class="green"><b>343</b> lines covered</span> and
+    <span class="red"><b>21</b> lines missed. </span>
+    (<span class="green">
+  94.23%
 </span>
 )
   </div>
@@ -143,7 +143,7 @@
             <td class="cell--number">7</td>
             <td class="cell--number">6</td>
             <td class="cell--number">1</td>
-            <td class="cell--number">2.29</td>
+            <td class="cell--number">20.57</td>
             
           </tr>
         
@@ -302,17 +302,6 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#1d66128b7d24bc0a31f232eddfa95ebaafa33fe9" class="src_link" title="app/models/admin.rb">app/models/admin.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">2.25</td>
-            
-          </tr>
-        
-          <tr class="t-file">
             <td class="strong t-file__name"><a href="#e8e3233e02e5eb485080c604fa514ab8e9ceca00" class="src_link" title="app/models/alumni.rb">app/models/alumni.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">6</td>
@@ -370,11 +359,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#57150bddb592c77a1b1dd59c59b816172d6c4824" class="src_link" title="app/models/person.rb">app/models/person.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">10</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">7</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">4.10</td>
             
           </tr>
         
@@ -659,7 +648,7 @@
 
             
 
-            <code class="ruby">          admin = Admin.from_omniauth(auth)</code>
+            <code class="ruby">          admin = Person.from_omniauth(auth)</code>
           </li>
         </div>
       
@@ -758,7 +747,7 @@
 
             
 
-            <code class="ruby">               redirect_to(new_admin_session_path)</code>
+            <code class="ruby">               redirect_to(new_person_session_path)</code>
           </li>
         </div>
       
@@ -846,7 +835,7 @@
 
             
 
-            <code class="ruby">          new_admin_session_path</code>
+            <code class="ruby">          new_person_session_path</code>
           </li>
         </div>
       
@@ -1064,7 +1053,7 @@
 
             
 
-            <code class="ruby">          new_admin_session_path</code>
+            <code class="ruby">          root_path</code>
           </li>
         </div>
       
@@ -1108,7 +1097,7 @@
 
             
 
-            <code class="ruby">          stored_location_for(resource_or_scope) || root_path</code>
+            <code class="ruby">          stored_location_for(resource_or_scope) || admins_path</code>
           </li>
         </div>
       
@@ -1205,7 +1194,7 @@
 
             
 
-            <code class="ruby">     before_action :authenticate_admin!</code>
+            <code class="ruby">     before_action :authenticate_person!</code>
           </li>
         </div>
       
@@ -1925,13 +1914,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="70">
-            
-            
-
+          <li class="covered" data-hits="4" data-linenumber="70">
+            <span class="hits">4</span>
             
 
-            <code class="ruby">          params.require(:alumni).permit(:graduation_year, :companies_worked, :person_id)</code>
+            
+
+            <code class="ruby">          params.require(:alumni).permit(:graduation_year, :person_id)</code>
           </li>
         </div>
       
@@ -2103,7 +2092,7 @@
 
             
 
-            <code class="ruby">     before_action :authenticate_admin!</code>
+            <code class="ruby">     before_action :authenticate_person!</code>
           </li>
         </div>
       
@@ -2926,7 +2915,7 @@
 
             
 
-            <code class="ruby">     before_action :authenticate_admin!, except: %i[create show update edit]</code>
+            <code class="ruby">     before_action :authenticate_person!, except: %i[create show update edit]</code>
           </li>
         </div>
       
@@ -3798,8 +3787,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="9">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="70" data-linenumber="9">
+            <span class="hits">70</span>
             
 
             
@@ -3809,8 +3798,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="10">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="70" data-linenumber="10">
+            <span class="hits">70</span>
             
 
             
@@ -4033,7 +4022,7 @@
 
             
 
-            <code class="ruby">     before_action :authenticate_admin!</code>
+            <code class="ruby">     before_action :authenticate_person!</code>
           </li>
         </div>
       
@@ -4845,7 +4834,7 @@
 
             
 
-            <code class="ruby">     before_action :authenticate_admin!</code>
+            <code class="ruby">     before_action :authenticate_person!</code>
           </li>
         </div>
       
@@ -5565,13 +5554,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="70">
-            
-            
-
+          <li class="covered" data-hits="4" data-linenumber="70">
+            <span class="hits">4</span>
             
 
-            <code class="ruby">          params.require(:person).permit(:id, :name, :class_year, :membership_length, :companyID)</code>
+            
+
+            <code class="ruby">          params.require(:person).permit(:name, :class_year, :membership_length, :email, :is_admin)</code>
           </li>
         </div>
       
@@ -5668,7 +5657,7 @@
 
             
 
-            <code class="ruby">     before_action :authenticate_admin!</code>
+            <code class="ruby">     before_action :authenticate_person!</code>
           </li>
         </div>
       
@@ -7250,159 +7239,7 @@
 </div>
 
       
-        <div class="source_table" id="1d66128b7d24bc0a31f232eddfa95ebaafa33fe9">
-  <div class="header">
-    <h3>app/models/admin.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>4</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="1">
-            
-            
-
-            
-
-            <code class="ruby"># frozen_string_literal: true</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class Admin &lt; ApplicationRecord</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby">     # Include default devise modules. Others available are:</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
-            
-
-            <code class="ruby">     # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">     devise :omniauthable, omniauth_providers: [:google_oauth2]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">     def self.from_omniauth(auth)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="9">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">          Admin.where(email: auth.info.email).first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">     end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="e8e3233e02e5eb485080c604fa514ab8e9ceca00">
+        <div class="source_table" id="df6a328b625d2e7199a354f1e8e9602cf6463f72">
   <div class="header">
     <h3>app/models/alumni.rb</h3>
     <h4>
@@ -7468,7 +7305,7 @@
 
             
 
-            <code class="ruby">     validates :graduation_year, :companies_worked, :person_id, presence: true</code>
+            <code class="ruby">     validates :graduation_year, :person_id, presence: true</code>
           </li>
         </div>
       
@@ -7759,7 +7596,7 @@
 
             
 
-            <code class="ruby">     has_one :person, through: :officer</code>
+            <code class="ruby">     has_many :officer</code>
           </li>
         </div>
       
@@ -7770,7 +7607,7 @@
 
             
 
-            <code class="ruby">     has_one :officer</code>
+            <code class="ruby">     has_many :person, through: :officer</code>
           </li>
         </div>
       
@@ -7856,7 +7693,7 @@
 
             
 
-            <code class="ruby">     validates :person_id, :position, :email, :year_elected, :description, presence: true</code>
+            <code class="ruby">     validates :person_id, :position, :year_elected, :description, presence: true</code>
           </li>
         </div>
       
@@ -7923,8 +7760,8 @@
     
 
     <div class="t-line-summary">
-      <b>7</b> relevant lines.
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>10</b> relevant lines.
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -7975,18 +7812,18 @@
 
             
 
-            <code class="ruby">     validates :name, :class_year, :membership_length, presence: true</code>
+            <code class="ruby">     devise :omniauthable, omniauth_providers: [:google_oauth2]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="5">
+            
             
 
             
 
-            <code class="ruby">     has_many :positions, dependent: :destroy # This will delete all the positions to the person when person is deleted</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -7997,7 +7834,7 @@
 
             
 
-            <code class="ruby">     has_many :companies, through: :positions</code>
+            <code class="ruby">     validates :name, :class_year, :membership_length, :email, presence: true</code>
           </li>
         </div>
       
@@ -8008,7 +7845,7 @@
 
             
 
-            <code class="ruby">     has_many :contact_forms, through: :officers</code>
+            <code class="ruby">     has_many :positions, dependent: :destroy # This will delete all the positions to the person when person is deleted</code>
           </li>
         </div>
       
@@ -8019,7 +7856,7 @@
 
             
 
-            <code class="ruby">     has_one :officer, dependent: :destroy # Will delete officer when person is deleted</code>
+            <code class="ruby">     has_many :companies, through: :positions</code>
           </li>
         </div>
       
@@ -8030,12 +7867,78 @@
 
             
 
+            <code class="ruby">     has_many :contact_forms, through: :officers</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     has_one :officer, dependent: :destroy # Will delete officer when person is deleted</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">     has_one :alumni, dependent: :destroy # Will delete alumni when person is deleted</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     def self.from_omniauth(auth)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="32" data-linenumber="14">
+            <span class="hits">32</span>
+            
+
+            
+
+            <code class="ruby">          Person.where(email: auth.info.email, is_admin: true).first</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -14398,7 +14301,7 @@
 
             
 
-            <code class="ruby">  devise_for :admins, controllers: { omniauth_callbacks: &#39;admins/omniauth_callbacks&#39; }</code>
+            <code class="ruby">  devise_for :people, controllers: { omniauth_callbacks: &#39;admins/omniauth_callbacks&#39; }</code>
           </li>
         </div>
       
@@ -14420,7 +14323,7 @@
 
             
 
-            <code class="ruby">  devise_scope :admin do</code>
+            <code class="ruby">  devise_scope :person do</code>
           </li>
         </div>
       
@@ -14431,7 +14334,7 @@
 
             
 
-            <code class="ruby">    get &#39;admins/sign_in&#39;, to: &#39;admins/sessions#new&#39;, as: :new_admin_session</code>
+            <code class="ruby">    get &#39;admins/sign_in&#39;, to: &#39;admins/sessions#new&#39;, as: :new_person_session</code>
           </li>
         </div>
       
@@ -14442,7 +14345,7 @@
 
             
 
-            <code class="ruby">    get &#39;admins/sign_out&#39;, to: &#39;admins/sessions#destroy&#39;, as: :destroy_admin_session</code>
+            <code class="ruby">    get &#39;admins/sign_out&#39;, to: &#39;admins/sessions#destroy&#39;, as: :destroy_person_session</code>
           </li>
         </div>
       
@@ -14486,7 +14389,7 @@
 
             
 
-            <code class="ruby">  resources :officer_pages</code>
+            <code class="ruby">  get &#39;admins&#39;, action: :index, controller: :admins</code>
           </li>
         </div>
       
@@ -14497,7 +14400,7 @@
 
             
 
-            <code class="ruby">  resources :home_pages</code>
+            <code class="ruby">  resources :officer_pages</code>
           </li>
         </div>
       
@@ -14508,7 +14411,7 @@
 
             
 
-            <code class="ruby">  resources :contact_forms</code>
+            <code class="ruby">  resources :home_pages</code>
           </li>
         </div>
       
@@ -14519,7 +14422,7 @@
 
             
 
-            <code class="ruby">  resources :companies</code>
+            <code class="ruby">  resources :contact_forms</code>
           </li>
         </div>
       
@@ -14530,7 +14433,7 @@
 
             
 
-            <code class="ruby">  resources :alumnis</code>
+            <code class="ruby">  resources :companies</code>
           </li>
         </div>
       
@@ -14541,7 +14444,7 @@
 
             
 
-            <code class="ruby">  resources :officers</code>
+            <code class="ruby">  resources :alumnis</code>
           </li>
         </div>
       
@@ -14552,7 +14455,7 @@
 
             
 
-            <code class="ruby">  resources :positions</code>
+            <code class="ruby">  resources :officers</code>
           </li>
         </div>
       
@@ -14563,7 +14466,7 @@
 
             
 
-            <code class="ruby">  resources :people</code>
+            <code class="ruby">  resources :positions</code>
           </li>
         </div>
       
@@ -14574,7 +14477,7 @@
 
             
 
-            <code class="ruby">  resources :schedules</code>
+            <code class="ruby">  resources :people</code>
           </li>
         </div>
       
@@ -14585,7 +14488,7 @@
 
             
 
-            <code class="ruby">  resources :admins</code>
+            <code class="ruby">  resources :schedules</code>
           </li>
         </div>
       

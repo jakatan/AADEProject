@@ -1,5 +1,10 @@
-<h1>New Company</h1>
+<div class="title">
+  <h1>New Company</h1>
+</div>
+
 
 <%= render 'form', company: @company %>
+<div class="submit-button">
+  <%= link_to 'Back', companies_path, :class=>"btn btn-dark"  %>
+</div>
 
-<%= link_to 'Back', companies_path %>

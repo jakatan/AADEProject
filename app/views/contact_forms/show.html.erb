@@ -1,24 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="row justify-content-center">
+  <div class="card" style="text-align: center; width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong><h5>Officer Specified: </h5></strong>
+        <%= @contact_form.person.name %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>User Email: </h5></strong>
+        <%= @contact_form.email %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>User Name: </h5></strong>
+        <%= @contact_form.name %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Message: </h5></strong>
+        <%= @contact_form.message %>
+      </li>
+    </ul>
+    <div class="card-footer">
+      <%= link_to 'Edit', edit_contact_form_path(@contact_form), :class=>"btn btn-warning"   %>
 
-<p>
-  <strong>Person:</strong>
-  <%= Person.where(id: @contact_form.person_id).name %>
-</p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contact_form.email %>
-</p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @contact_form.name %>
-</p>
-
-<p>
-  <strong>Message:</strong>
-  <%= @contact_form.message %>
-</p>
-
-<%= link_to 'Edit', edit_contact_form_path(@contact_form) %> |
-<%= link_to 'Back', officer_page_path %>
+<div class="submit-button">
+  <%= link_to 'Back', contact_forms_path, :class=>"btn btn-dark"   %>
+</div>

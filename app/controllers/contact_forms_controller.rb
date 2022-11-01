@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ContactFormsController < ApplicationController
-     before_action :authenticate_admin!, except: %i[create show update edit]
+     before_action :authenticate_person!, except: %i[create show update edit]
      before_action :set_contact_form, only: %i[show edit update destroy]
 
      # GET /contact_forms or /contact_forms.json

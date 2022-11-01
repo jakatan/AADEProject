@@ -7,9 +7,9 @@ require 'rails_helper'
 RSpec.describe('Admin is able to', type: :feature) do
 
      before :all do # Create admin used in mockoauth
-          @person = Person.create!(name: 'TestPerson', class_year: 'test', membership_length: 'test')
+          @person = Person.create!(name: 'TestPerson', class_year: '2023',
+                                   membership_length: '20 years', email: 'test@test.com', is_admin: true)
           @company = Company.create!(name: 'apple', website: 'test')
-          Admin.create!(email: 'test@test.com')
      end
 
      before do # Log in the admin
@@ -25,7 +25,7 @@ RSpec.describe('Admin is able to', type: :feature) do
      end
 
      after do # Log out the admin
-          visit destroy_admin_session_path
+          visit destroy_person_session_path
      end
 
      it 'add a position' do

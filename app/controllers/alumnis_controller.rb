@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class AlumnisController < ApplicationController
-     before_action :authenticate_admin!
+     before_action :authenticate_person!
      before_action :set_alumni, only: %i[show edit update destroy]
 
      # GET /alumnis or /alumnis.json
@@ -67,6 +67,6 @@ class AlumnisController < ApplicationController
 
      # Only allow a list of trusted parameters through.
      def alumni_params
-          params.require(:alumni).permit(:graduation_year, :companies_worked, :person_id)
+          params.require(:alumni).permit(:graduation_year, :person_id)
      end
 end

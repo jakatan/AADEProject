@@ -11,22 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="fields">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :name, {class: 'form-label'} %>
+      <%= form.text_field :name, { class: "form-control"} %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :class_year, {class: 'form-label'} %>
+      <%= form.text_field :class_year, { class: "form-control"} %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :membership_length, {class: 'form-label'} %>
+      <%= form.text_field :membership_length, { class: "form-control"} %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <%= form.check_box :is_admin%>
+        <%= form.label :is_admin, {class: 'form-label'} %>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+      <%= form.label :email, {class: 'form-label'} %>
+      <%= form.text_field :email, { class: "form-control"} %>
+      </div>
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= form.label :class_year %>
-    <%= form.text_field :class_year %>
-  </div>
-
-  <div class="field">
-    <%= form.label :membership_length %>
-    <%= form.text_field :membership_length %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="submit-button">
+    <%= form.button :submit => "", class: "btn btn-success" %>
   </div>
 <% end %>
