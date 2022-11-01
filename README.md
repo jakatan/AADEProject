@@ -43,7 +43,7 @@ Run the following code in Powershell if using windows or the terminal using Linu
   MAC:
   `docker run --rm -it --volume "$(pwd):/rails_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 dmartinez05/ruby_rails_postgresql:latest`
 
-  Windows:
+  Windows Locally:
   `docker run --rm -it --volume "${PWD}:/rails_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 dmartinez05/ruby_rails_postgresql:latest`
   
   `cd rails_app`
@@ -57,9 +57,22 @@ Run the app
 
 The application can be seen using a browser and navigating to http://localhost:3000/
 
+
 ## Environmental Variables/Files ##
 
-N/A
+GOOGLE_OAUTH_CLIENT_ID = The client ID for the google project used for authentication
+
+GOOGLE_OAUTH_CLIENT_SECRET = The secret key for the google project used for authentication
+
+## Google Oauth ##
+
+By default the code runs locally without accessing live server for google authentication. 
+The mock account used to simulate logging in can be found in: 
+[config/environments/development.rb](config/environments/development.rb).
+This mocks the act of signing in with the email listed. 
+
+To link a google project add the corresponding environments variables to the docker run command:\
+  `-e GOOGLE_OAUTH_CLIENT_ID=<Client-ID> -e GOOGLE_OAUTH_CLIENT_SECRET=<Client Secret>`
 
 ## Deployment ##
 
