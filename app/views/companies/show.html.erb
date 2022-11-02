@@ -1,14 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="row justify-content-center">
+  <div class="card" style="text-align: center; width: 18rem;">
+    <% if @company.logo.attached? %>
+      <%= image_tag @company.logo.variant(resize_to_fit: [200, 200]), :class=>"card-img-top" %>
+    <% else %>
+      logo could not load
+    <% end %>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong><h5>Company Name: </h5></strong>
+        <%= @company.name %>
+      </li>
+      <li class="list-group-item">
+        <strong><h5>Company Website: </h5></strong>
+        <a href="https://<%=@company.website%>"><%= @company.website %></a>
+      </li>
+    </ul>
+    <div class="card-footer">
+      <%= link_to 'Edit',  edit_company_path(@company), :class=>"btn btn-warning"   %>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Company Name:</strong>
-  <%= @company.name %>
-</p>
 
-<p>
-  <strong>Company website:</strong>
-  <%= @company.website %>
-</p>
-
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<div class="submit-button">
+  <%= link_to 'Back', companies_path, :class=>"btn btn-dark"   %>
+</div>
