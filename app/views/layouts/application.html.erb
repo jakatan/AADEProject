@@ -21,18 +21,14 @@
     </style>
   </head>
 
+  <%= render 'layouts/nav' %>
   <!-- This checks what page is currently displayed and renders the correct navbar -->
-  <% if  current_page?(home_pages_path) or
+  <% if  not (current_page?(home_pages_path) or
           current_page?(schedules_path) or
           current_page?(officer_pages_path) or
-          current_page?(root_path)%>
-    <%= render 'layouts/nav' %>
-
-  <% else %>
-      <%= render 'layouts/admin_nav' %>
-      <%= stylesheet_link_tag 'admins' %>
+          current_page?(root_path))%>
+  <%= stylesheet_link_tag 'admins' %>
   <% end %>
-
 
   <body>
   <% if flash.any? %>
