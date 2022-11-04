@@ -1,6 +1,83 @@
 
+<div class="container">
+  <h1 style ="text-align: center;">Welcome to the Admins Page!</h1>
 
-<h1 style ="text-align: center;">Welcome to the Admins Page!</h1>
+
+  <h4>General Guidelines</h4>
+  <ul>
+    <li>Navigate to the desired area using the Admin Menu.</li>
+    <li>The initial page will show the list of items for the selected area along with some options.</li>
+  </ul>
+    <h5>Options</h5>
+  <ul>
+    <li>New items can be via <div class="submit-button"><div class="btn btn-success"> New ITEM </div></div></li>
+    <li>Item information is displayed using <div class="submit-button"><div class="btn btn-outline-info"> Show </div></div></li>
+    <li>Items can be edited using <div class="submit-button"><div class="btn btn-outline-info"> Edit </div></div> </li>
+    <li>Items can be deleted using <div class="submit-button"><div class="btn btn-outline-danger">Destroy</div></div></li>
+  </ul>
+  <br>
+  <h4>Specifics On Areas</h4>
+  <h5>People/Members</h5>
+  <p>
+    The people/member table is the basis for certain other tables. It is required for a person
+    to exist before adding an <strong>Officer</strong> or an <strong>Alumni</strong>
+  </p>
+  <p>
+    Deleting a person will delete the following items associated with that person:
+  </p>
+  <ul>
+    <li>Officer</li>
+    <li>Alumni</li>
+    <li>Position</li>
+  </ul>
 
 
-<p>This is where a basic wiki of how to use this site will be placed</p>
+  <h5>Admins</h5>
+  <p>
+    Admins are added and removed via editing items in the people section. An existing admin can update a person to be
+    an admin by editing a person item, checking the 'is_admin' box.
+    Similar, an admin can be removed by unchecking this box.
+  </p>
+  <p>The email associated with the person is what needs to be used when logging in.</p>
+
+
+  <h5>Officers</h5>
+  <p><strong>
+    An officer can only be made after creating a person with the base information.
+  </strong></p>
+  <p>
+    Officers may have a photo that can be uploaded when creating or editing an officer.
+    No photo being uploaded will result in a default silhouette image being used.
+  </p>
+  <p>
+    The officers listed in the Officer table are displayed in the public officer page.
+  </p>
+
+  <h5>Alumni</h5>
+  <p><strong>
+    An Alumni can only be made after creating a person with the base information.
+  </strong></p>
+  <p>
+    The alumni page is used to populated the list of alumni display on the main page.
+  </p>
+
+
+  <h5>Company</h5>
+  <p>
+    The company area is used to populated the list of companies displayed on the main page.
+    It allows create and updating a list of companies with their logo, name, and website.
+  </p>
+
+  <h5>Position</h5>
+  <p>
+    This area is for linking a person to a company.
+    With this an admin can list who worked at what company at what position in said company.
+  </p>
+
+  <h5>Contact Form</h5>
+  <p>
+    This area allows for viewing the list of messages submit via the public contact form.
+    It displays the intended officer, the email of the user, the name of user, and their message.
+  </p>
+</div>
+
