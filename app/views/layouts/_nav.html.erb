@@ -1,13 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top">
-  <a class="navbar-brand" href="/home_pages">AADE</a>
+<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top bg-dark">
+  <a class="navbar-brand" href="/home_pages"><%= image_tag("AADE_Logo.png", width: "75", height: "40")%></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/home_pages">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/schedules">Schedule</a>
-      <a class="nav-item nav-link" href="/officer_pages">Officer Page</a>
+      <a class="nav-item nav-link <%if current_page?(home_pages_path) or current_page?(root_path) %>active <% end %>" href="/home_pages">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link <%if current_page?(schedules_path) %>active <% end %>" href="/schedules" >Schedule</a>
+      <a class="nav-item nav-link <%if current_page?(officer_pages_path) %>active <% end %>" href="/officer_pages" >Officer Page</a>
       <% if person_signed_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -15,7 +15,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/admins">Admin Home</a></li>
-            <li><a class="dropdown-item" href="/persons">Manage Members</a></li>
+            <li><a class="dropdown-item" href="/people">Manage Members</a></li>
             <li><a class="dropdown-item" href="/officers">Manage Officers</a></li>
             <li><a class="dropdown-item" href="/alumnis">Manage Alumni</a></li>
             <li><a class="dropdown-item" href="/companies">Manage Companies</a></li>
