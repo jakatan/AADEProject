@@ -16,6 +16,7 @@ body {
   background-color: #333333;
   padding-bottom: 10px;
   padding-top: 10px;
+  align-content: center;
 }
 
 .column-div {
@@ -24,7 +25,6 @@ body {
   background-color: rgba(250, 250, 250, 0.8);
   justify-content: center;
   align-content: center;
-  padding-bottom: 15px;
   padding-top: 15px;
 }
 
@@ -70,6 +70,9 @@ body {
   justify-items: space-between;
 }
 
+.actions {
+  padding-top: 40px;
+}
 .contactHeader {
   text-align: center;
 }
@@ -80,7 +83,45 @@ body {
   align-content: center;
 }
 .field {
-  padding-right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  flex-direction: row;
+}
+.actions {
+  font-size: small;
+}
+.message {
+  width: 500px;
+  font-size: small;
+  padding-left: 5px;
+}
+label {
+  padding-top: 20px;
+  font-size: large;
+}
+.person_id {
+  width: 200px;
+  font-size: small;
+  padding-left: 5px;
+  color: #11ff11;
+  background-color: #11ff11;
+}
+.emailText {
+  padding-top: 20px;
+  font-size: x-large;
+}
+.email {
+  width: 200px;
+  font-size: small;
+  padding-left: 5px;
+}
+.nameText {
+  padding-top: 20px;
+  font-size: x-large;
+}
+.name {
+  width: 200px;
+  font-size: small;
   padding-left: 5px;
 }
 .contact_div {
@@ -88,10 +129,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  background-color: #333333;
   padding-top: 10px;
-  padding-bottom: 10%;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px #111111;
+  font-size: medium;
 }
 h1 {
   color: #ffffff;
