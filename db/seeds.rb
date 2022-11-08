@@ -47,27 +47,27 @@
         person_id: Person.first.id,
         position: "President",
         year_elected: "2022",
-        description: "i am steven"
+        description: "Petroleum Engineering"
         },{
         person_id: Person.second.id,
-        position: "Vice President External",
+        position: "VP External",
         year_elected: "2022",
-        description: "i am aakash"  
+        description: "Petroleum Engineering"  
         },{
         person_id: Person.third.id,
-        position: "Vice President Internal",
+        position: "VP Internal",
         year_elected: "2022",
-        description: "i am will"
+        description: "Petroleum Engineering"
         },{        
         person_id: Person.fourth.id,
         position: "Secretary",
         year_elected: "2022",
-        description: "i am christian"
+        description: "Petroleum Engineering"
          },{
         person_id: Person.fifth.id,
         position: "Treasury",
         year_elected: "2022",
-        description: "i am brandon"}])
+        description: "Petroleum Engineering"}])
 
     p "Created #{Person.count} people"
 

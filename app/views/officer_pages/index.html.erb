@@ -10,16 +10,15 @@
 </div>
 <div class = "column-div">
   <div class = "row-div">
-
     <% @officers.order(:person_id).each do |officer| %>
-      <div class="card">
+      <div class="card justify-content-between">
         <div class="container">
           <h3><%=officer.position %></h3>
 
           <% if officer.portrait.attached? %>
             <%= image_tag officer.portrait, class: "card-img-top" %>
           <% else %>
-          <%= image_tag("noimage.png", class: "card-img-top")%>
+            <%= image_tag("noimage.png", class: "card-img-top")%>
 
           <% end %>
 
@@ -28,18 +27,15 @@
         </div>
       </div>
     <% end %>
-
-
   </div>
 </div>
   <div class = "center-div">
     <h1 class = "contactHeader">Contact Us</h1>
-    <div class = "column-div">
+
       <div class = "contact_div">
         <p>Have a question? Just looking to drop a note?</p>
         <p> Choose the appropriate officer&apos;s name below to reach out! Please direct all general inquiries to our secretary.</p> <br/>
       <%= render '/contact_forms/form', contact_form: @contact_form %>
 
     </div>
-  </div>
 </div>
