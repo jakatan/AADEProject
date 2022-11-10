@@ -23,14 +23,14 @@
           <% end %>
 
           <p><b><%=Person.find(officer.person_id).name %></b>&nbsp</p>
-          <p><%=officer.description %><%=' ' + Person.find(officer.person_id).class_year[2..-1] + '\'' %></p>
+          <p><%=officer.description %><%=' ' +  '\'' + Person.find(officer.person_id).class_year[2..-1]  %></p>
         </div>
       </div>
     <% end %>
   </div>
 </div>
   <div class = "center-div">
-    <h1 class = "contactHeader">Contact Us</h1>
+    <h2 class = "contactHeader">Contact Us</h2>
 
       <div class = "contact_div">
         <p>Have a question? Just looking to drop a note?</p>
