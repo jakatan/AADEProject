@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :positions
   resources :people
   resources :schedules
+  post 'admins', action: :change_email, controller: 'admins'
 
   root 'home_pages#index'
 end

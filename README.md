@@ -81,7 +81,7 @@ Follow the Google Doc: https://docs.google.com/document/d/19gs5thecCzYK91M_64VEX
 
 ## CI/CD ##
 
-N/A
+CI is done by Github Actions through the workflow.yml and CD is done through Heroku
 
 ## Support ##
 
