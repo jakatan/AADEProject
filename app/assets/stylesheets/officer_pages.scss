@@ -9,12 +9,12 @@ body {
 }
 
 .center-div {
+  background-color: ghostwhite;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin: auto;
-  background-color: #333333;
   padding-bottom: 10px;
   padding-top: 10px;
   align-content: center;
@@ -23,18 +23,19 @@ body {
 .column-div {
   display: flex;
   flex-direction: column;
-  background-color: rgba(250, 250, 250, 0.8);
   justify-content: center;
   align-content: center;
   padding-top: 15px;
+  padding-bottom: 1rem;
 }
 
 .left-align-div {
   flex-direction: center;
   text-align: left;
-  background-color: #333333;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 5rem!important;
+  padding-left: 3rem!important;
+  padding-right: 3rem!important;
+  padding-bottom: 1.5rem!important;
 }
 .row-div {
   display: flex;
@@ -126,19 +127,19 @@ label {
   padding-left: 5px;
 }
 .contact_div {
+  background-color: ghostwhite;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: #333333;
   padding-top: 10px;
   padding-bottom: 10px;
-  text-shadow: 1px 1px #111111;
+  color: black;
   font-size: medium;
 }
 h1 {
   color: #ffffff;
-  text-align: start;
+  text-align: center;
   text-shadow: 2px 2px #111111;
   font-size: 50px;
   padding-left: 20px;
@@ -146,7 +147,8 @@ h1 {
 }
 
 h2 {
-  color: #ffffff;
+  color: black;
+  font-size: 50px;
 }
 h3 {
   margin: 10px;

@@ -43,12 +43,12 @@
   <% end %>
   <%= yield %>
 
-  </body>
   <% if  current_page?(home_pages_path) or
-    current_page?(schedules_path) or
-    current_page?(officer_pages_path) or
-    current_page?(root_path)%>
-    <%= render 'layouts/footer' %>
+  current_page?(schedules_path) or
+  current_page?(officer_pages_path) or
+  current_page?(root_path)%>
+  <%= render 'layouts/footer' %>
   <% end %>
-
+  
+  </body>
 </html>
