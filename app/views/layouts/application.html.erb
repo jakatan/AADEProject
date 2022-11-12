@@ -39,6 +39,13 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
+      <script type="text/javascript">
+          setTimeout(function () {
+
+              // Closing the alert
+              $('.<%= flash_class(key) %>').alert('close');
+          }, 5000);
+      </script>
   <% end %>
   <% end %>
   <%= yield %>
