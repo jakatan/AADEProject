@@ -5,11 +5,6 @@
 
 //#4400FA
 
-body {
-    color: #FFFFFF;
-    font-size: large;
-    background-color: #500000;
-}
 
 .center-div {
     text-align:center;
@@ -21,14 +16,15 @@ h1 {
 }
 
 .upcoming-events {
-    padding-top: 17px;
-    padding-bottom: 17px;
+    color: black;
+    text-align: center;
+    font-size: 50px;
 }
 
 iframe {
     border: 0;
-    width: 800px;
-    height: 600px;
+    width: 80vw;
+    height: 70vh;
     padding-top: 17px;
     padding-bottom: 17px;
 }
