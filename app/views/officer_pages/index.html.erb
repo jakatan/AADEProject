@@ -22,8 +22,8 @@
 
           <% end %>
 
-          <p><b><%=Person.find(officer.person_id).name %></b>&nbsp</p>
-          <p><%=officer.description %><%=' ' +  '\'' + Person.find(officer.person_id).class_year[2..-1]  %></p>
+          <p class="card-text"><%=Person.find(officer.person_id).name %>&nbsp</p>
+          <p class="card-text"><%=officer.description %><%=' ' +  '\'' + Person.find(officer.person_id).class_year[2..-1]  %></p>
         </div>
       </div>
     <% end %>

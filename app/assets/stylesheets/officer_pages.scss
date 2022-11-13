@@ -2,22 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body {
+.card-text {
   color: #ffffff;
   font-size: large;
-  background-color: #500000;
+  margin: 4px;
 }
 
 .center-div {
-  background-color: ghostwhite;
+  background-color: #D6D3C4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin: auto;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px;
   align-content: center;
+  width: 70vw;
+  border-radius: 5px;
 }
 
 .column-div {
@@ -127,23 +128,19 @@ label {
   padding-left: 5px;
 }
 .contact_div {
-  background-color: ghostwhite;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 20px;
   color: black;
   font-size: medium;
+  border-radius: 25px;
 }
 h1 {
-  color: #ffffff;
+  color: black;
   text-align: center;
-  text-shadow: 2px 2px #111111;
   font-size: 50px;
-  padding-left: 20px;
-  margin: 0px;
 }
 
 h2 {
@@ -152,10 +149,9 @@ h2 {
 }
 h3 {
   margin: 10px;
+  color: #ffffff;
 }
-p {
-  margin: 4px;
-}
+
 a:hover {
   opacity: 0.5;
   transition: 0.5s ease;

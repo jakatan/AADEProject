@@ -33,12 +33,19 @@
   <body>
   <% if flash.any? %>
   <% flash.each do |key, message| %>
-    <div class="alert <%= flash_class(key) %> alert-dismissible fade show text-center" role="alert">
+    <div class="alert <%= flash_class(key) %> alert-dismissible fade show text-center fixed-top" role="alert" style="margin-top: 65px">
       <%= message %>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
+      <script type="text/javascript">
+          setTimeout(function () {
+
+              // Closing the alert
+              $('.<%= flash_class(key) %>').alert('close');
+          }, 5000);
+      </script>
   <% end %>
   <% end %>
   <%= yield %>

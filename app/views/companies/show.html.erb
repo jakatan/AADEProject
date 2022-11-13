@@ -3,7 +3,7 @@
     <% if @company.logo.attached? %>
       <%= image_tag @company.logo.variant(resize_to_fit: [200, 200]), :class=>"card-img-top" %>
     <% else %>
-      logo could not load
+      No image attached
     <% end %>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">

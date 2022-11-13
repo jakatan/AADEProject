@@ -22,7 +22,7 @@
       <tr>
         <td><%= company.name %></td>
         <td><%= company.website %></td>
-        <td><%= company.logo %></td>
+        <td><%= company.logo.filename.to_s %></td>
         <td><%= link_to 'Show', company, :class => "btn btn-outline-info" %></td>
         <td><%= link_to 'Edit', edit_company_path(company), :class => "btn btn-outline-info" %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-danger" %></td>
