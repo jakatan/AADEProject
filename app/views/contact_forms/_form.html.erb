@@ -12,28 +12,29 @@
   <% end %>
 
   <div class="contact_row">
-  <div class="field">
-    <%= form.label :person_id %>
-    <%= form.select :person_id, Person.joins(:officer).order(:person_id).map { |person| [person.name, person.id] }, include_blank: true, id: "id_of_the_person_id_select_box" %>
-  </div>
+    <div class= "form-group col-md-2">
+      <%= form.label :"Officer", {class: 'form-label'} %>
+      <%= form.select :person_id, Person.joins(:officer).order(:person_id).map { |person| [person.name, person.id] }, {include_blank: true, id: "id_of_the_person_id_select_box"}, {class: "form-control"} %>
+    </div>
+    
+    <div class="form-group col-md-2">
+      <%= form.label :name, {class: 'form-label'} %>
+      <%= form.text_field :name, {class: "form-control"}%>
+    </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <div class="form-group col-md-2">
+      <%= form.label :email, {class: 'form-label'} %>
+      <%= form.text_field :email, {class: "form-control"} %>
+    </div>
   </div>
+  <div class="contact_row">
+    <div class="form-group col-md-6">
+    <%= form.label :message, {class: 'form-label'} %>
+    <%= form.text_area :message, :cols => 10, :rows => 5, class: "form-control"%>
+    </div>
+  </div>
+    <div class="submit-button">
+      <%= form.button :submit => "", class: "btn btn-dark"%>
+    </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_field :message, :cols => 30, :rows => 10 %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-  </div>
 <% end %>

@@ -2,38 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body {
+.card-text {
   color: #ffffff;
   font-size: large;
-  background-color: #500000;
+  margin: 4px;
 }
+
 .center-div {
+  background-color: #D6D3C4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin: auto;
-  background-color: #333333;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px;
+  align-content: center;
+  width: 70vw;
+  border-radius: 5px;
 }
 
 .column-div {
   display: flex;
   flex-direction: column;
-  background-color: rgba(250, 250, 250, 0.8);
   justify-content: center;
   align-content: center;
-  padding-bottom: 15px;
   padding-top: 15px;
+  padding-bottom: 1rem;
 }
 
 .left-align-div {
   flex-direction: center;
   text-align: left;
-  background-color: #333333;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 5rem!important;
+  padding-left: 3rem!important;
+  padding-right: 3rem!important;
+  padding-bottom: 1.5rem!important;
 }
 .row-div {
   display: flex;
@@ -70,6 +73,9 @@ body {
   justify-items: space-between;
 }
 
+.actions {
+  padding-top: 40px;
+}
 .contactHeader {
   text-align: center;
 }
@@ -80,7 +86,45 @@ body {
   align-content: center;
 }
 .field {
-  padding-right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  flex-direction: row;
+}
+.actions {
+  font-size: small;
+}
+.message {
+  width: 500px;
+  font-size: small;
+  padding-left: 5px;
+}
+label {
+  padding-top: 20px;
+  font-size: large;
+}
+.person_id {
+  width: 200px;
+  font-size: small;
+  padding-left: 5px;
+  color: #11ff11;
+  background-color: #11ff11;
+}
+.emailText {
+  padding-top: 20px;
+  font-size: x-large;
+}
+.email {
+  width: 200px;
+  font-size: small;
+  padding-left: 5px;
+}
+.nameText {
+  padding-top: 20px;
+  font-size: x-large;
+}
+.name {
+  width: 200px;
+  font-size: small;
   padding-left: 5px;
 }
 .contact_div {
@@ -88,29 +132,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  padding-top: 10px;
-  padding-bottom: 10%;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding: 20px;
+  color: black;
+  font-size: medium;
+  border-radius: 25px;
 }
 h1 {
-  color: #ffffff;
-  text-align: start;
-  text-shadow: 2px 2px #111111;
+  color: black;
+  text-align: center;
   font-size: 50px;
-  padding-left: 20px;
-  margin: 0px;
 }
 
 h2 {
-  color: #ffffff;
+  color: black;
+  font-size: 50px;
 }
 h3 {
   margin: 10px;
+  color: #ffffff;
 }
-p {
-  margin: 4px;
-}
+
 a:hover {
   opacity: 0.5;
   transition: 0.5s ease;

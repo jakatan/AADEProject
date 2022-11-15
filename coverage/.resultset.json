@@ -1,16 +1,10 @@
 {
   "RSpec": {
     "coverage": {
-      "/csce431/AADEProject/config/environment.rb": {
-        "lines": [
-          null,
-          1,
-          null,
-          null,
-          1
-        ]
+      "/431project/config/environment.rb": {
+        "lines": [null, 1, null, null, 1]
       },
-      "/csce431/AADEProject/config/application.rb": {
+      "/431project/config/application.rb": {
         "lines": [
           1,
           null,
@@ -36,15 +30,10 @@
           null
         ]
       },
-      "/csce431/AADEProject/config/boot.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1
-        ]
+      "/431project/config/boot.rb": {
+        "lines": [1, null, 1, 1]
       },
-      "/csce431/AADEProject/config/environments/test.rb": {
+      "/431project/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -108,19 +97,10 @@
           null
         ]
       },
-      "/csce431/AADEProject/config/initializers/application_controller_renderer.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
+      "/431project/config/initializers/application_controller_renderer.rb": {
+        "lines": [null, null, null, null, null, null, null, null]
       },
-      "/csce431/AADEProject/config/initializers/assets.rb": {
+      "/431project/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -140,19 +120,10 @@
           1
         ]
       },
-      "/csce431/AADEProject/config/initializers/backtrace_silencers.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1
-        ]
+      "/431project/config/initializers/backtrace_silencers.rb": {
+        "lines": [null, null, null, null, null, null, null, 1]
       },
-      "/csce431/AADEProject/config/initializers/content_security_policy.rb": {
+      "/431project/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -186,16 +157,10 @@
           null
         ]
       },
-      "/csce431/AADEProject/config/initializers/cookies_serializer.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          1
-        ]
+      "/431project/config/initializers/cookies_serializer.rb": {
+        "lines": [null, null, null, null, 1]
       },
-      "/csce431/AADEProject/config/initializers/devise.rb": {
+      "/431project/config/initializers/devise.rb": {
         "lines": [
           null,
           null,
@@ -511,17 +476,10 @@
           null
         ]
       },
-      "/csce431/AADEProject/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
+      "/431project/config/initializers/filter_parameter_logging.rb": {
+        "lines": [null, null, null, 1, null, null]
       },
-      "/csce431/AADEProject/config/initializers/inflections.rb": {
+      "/431project/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -541,15 +499,10 @@
           null
         ]
       },
-      "/csce431/AADEProject/config/initializers/mime_types.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null
-        ]
+      "/431project/config/initializers/mime_types.rb": {
+        "lines": [null, null, null, null]
       },
-      "/csce431/AADEProject/config/initializers/permissions_policy.rb": {
+      "/431project/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -564,7 +517,7 @@
           null
         ]
       },
-      "/csce431/AADEProject/config/initializers/wrap_parameters.rb": {
+      "/431project/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -582,7 +535,7 @@
           null
         ]
       },
-      "/csce431/AADEProject/config/routes.rb": {
+      "/431project/config/routes.rb": {
         "lines": [
           1,
           1,
@@ -623,107 +576,46 @@
           1,
           null,
           1,
-          32,
+          6,
           null,
           null
         ]
       },
-      "/csce431/AADEProject/app/models/application_record.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
+      "/431project/app/models/application_record.rb": {
+        "lines": [null, null, 1, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/admins_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/admins_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/alumnis_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/alumnis_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/application_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/application_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/companies_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/companies_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/contact_forms_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/contact_forms_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/home_pages_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/home_pages_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/officer_pages_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/officer_pages_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/officers_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/officers_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/people_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/people_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/positions_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/positions_helper.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/helpers/schedules_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
+      "/431project/app/helpers/schedules_helper.rb": {
+        "lines": [null, null, 1, null]
       },
       "/csce431/AADEProject/app/controllers/alumnis_controller.rb": {
         "lines": [
@@ -735,54 +627,6 @@
           null,
           null,
           1,
-          7,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          2,
-          null,
-          2,
-          2,
-          2,
-          1,
-          null,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          1,
-          null,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          2,
           1,
           null,
           null,
@@ -791,119 +635,7 @@
           null,
           null,
           1,
-          9,
-          null,
-          null,
-          null,
           1,
-          4,
-          null,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/controllers/companies_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          7,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          2,
-          null,
-          2,
-          2,
-          2,
-          1,
-          null,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          1,
-          null,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          2,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          9,
-          null,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/controllers/contact_forms_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          3,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          2,
           null,
           null,
           null,
@@ -939,19 +671,19 @@
           null,
           null,
           1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
           1,
+          null,
           null,
           1,
           2,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          3,
           null,
           null,
           null,
@@ -961,82 +693,10 @@
           null
         ]
       },
-      "/csce431/AADEProject/app/controllers/officers_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          7,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          1,
-          null,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          1,
-          null,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          2,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          9,
-          null,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null
-        ]
+      "/431project/app/controllers/application_controller.rb": {
+        "lines": [null, null, 1, null]
       },
-      "/csce431/AADEProject/app/controllers/people_controller.rb": {
+      "/431project/app/controllers/admins/sessions_controller.rb": {
         "lines": [
           null,
           null,
@@ -1189,66 +849,91 @@
         ]
       },
       "/csce431/AADEProject/app/models/alumni.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null
-        ]
+        "lines": [null, null, 1, 1, 1, null]
       },
       "/csce431/AADEProject/app/models/company.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null
-        ]
+        "lines": [null, null, 1, 1, 1, null]
       },
       "/csce431/AADEProject/app/models/contact_form.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
+        "lines": [null, null, 1, 1, 1, 1, null]
       },
       "/csce431/AADEProject/app/models/officer.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
+        "lines": [null, null, 1, 1, 1, 1, 1, null]
       },
       "/csce431/AADEProject/app/models/position.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
+        "lines": [null, null, 1, 1, 1, 1, null]
       },
       "/csce431/AADEProject/app/controllers/admins/sessions_controller.rb": {
+        "lines": [null, null, 1, 1, 32, null, null, 1, 0, null, null]
+      },
+      "/431project/app/controllers/people_controller.rb": {
         "lines": [
           null,
           null,
           1,
           1,
-          32,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
           null,
           null,
           1,
@@ -1257,22 +942,25 @@
           null
         ]
       },
-      "/csce431/AADEProject/app/controllers/admins/omniauth_callbacks_controller.rb": {
+      "/431project/app/controllers/officers_controller.rb": {
         "lines": [
           null,
           null,
           1,
           1,
-          32,
+          1,
           null,
-          32,
-          32,
-          32,
-          32,
           null,
-          0,
+          1,
+          1,
           null,
-          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
           null,
           null,
           null,
@@ -1281,21 +969,339 @@
           null,
           1,
           0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
           null,
           null,
           1,
-          32,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
           null,
           null,
           1,
           null,
+          null,
           1,
-          32,
+          2,
+          null,
+          null,
+          null,
+          1,
+          0,
           null,
           null
         ]
       },
-      "/csce431/AADEProject/app/controllers/home_pages_controller.rb": {
+      "/431project/app/controllers/alumnis_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/431project/app/controllers/positions_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/431project/app/controllers/contact_forms_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/431project/app/models/person.rb": {
+        "lines": [null, null, 1, 1, 1, 1, 1, 1, 1, null]
+      },
+      "/431project/app/models/officer.rb": {
+        "lines": [null, null, 1, 1, 1, 1, 1, null]
+      },
+      "/431project/app/models/alumni.rb": {
+        "lines": [null, null, 1, 1, 1, null]
+      },
+      "/431project/app/models/contact_form.rb": {
+        "lines": [null, null, 1, 1, 1, 1, null]
+      },
+      "/431project/app/models/company.rb": {
+        "lines": [null, null, 1, 1, 1, null]
+      },
+      "/431project/app/models/position.rb": {
+        "lines": [null, null, 1, 1, 1, 1, null]
+      },
+      "/431project/app/controllers/admins/omniauth_callbacks_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          6,
+          null,
+          6,
+          6,
+          6,
+          6,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          1,
+          null,
+          1,
+          6,
+          null,
+          null
+        ]
+      },
+      "/431project/app/controllers/home_pages_controller.rb": {
         "lines": [
           null,
           null,
@@ -1313,106 +1319,6 @@
           null,
           1,
           null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/controllers/schedules_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/csce431/AADEProject/app/controllers/officer_pages_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
           null,
           null,
           null,

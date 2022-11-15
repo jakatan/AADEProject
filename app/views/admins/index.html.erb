@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container p-5">
   <h1 style ="text-align: center;">Welcome to the Admins Page!</h1>
 
 
@@ -79,5 +79,27 @@
     This area allows for viewing the list of messages submit via the public contact form.
     It displays the intended officer, the email of the user, the name of user, and their message.
   </p>
+
+  <h5>Schedule</h5>
+  <p>
+    The calendar on the schedule page can be changed by filling in the text box below with a valid email that 
+    is linked to a Google Calendar. 
+  </p>
+  <p><strong>
+    Make sure the events are public for the Google Calendar that is tied to the new email; 
+    otherwise the events will not show up on the schedule page.
+  </strong>
+  </p>
+
+  <%= form_with do |form| %>
+    <div class = "form-row align-items-center">
+      <div class = "mx-sm-1">
+        <%= form.email_field :address, :class => "form-control"%>
+      </div>
+      <div class = "mx-sm-1">
+        <%= form.submit "Change Email", :class => "submit-button btn btn-success"%>
+      </div>
+    </div>
+  <% end %>
 </div>
 

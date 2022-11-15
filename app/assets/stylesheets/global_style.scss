@@ -1,4 +1,32 @@
 body{
-  //This is to keep the navbar from overlapping page content
-  padding-top: 50px;
+  padding-top: 55px;
+  font-size: large;
+  margin: 0px;
 }
+
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+.p-3 {
+  padding: 3rem!important;
+}
+
+.p-5 {
+  padding-top: 5rem!important;
+  padding-left: 3rem!important;
+  padding-right: 3rem!important;
+  padding-bottom: 0rem!important;
+}
+
+.p-7 {
+  padding-top: 8rem!important;
+  padding-left: 3rem!important;
+  padding-right: 3rem!important;
+  padding-bottom: 0rem!important;
+}
+

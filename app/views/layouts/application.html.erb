@@ -21,33 +21,41 @@
     </style>
   </head>
 
+  <%= render 'layouts/nav' %>
   <!-- This checks what page is currently displayed and renders the correct navbar -->
-  <% if  current_page?(home_pages_path) or
+  <% if  not (current_page?(home_pages_path) or
           current_page?(schedules_path) or
           current_page?(officer_pages_path) or
-          current_page?(root_path)%>
-    <%= render 'layouts/nav' %>
-
-  <% else %>
-      <%= render 'layouts/admin_nav' %>
-      <%= stylesheet_link_tag 'admins' %>
+          current_page?(root_path))%>
+  <%= stylesheet_link_tag 'admins' %>
   <% end %>
-
 
   <body>
   <% if flash.any? %>
-    <% flash.each do |key, value| -%>
-      <section class="flash flash__<%= key %>"><%= value.html_safe %></section>
-    <% end -%>
+  <% flash.each do |key, message| %>
+    <div class="alert <%= flash_class(key) %> alert-dismissible fade show text-center fixed-top" role="alert" style="margin-top: 65px">
+      <%= message %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <script type="text/javascript">
+          setTimeout(function () {
+
+              // Closing the alert
+              $('.<%= flash_class(key) %>').alert('close');
+          }, 5000);
+      </script>
+  <% end %>
   <% end %>
   <%= yield %>
 
-  </body>
   <% if  current_page?(home_pages_path) or
-    current_page?(schedules_path) or
-    current_page?(officer_pages_path) or
-    current_page?(root_path)%>
-    <%= render 'layouts/footer' %>
+  current_page?(schedules_path) or
+  current_page?(officer_pages_path) or
+  current_page?(root_path)%>
+  <%= render 'layouts/footer' %>
   <% end %>
-
+  
+  </body>
 </html>

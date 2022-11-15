@@ -23,14 +23,14 @@ class ContactFormsController < ApplicationController
      # POST /contact_forms or /contact_forms.json
      def create
           @contact_form = ContactForm.new(contact_form_params)
-
+          @officer_pages = Officer
           respond_to do |format|
                if @contact_form.save
-                    format.html { redirect_to contact_form_url(@contact_form), notice: "Contact form was successfully submitted." }
-                    format.json { render(:show, status: :created, location: @contact_form) }
+                    flash[:success] = "Contact form was successfully submitted."
+                    format.html { redirect_to request.referer }
                else
-                    format.html { render(:new, status: :unprocessable_entity) }
-                    format.json { render(json: @contact_form.errors, status: :unprocessable_entity) }
+                    flash[:error] = "Contact form failed to submit. Make sure you filled out all of the input boxes."
+                    format.html { redirect_to request.referer }
                end
           end
      end
