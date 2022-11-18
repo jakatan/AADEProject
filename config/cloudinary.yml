@@ -1,0 +1,12 @@
+development:
+  cloud_name: "dvcvlxxoo"
+  api_key: "347312336941486"
+  api_secret: "FRQKTrFvkkDhWzuOladevMDEjno"
+  secure: true
+
+production:
+  cloud_name: "dvcvlxxoo"
+  api_key: "347312336941486"
+  api_secret: "FRQKTrFvkkDhWzuOladevMDEjno"
+  secure: true
+
