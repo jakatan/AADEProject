@@ -117,4 +117,5 @@
            is_admin: true
       }])
 
-
+##Delete any existing files stored
+ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
