@@ -1,12 +1,6 @@
-development:
-  cloud_name: "dvcvlxxoo"
-  api_key: "347312336941486"
-  api_secret: "FRQKTrFvkkDhWzuOladevMDEjno"
-  secure: true
-
 production:
-  cloud_name: "dvcvlxxoo"
-  api_key: "347312336941486"
-  api_secret: "FRQKTrFvkkDhWzuOladevMDEjno"
+  cloud_name: <%= ENV['CLOUDINARY_CLOUD_NAME'] %>
+  api_key: <%= ENV['CLOUDINARY_API_KEY'] %>
+  api_secret: <%= ENV['CLOUDINARY_API_SECRET'] %>
   secure: true
 
