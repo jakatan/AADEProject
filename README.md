@@ -64,6 +64,8 @@ GOOGLE_OAUTH_CLIENT_ID = The client ID for the google project used for authentic
 
 GOOGLE_OAUTH_CLIENT_SECRET = The secret key for the google project used for authentication
 
+CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET = Used in production to store photos
+
 ## Google Oauth ##
 
 By default the code runs locally without accessing live server for google authentication. 
